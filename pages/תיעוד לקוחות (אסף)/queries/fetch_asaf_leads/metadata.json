@@ -28,7 +28,7 @@
     ],
     "name": "fetch_asaf_leads",
     "pageId": "תיעוד לקוחות (אסף)",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

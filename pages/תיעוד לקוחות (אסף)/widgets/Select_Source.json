@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "4c12d",
+  "label": "",
+  "labelAlignment": "right",
+  "labelPosition": "Top",
+  "leftColumn": 4,
+  "options": [
+    {
+      "label": "הכל",
+      "value": ""
+    },
+    {
+      "label": "תיאום פגישות לידור",
+      "value": "תיאום פגישות לידור"
+    },
+    {
+      "label": "תיק קיים",
+      "value": "תיק קיים"
+    },
+    {
+      "label": "בדיקת מסלקה",
+      "value": "בדיקת מסלקה"
+    },
+    {
+      "label": "תיק קיים / אמיר",
+      "value": "תיק קיים / אמיר"
+    }
+  ],
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "מקור הגעה",
+  "renderMode": "CANVAS",
+  "rightColumn": 24,
+  "serverSideFiltering": false,
+  "topRow": 11,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "8ba6a2512f",
+  "widgetName": "Select_Source"
+}

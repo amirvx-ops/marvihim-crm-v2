@@ -1,0 +1,93 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "1637c",
+  "label": "",
+  "labelAlignment": "right",
+  "labelPosition": "Top",
+  "leftColumn": 27,
+  "options": [
+    {
+      "label": "הכל",
+      "value": ""
+    },
+    {
+      "label": "MARVIHIM",
+      "value": "MARVIHIM"
+    },
+    {
+      "label": "FIBO",
+      "value": "FIBO"
+    },
+    {
+      "label": "TaxPro",
+      "value": "TaxPro"
+    },
+    {
+      "label": "ALLJOBS",
+      "value": "ALLJOBS"
+    },
+    {
+      "label": "HIGHTAX",
+      "value": "HIGHTAX"
+    },
+    {
+      "label": "TAXUP",
+      "value": "TAXUP"
+    },
+    {
+      "label": "אקסלנס",
+      "value": "אקסלנס"
+    },
+    {
+      "label": "החזר-טק",
+      "value": "החזר-טק"
+    },
+    {
+      "label": "יש לי זכות",
+      "value": "יש לי זכות"
+    },
+    {
+      "label": "קבוצת פתרון",
+      "value": "קבוצת פתרון"
+    },
+    {
+      "label": "קו זכות",
+      "value": "קו זכות"
+    },
+    {
+      "label": "plus-finance",
+      "value": "plus-finance"
+    }
+  ],
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "מקור ליד",
+  "renderMode": "CANVAS",
+  "rightColumn": 43,
+  "serverSideFiltering": false,
+  "topRow": 12,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "b366a02af5",
+  "widgetName": "Select_Partner"
+}

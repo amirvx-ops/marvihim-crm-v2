@@ -28,7 +28,7 @@
     ],
     "name": "attention_needed",
     "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

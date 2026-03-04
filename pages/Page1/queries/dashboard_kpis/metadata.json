@@ -28,7 +28,7 @@
     ],
     "name": "dashboard_kpis",
     "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

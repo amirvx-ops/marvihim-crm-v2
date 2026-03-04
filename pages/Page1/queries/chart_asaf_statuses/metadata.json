@@ -28,7 +28,7 @@
     ],
     "name": "chart_asaf_statuses",
     "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

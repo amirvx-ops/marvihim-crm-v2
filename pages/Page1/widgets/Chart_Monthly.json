@@ -1,0 +1,90 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 53,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "07ae8f30": {
+      "color": "",
+      "data": "{{chart_monthly_trend.data?.map(r => ({x: r.month, y: r.ported})) || []}}",
+      "seriesName": "נוידו"
+    },
+    "62b87ab7": {
+      "color": "",
+      "data": "{{chart_monthly_trend.data?.map(r => ({x: r.month, y: r.closings})) || []}}",
+      "seriesName": "סגירות"
+    },
+    "fece38f1": {
+      "color": "",
+      "data": "{{chart_monthly_trend.data?.map(r => ({x: r.month, y: r.new_leads})) || []}}",
+      "seriesName": "לידים חדשים"
+    }
+  },
+  "chartName": "מגמה חודשית",
+  "chartType": "LINE_CHART",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": ""
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.fece38f1.data"
+    },
+    {
+      "key": "chartData.62b87ab7.data"
+    },
+    {
+      "key": "chartData.07ae8f30.data"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartData.fece38f1.data"
+    },
+    {
+      "key": "chartData.62b87ab7.data"
+    },
+    {
+      "key": "chartData.07ae8f30.data"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "d76c8",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "setAdaptiveYMin": false,
+  "showDataPointLabel": false,
+  "topRow": 33,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "ae681c5791",
+  "widgetName": "Chart_Monthly",
+  "xAxisName": "חודש",
+  "yAxisName": "כמות"
+}

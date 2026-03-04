@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ef2c5",
+  "label": "",
+  "labelAlignment": "right",
+  "labelPosition": "Top",
+  "leftColumn": 8,
+  "options": [
+    {
+      "label": "הכל",
+      "value": ""
+    },
+    {
+      "label": "גאמביז",
+      "value": "גאמביז"
+    },
+    {
+      "label": "נופר",
+      "value": "נופר"
+    },
+    {
+      "label": "רמי",
+      "value": "רמי"
+    },
+    {
+      "label": "אסף",
+      "value": "אסף"
+    }
+  ],
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "מטפל",
+  "renderMode": "CANVAS",
+  "rightColumn": 22,
+  "serverSideFiltering": false,
+  "topRow": 11,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "f388f73370",
+  "widgetName": "Select_Agent"
+}

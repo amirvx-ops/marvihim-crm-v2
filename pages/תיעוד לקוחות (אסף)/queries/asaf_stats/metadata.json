@@ -28,7 +28,7 @@
     ],
     "name": "asaf_stats",
     "pageId": "תיעוד לקוחות (אסף)",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

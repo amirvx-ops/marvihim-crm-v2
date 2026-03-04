@@ -28,7 +28,7 @@
     ],
     "name": "chart_by_agent",
     "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

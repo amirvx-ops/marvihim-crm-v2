@@ -1,0 +1,79 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 74,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "3fa50084": {
+      "color": "",
+      "data": "{{chart_insurance_company.data?.map(r => ({x: r.company, y: r.leads})) || []}}",
+      "seriesName": "לידים"
+    },
+    "a924fca6": {
+      "color": "",
+      "data": "{{chart_insurance_company.data?.map(r => ({x: r.company, y: r.closings})) || []}}",
+      "seriesName": "סגירות"
+    }
+  },
+  "chartName": "הראל vs פניקס",
+  "chartType": "BAR_CHART",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": ""
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.3fa50084.data"
+    },
+    {
+      "key": "chartData.a924fca6.data"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartData.3fa50084.data"
+    },
+    {
+      "key": "chartData.a924fca6.data"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "85e94",
+  "labelOrientation": "auto",
+  "leftColumn": 32,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "setAdaptiveYMin": false,
+  "showDataPointLabel": false,
+  "topRow": 54,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "d59964a837",
+  "widgetName": "Chart_Insurance",
+  "xAxisName": "חברה",
+  "yAxisName": "כמות"
+}

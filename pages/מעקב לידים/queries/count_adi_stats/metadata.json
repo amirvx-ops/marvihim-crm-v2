@@ -28,7 +28,7 @@
     ],
     "name": "count_adi_stats",
     "pageId": "מעקב לידים",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

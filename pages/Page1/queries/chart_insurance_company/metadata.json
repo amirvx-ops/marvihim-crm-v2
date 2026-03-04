@@ -28,7 +28,7 @@
     ],
     "name": "chart_insurance_company",
     "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

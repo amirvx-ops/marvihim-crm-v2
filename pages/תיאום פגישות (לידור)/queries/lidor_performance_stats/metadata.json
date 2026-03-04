@@ -28,7 +28,7 @@
     ],
     "name": "lidor_performance_stats",
     "pageId": "תיאום פגישות (לידור)",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

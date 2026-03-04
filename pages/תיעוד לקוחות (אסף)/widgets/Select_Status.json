@@ -1,0 +1,85 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "isDeprecated": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "9b034",
+  "label": "",
+  "labelAlignment": "right",
+  "labelPosition": "Top",
+  "leftColumn": 24,
+  "options": [
+    {
+      "label": "הכל",
+      "value": ""
+    },
+    {
+      "label": "נויד",
+      "value": "נויד"
+    },
+    {
+      "label": "מעקב",
+      "value": "מעקב"
+    },
+    {
+      "label": "ביקש מועד אחר",
+      "value": "ביקש מועד אחר"
+    },
+    {
+      "label": "לא רלוונטי",
+      "value": "לא רלוונטי"
+    },
+    {
+      "label": "לא מעוניין",
+      "value": "לא מעוניין"
+    },
+    {
+      "label": "אין מענה",
+      "value": "אין מענה"
+    },
+    {
+      "label": "סוכן",
+      "value": "סוכן"
+    },
+    {
+      "label": "ניתנה הצעה",
+      "value": "ניתנה הצעה"
+    },
+    {
+      "label": "לא ניתן לשפר",
+      "value": "לא ניתן לשפר"
+    },
+    {
+      "label": "בתהליך הכנת מסמכים",
+      "value": "בתהליך הכנת מסמכים"
+    }
+  ],
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "סטטוס",
+  "renderMode": "CANVAS",
+  "rightColumn": 44,
+  "serverSideFiltering": false,
+  "topRow": 11,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "f521626d71",
+  "widgetName": "Select_Status"
+}
