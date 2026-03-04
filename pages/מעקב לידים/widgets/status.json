@@ -1,11 +1,10 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 204,
+  "bottomRow": 16,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,46 +14,46 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [
+  "dynamicPropertyPathList": [
     {
-      "key": "onTextChanged"
+      "key": "sourceData"
     }
   ],
-  "iconAlign": "left",
-  "inputType": "TEXT",
+  "dynamicTriggerPathList": [],
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "l0518499br",
-  "label": "Input_Search",
+  "key": "w1ncmhj45h",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
+  "labelText": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 45,
+  "leftColumn": 6,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8,
+  "mobileBottomRow": 18,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 19,
-  "mobileTopRow": 1,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "onTextChanged": "{{fetch_adi_leads.run()}}",
+  "optionLabel": "name",
+  "optionValue": "code",
   "parentColumnSpace": 10.25,
   "parentId": "0",
   "parentRowSpace": 10,
-  "placeholderText": "חיפוש שם או ת.ז",
+  "placeholderText": "סטטוס",
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
-  "showStepArrows": false,
-  "topRow": 197,
-  "type": "INPUT_WIDGET_V2",
-  "version": 2,
-  "widgetId": "kwg5dppjpe",
-  "widgetName": "Input_Search"
+  "rightColumn": 24,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Blue\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"Green\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"Red\",\n    \"code\": \"RED\"\n  }\n]",
+  "topRow": 12,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "dgwsdwabel",
+  "widgetName": "status"
 }
