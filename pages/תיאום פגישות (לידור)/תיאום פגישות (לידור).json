@@ -6,23 +6,1807 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 470,
+          "bottomRow": 5000,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 480,
+          "minHeight": 1292,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 1224,
+          "rightColumn": 4896,
           "snapColumns": 64,
-          "snapRows": 46,
+          "snapRows": 124,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
           "widgetId": "0",
-          "widgetName": "MainContainer"
+          "widgetName": "MainContainer",
+          "children": [
+            {
+              "widgetName": "Text_Title",
+              "type": "TEXT_WIDGET",
+              "widgetId": "73bfd8e01d",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 0,
+              "bottomRow": 5,
+              "leftColumn": 0,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "1cb5a",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "תיאום פגישות",
+              "fontSize": "1.875rem",
+              "fontStyle": "BOLD",
+              "textAlign": "RIGHT",
+              "textColor": "#231F20",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_PassedVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "d91e7ee761",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 48,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "47498",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{lidor_performance_stats.data?.reduce((s,r) => s + (r.leads_passed || 0), 0) || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#1976D2",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_DealsVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "73380ab9af",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 32,
+              "rightColumn": 48,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "3abf8",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{lidor_performance_stats.data?.reduce((s,r) => s + (r.deals_closed || 0), 0) || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#4CAF50",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_RateVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "2bf54e5846",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 16,
+              "rightColumn": 32,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "9bdea",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{(() => { const d = lidor_performance_stats.data || []; const p = d.reduce((s,r) => s + (r.leads_passed||0), 0); const c = d.reduce((s,r) => s + (r.deals_closed||0), 0); return p > 0 ? Math.round(c/p*100) + '%' : '0%'; })()}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#FF9800",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_CommissionVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "ae21396d84",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 0,
+              "rightColumn": 16,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "4f1bb",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{(() => { const d = lidor_performance_stats.data || []; const p = d.reduce((s,r) => s + (r.leads_passed||0), 0)*20; const c = d.reduce((s,r) => s + (r.deals_closed||0), 0)*50; return '₪' + (p+c); })()}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#4CAF50",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_PassedLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "6c2ed1cfcf",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 48,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "28d85",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "לידים שעברו",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_DealsLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "b10521640f",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 32,
+              "rightColumn": 48,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "31061",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "עסקאות",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_RateLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "50eb4e1183",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 16,
+              "rightColumn": 32,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "8ae4b",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "אחוז סגירה",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_CommissionLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "70271e7493",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 0,
+              "rightColumn": 16,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "1a2f5",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "עמלה",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Input_Search",
+              "type": "INPUT_WIDGET_V2",
+              "widgetId": "0ca07a4ad2",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 2,
+              "topRow": 11,
+              "bottomRow": 15,
+              "leftColumn": 48,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "53317",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "placeholderText": "חיפוש שם / ת.ז...",
+              "inputType": "TEXT",
+              "defaultText": "",
+              "isRequired": false,
+              "isDisabled": false,
+              "isSpellCheck": false,
+              "resetOnSubmit": false,
+              "label": "",
+              "labelPosition": "Top",
+              "labelAlignment": "right",
+              "iconSVG": "/static/media/icon.2bdb82e4c714c1ecdf91eb62b2ef5e7f.svg",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "none",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}"
+            },
+            {
+              "widgetName": "Select_Month",
+              "type": "SELECT_WIDGET",
+              "widgetId": "5fe8e4a83f",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 11,
+              "bottomRow": 15,
+              "leftColumn": 36,
+              "rightColumn": 48,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "f3957",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "placeholderText": "חודש",
+              "isFilterable": true,
+              "serverSideFiltering": false,
+              "defaultOptionValue": "",
+              "label": "",
+              "labelPosition": "Top",
+              "labelAlignment": "right",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "none",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "options": [
+                {
+                  "label": "הכל",
+                  "value": ""
+                },
+                {
+                  "label": "03/2026",
+                  "value": "03/2026"
+                },
+                {
+                  "label": "02/2026",
+                  "value": "02/2026"
+                },
+                {
+                  "label": "01/2026",
+                  "value": "01/2026"
+                },
+                {
+                  "label": "12/2025",
+                  "value": "12/2025"
+                },
+                {
+                  "label": "11/2025",
+                  "value": "11/2025"
+                },
+                {
+                  "label": "10/2025",
+                  "value": "10/2025"
+                },
+                {
+                  "label": "09/2025",
+                  "value": "09/2025"
+                },
+                {
+                  "label": "08/2025",
+                  "value": "08/2025"
+                },
+                {
+                  "label": "07/2025",
+                  "value": "07/2025"
+                },
+                {
+                  "label": "06/2025",
+                  "value": "06/2025"
+                },
+                {
+                  "label": "05/2025",
+                  "value": "05/2025"
+                },
+                {
+                  "label": "04/2025",
+                  "value": "04/2025"
+                },
+                {
+                  "label": "03/2025",
+                  "value": "03/2025"
+                },
+                {
+                  "label": "02/2025",
+                  "value": "02/2025"
+                },
+                {
+                  "label": "01/2025",
+                  "value": "01/2025"
+                },
+                {
+                  "label": "12/2024",
+                  "value": "12/2024"
+                },
+                {
+                  "label": "11/2024",
+                  "value": "11/2024"
+                },
+                {
+                  "label": "10/2024",
+                  "value": "10/2024"
+                },
+                {
+                  "label": "09/2024",
+                  "value": "09/2024"
+                },
+                {
+                  "label": "08/2024",
+                  "value": "08/2024"
+                },
+                {
+                  "label": "07/2024",
+                  "value": "07/2024"
+                },
+                {
+                  "label": "06/2024",
+                  "value": "06/2024"
+                },
+                {
+                  "label": "05/2024",
+                  "value": "05/2024"
+                },
+                {
+                  "label": "04/2024",
+                  "value": "04/2024"
+                }
+              ]
+            },
+            {
+              "widgetName": "Select_Source",
+              "type": "SELECT_WIDGET",
+              "widgetId": "bb7992c92b",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 11,
+              "bottomRow": 15,
+              "leftColumn": 22,
+              "rightColumn": 36,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "f1caa",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "placeholderText": "מקור",
+              "isFilterable": true,
+              "serverSideFiltering": false,
+              "defaultOptionValue": "",
+              "label": "",
+              "labelPosition": "Top",
+              "labelAlignment": "right",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "none",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "options": [
+                {
+                  "label": "הכל",
+                  "value": ""
+                },
+                {
+                  "label": "MARVIHIM",
+                  "value": "MARVIHIM"
+                },
+                {
+                  "label": "FIBO",
+                  "value": "FIBO"
+                },
+                {
+                  "label": "TaxPro",
+                  "value": "TaxPro"
+                },
+                {
+                  "label": "ALLJOBS",
+                  "value": "ALLJOBS"
+                },
+                {
+                  "label": "HIGHTAX",
+                  "value": "HIGHTAX"
+                },
+                {
+                  "label": "TAXUP",
+                  "value": "TAXUP"
+                },
+                {
+                  "label": "אקסלנס",
+                  "value": "אקסלנס"
+                },
+                {
+                  "label": "החזר-טק",
+                  "value": "החזר-טק"
+                },
+                {
+                  "label": "יש לי זכות",
+                  "value": "יש לי זכות"
+                },
+                {
+                  "label": "קבוצת פתרון",
+                  "value": "קבוצת פתרון"
+                },
+                {
+                  "label": "קו זכות",
+                  "value": "קו זכות"
+                },
+                {
+                  "label": "plus-finance",
+                  "value": "plus-finance"
+                }
+              ]
+            },
+            {
+              "widgetName": "Select_Agent",
+              "type": "SELECT_WIDGET",
+              "widgetId": "f388f73370",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 11,
+              "bottomRow": 15,
+              "leftColumn": 8,
+              "rightColumn": 22,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "ef2c5",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "placeholderText": "מטפל",
+              "isFilterable": true,
+              "serverSideFiltering": false,
+              "defaultOptionValue": "",
+              "label": "",
+              "labelPosition": "Top",
+              "labelAlignment": "right",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "none",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "options": [
+                {
+                  "label": "הכל",
+                  "value": ""
+                },
+                {
+                  "label": "גאמביז",
+                  "value": "גאמביז"
+                },
+                {
+                  "label": "נופר",
+                  "value": "נופר"
+                },
+                {
+                  "label": "רמי",
+                  "value": "רמי"
+                },
+                {
+                  "label": "אסף",
+                  "value": "אסף"
+                }
+              ]
+            },
+            {
+              "widgetName": "Table_Lidor",
+              "type": "TABLE_WIDGET_V2",
+              "widgetId": "67856dd02b",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 2,
+              "topRow": 16,
+              "bottomRow": 52,
+              "leftColumn": 0,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "6f00d",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.תאריך.computedValue"
+                },
+                {
+                  "key": "primaryColumns.שם.computedValue"
+                },
+                {
+                  "key": "primaryColumns.תז.computedValue"
+                },
+                {
+                  "key": "primaryColumns.כולל_הר_ביטוח.computedValue"
+                },
+                {
+                  "key": "primaryColumns.מקור.computedValue"
+                },
+                {
+                  "key": "primaryColumns.מטפל.computedValue"
+                },
+                {
+                  "key": "primaryColumns.תאריך_פגישה.computedValue"
+                },
+                {
+                  "key": "primaryColumns.שעה.computedValue"
+                },
+                {
+                  "key": "primaryColumns.הליד_עבר.computedValue"
+                },
+                {
+                  "key": "primaryColumns.נסגרה_עסקה.computedValue"
+                },
+                {
+                  "key": "primaryColumns.הערות.computedValue"
+                },
+                {
+                  "key": "primaryColumns.lead_id.computedValue"
+                }
+              ],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onPageChange"
+                },
+                {
+                  "key": "onPageSizeChange"
+                },
+                {
+                  "key": "onSubmitSuccess"
+                }
+              ],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
+              "tableData": "{{fetch_lidor_leads.data}}",
+              "primaryColumns": {
+                "תאריך": {
+                  "index": 0,
+                  "width": 100,
+                  "id": "תאריך",
+                  "originalId": "תאריך",
+                  "alias": "תאריך",
+                  "label": "תאריך",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"תאריך\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "שם": {
+                  "index": 1,
+                  "width": 130,
+                  "id": "שם",
+                  "originalId": "שם",
+                  "alias": "שם",
+                  "label": "שם",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"שם\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "תז": {
+                  "index": 2,
+                  "width": 100,
+                  "id": "תז",
+                  "originalId": "תז",
+                  "alias": "תז",
+                  "label": "ת.ז.",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"תז\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "כולל_הר_ביטוח": {
+                  "index": 3,
+                  "width": 120,
+                  "id": "כולל_הר_ביטוח",
+                  "originalId": "כולל_הר_ביטוח",
+                  "alias": "כולל_הר_ביטוח",
+                  "label": "כולל הר ביטוח?",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"כולל_הר_ביטוח\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "מקור": {
+                  "index": 4,
+                  "width": 110,
+                  "id": "מקור",
+                  "originalId": "מקור",
+                  "alias": "מקור",
+                  "label": "מקור",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"מקור\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "מטפל": {
+                  "index": 5,
+                  "width": 100,
+                  "id": "מטפל",
+                  "originalId": "מטפל",
+                  "alias": "מטפל",
+                  "label": "מטפל",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"מטפל\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "תאריך_פגישה": {
+                  "index": 6,
+                  "width": 120,
+                  "id": "תאריך_פגישה",
+                  "originalId": "תאריך_פגישה",
+                  "alias": "תאריך_פגישה",
+                  "label": "תאריך פגישה",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"תאריך_פגישה\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "שעה": {
+                  "index": 7,
+                  "width": 70,
+                  "id": "שעה",
+                  "originalId": "שעה",
+                  "alias": "שעה",
+                  "label": "שעה",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"שעה\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "הליד_עבר": {
+                  "index": 8,
+                  "width": 90,
+                  "id": "הליד_עבר",
+                  "originalId": "הליד_עבר",
+                  "alias": "הליד_עבר",
+                  "label": "הליד עבר?",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"הליד_עבר\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "נסגרה_עסקה": {
+                  "index": 9,
+                  "width": 120,
+                  "id": "נסגרה_עסקה",
+                  "originalId": "נסגרה_עסקה",
+                  "alias": "נסגרה_עסקה",
+                  "label": "נסגרה עסקה",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"נסגרה_עסקה\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "הערות": {
+                  "index": 10,
+                  "width": 180,
+                  "id": "הערות",
+                  "originalId": "הערות",
+                  "alias": "הערות",
+                  "label": "הערות",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"הערות\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "lead_id": {
+                  "index": 11,
+                  "width": 150,
+                  "id": "lead_id",
+                  "originalId": "lead_id",
+                  "alias": "lead_id",
+                  "label": "lead_id",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Lidor.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lead_id\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                }
+              },
+              "columnOrder": [
+                "תאריך",
+                "שם",
+                "תז",
+                "כולל_הר_ביטוח",
+                "מקור",
+                "מטפל",
+                "תאריך_פגישה",
+                "שעה",
+                "הליד_עבר",
+                "נסגרה_עסקה",
+                "הערות",
+                "lead_id"
+              ],
+              "isVisibleSearch": true,
+              "isVisibleFilters": true,
+              "isVisiblePagination": true,
+              "isVisibleDownload": true,
+              "isSortable": true,
+              "enableClientSideSearch": false,
+              "serverSidePaginationEnabled": true,
+              "defaultPageSize": 20,
+              "totalRecordsCount": 0,
+              "defaultSelectedRowIndex": 0,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "borderWidth": "1",
+              "textSize": "0.875rem",
+              "horizontalAlignment": "RIGHT",
+              "verticalAlignment": "CENTER",
+              "delimiter": ",",
+              "label": "Data",
+              "searchKey": "",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "onPageChange": "{{fetch_lidor_leads.run()}}",
+              "onPageSizeChange": "{{fetch_lidor_leads.run()}}",
+              "onSubmitSuccess": "{{update_lidor_lead.run().then(() => fetch_lidor_leads.run())}}",
+              "canFreezeColumn": true,
+              "columnWidthMap": {},
+              "columnUpdatedAt": 1772642674172,
+              "needsHeightForContent": true,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              }
+            },
+            {
+              "widgetName": "Text_AgentPerf",
+              "type": "TEXT_WIDGET",
+              "widgetId": "a2895bc6fc",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 53,
+              "bottomRow": 56,
+              "leftColumn": 32,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "0c8d6",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "ביצועים לפי מטפל",
+              "fontSize": "1rem",
+              "fontStyle": "BOLD",
+              "textAlign": "RIGHT",
+              "textColor": "#231F20",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Table_AgentPerf",
+              "type": "TABLE_WIDGET_V2",
+              "widgetId": "1058d25a6f",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 2,
+              "topRow": 56,
+              "bottomRow": 68,
+              "leftColumn": 32,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "a2d23",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.agent.computedValue"
+                },
+                {
+                  "key": "primaryColumns.leads_passed.computedValue"
+                },
+                {
+                  "key": "primaryColumns.deals_closed.computedValue"
+                },
+                {
+                  "key": "primaryColumns.close_rate.computedValue"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
+              "tableData": "{{lidor_performance_stats.data}}",
+              "primaryColumns": {
+                "agent": {
+                  "index": 0,
+                  "width": 100,
+                  "id": "agent",
+                  "originalId": "agent",
+                  "alias": "agent",
+                  "label": "מטפל",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_AgentPerf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"agent\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "leads_passed": {
+                  "index": 1,
+                  "width": 100,
+                  "id": "leads_passed",
+                  "originalId": "leads_passed",
+                  "alias": "leads_passed",
+                  "label": "לידים שעברו",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_AgentPerf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"leads_passed\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "deals_closed": {
+                  "index": 2,
+                  "width": 80,
+                  "id": "deals_closed",
+                  "originalId": "deals_closed",
+                  "alias": "deals_closed",
+                  "label": "עסקאות",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_AgentPerf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deals_closed\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "close_rate": {
+                  "index": 3,
+                  "width": 100,
+                  "id": "close_rate",
+                  "originalId": "close_rate",
+                  "alias": "close_rate",
+                  "label": "אחוז סגירה %",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_AgentPerf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"close_rate\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                }
+              },
+              "columnOrder": [
+                "agent",
+                "leads_passed",
+                "deals_closed",
+                "close_rate"
+              ],
+              "isVisibleSearch": false,
+              "isVisibleFilters": true,
+              "isVisiblePagination": true,
+              "isVisibleDownload": true,
+              "isSortable": true,
+              "enableClientSideSearch": true,
+              "serverSidePaginationEnabled": false,
+              "defaultPageSize": 5,
+              "totalRecordsCount": 0,
+              "defaultSelectedRowIndex": 0,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "borderWidth": "1",
+              "textSize": "0.875rem",
+              "horizontalAlignment": "RIGHT",
+              "verticalAlignment": "CENTER",
+              "delimiter": ",",
+              "label": "Data",
+              "searchKey": "",
+              "inlineEditingSaveOption": "CUSTOM",
+              "onPageChange": "",
+              "onPageSizeChange": "",
+              "onSubmitSuccess": "",
+              "canFreezeColumn": true,
+              "columnWidthMap": {},
+              "columnUpdatedAt": 1772642674172,
+              "needsHeightForContent": true,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              }
+            },
+            {
+              "widgetName": "Text_SourcePerf",
+              "type": "TEXT_WIDGET",
+              "widgetId": "e004cc722b",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 53,
+              "bottomRow": 56,
+              "leftColumn": 0,
+              "rightColumn": 32,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "b790a",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "ביצועים לפי מקור",
+              "fontSize": "1rem",
+              "fontStyle": "BOLD",
+              "textAlign": "RIGHT",
+              "textColor": "#231F20",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Table_SourcePerf",
+              "type": "TABLE_WIDGET_V2",
+              "widgetId": "8f5f339e0f",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 2,
+              "topRow": 56,
+              "bottomRow": 68,
+              "leftColumn": 0,
+              "rightColumn": 32,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "b8c3b",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.source.computedValue"
+                },
+                {
+                  "key": "primaryColumns.leads_passed.computedValue"
+                },
+                {
+                  "key": "primaryColumns.deals_closed.computedValue"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
+              "tableData": "{{lidor_source_stats.data}}",
+              "primaryColumns": {
+                "source": {
+                  "index": 0,
+                  "width": 130,
+                  "id": "source",
+                  "originalId": "source",
+                  "alias": "source",
+                  "label": "מקור",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_SourcePerf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"source\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "leads_passed": {
+                  "index": 1,
+                  "width": 100,
+                  "id": "leads_passed",
+                  "originalId": "leads_passed",
+                  "alias": "leads_passed",
+                  "label": "לידים שעברו",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_SourcePerf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"leads_passed\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "deals_closed": {
+                  "index": 2,
+                  "width": 80,
+                  "id": "deals_closed",
+                  "originalId": "deals_closed",
+                  "alias": "deals_closed",
+                  "label": "עסקאות",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_SourcePerf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deals_closed\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                }
+              },
+              "columnOrder": [
+                "source",
+                "leads_passed",
+                "deals_closed"
+              ],
+              "isVisibleSearch": false,
+              "isVisibleFilters": true,
+              "isVisiblePagination": true,
+              "isVisibleDownload": true,
+              "isSortable": true,
+              "enableClientSideSearch": true,
+              "serverSidePaginationEnabled": false,
+              "defaultPageSize": 10,
+              "totalRecordsCount": 0,
+              "defaultSelectedRowIndex": 0,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "borderWidth": "1",
+              "textSize": "0.875rem",
+              "horizontalAlignment": "RIGHT",
+              "verticalAlignment": "CENTER",
+              "delimiter": ",",
+              "label": "Data",
+              "searchKey": "",
+              "inlineEditingSaveOption": "CUSTOM",
+              "onPageChange": "",
+              "onPageSizeChange": "",
+              "onSubmitSuccess": "",
+              "canFreezeColumn": true,
+              "columnWidthMap": {},
+              "columnUpdatedAt": 1772642674172,
+              "needsHeightForContent": true,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              }
+            }
+          ]
         }
       }
     ],

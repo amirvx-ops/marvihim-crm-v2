@@ -6,23 +6,1354 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 470,
+          "bottomRow": 5000,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 480,
+          "minHeight": 1292,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 1224,
+          "rightColumn": 4896,
           "snapColumns": 64,
-          "snapRows": 46,
+          "snapRows": 124,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
           "widgetId": "0",
-          "widgetName": "MainContainer"
+          "widgetName": "MainContainer",
+          "children": [
+            {
+              "widgetName": "Text_Title",
+              "type": "TEXT_WIDGET",
+              "widgetId": "838133cfdd",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 0,
+              "bottomRow": 5,
+              "leftColumn": 0,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "e9a77",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "תיעוד לקוחות - אסף",
+              "fontSize": "1.875rem",
+              "fontStyle": "BOLD",
+              "textAlign": "RIGHT",
+              "textColor": "#231F20",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_TotalVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "685c7fd105",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 54,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "46ae7",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{asaf_stats.data[0]?.total || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#1976D2",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_PortedVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "a9d2fb0c6a",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 44,
+              "rightColumn": 54,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "c10aa",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{asaf_stats.data[0]?.ported || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#4CAF50",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_FollowVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "ee0011a5de",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 33,
+              "rightColumn": 44,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "116e8",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{asaf_stats.data[0]?.follow_up || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#FF9800",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_ProposalVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "9e092465b9",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 22,
+              "rightColumn": 33,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "cd39f",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{asaf_stats.data[0]?.proposal_given || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#2196F3",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_ClosedVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "9772f63dc5",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 11,
+              "rightColumn": 22,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "2b63c",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{asaf_stats.data[0]?.closed_no_deal || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#F44336",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_AmountVal",
+              "type": "TEXT_WIDGET",
+              "widgetId": "a26e84ada6",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 5,
+              "bottomRow": 8,
+              "leftColumn": 0,
+              "rightColumn": 11,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "b5a04",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "text"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "₪{{asaf_stats.data[0]?.total_ported_amount || 0}}",
+              "fontSize": "1.25rem",
+              "fontStyle": "BOLD",
+              "textAlign": "CENTER",
+              "textColor": "#4CAF50",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_TotalLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "137caf4a09",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 54,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "ca597",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "סה״כ",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_PortedLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "8f7ace8e07",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 44,
+              "rightColumn": 54,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "244fb",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "נויד",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_FollowLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "fc3853e6a0",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 33,
+              "rightColumn": 44,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "da5e8",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "מעקב",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_ProposalLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "6e172aea55",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 22,
+              "rightColumn": 33,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "0e36e",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "ניתנה הצעה",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_ClosedLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "dd4f625d49",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 11,
+              "rightColumn": 22,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "50380",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "סגור ללא עסקה",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Stat_AmountLbl",
+              "type": "TEXT_WIDGET",
+              "widgetId": "a2777e388a",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 8,
+              "bottomRow": 10,
+              "leftColumn": 0,
+              "rightColumn": 11,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "ff786",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "truncateButtonColor"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "text": "סכום נויד",
+              "fontSize": "0.75rem",
+              "fontStyle": "",
+              "textAlign": "CENTER",
+              "textColor": "#666",
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "disableLink": false
+            },
+            {
+              "widgetName": "Input_Search",
+              "type": "INPUT_WIDGET_V2",
+              "widgetId": "6d9a5fa9c7",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 2,
+              "topRow": 11,
+              "bottomRow": 15,
+              "leftColumn": 44,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "5e172",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "placeholderText": "חיפוש שם / ת.ז. / נייד...",
+              "inputType": "TEXT",
+              "defaultText": "",
+              "isRequired": false,
+              "isDisabled": false,
+              "isSpellCheck": false,
+              "resetOnSubmit": false,
+              "label": "",
+              "labelPosition": "Top",
+              "labelAlignment": "right",
+              "iconSVG": "/static/media/icon.2bdb82e4c714c1ecdf91eb62b2ef5e7f.svg",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "none",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}"
+            },
+            {
+              "widgetName": "Select_Status",
+              "type": "SELECT_WIDGET",
+              "widgetId": "f521626d71",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 11,
+              "bottomRow": 15,
+              "leftColumn": 24,
+              "rightColumn": 44,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "9b034",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "placeholderText": "סטטוס",
+              "isFilterable": true,
+              "serverSideFiltering": false,
+              "defaultOptionValue": "",
+              "label": "",
+              "labelPosition": "Top",
+              "labelAlignment": "right",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "none",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "options": [
+                {
+                  "label": "הכל",
+                  "value": ""
+                },
+                {
+                  "label": "נויד",
+                  "value": "נויד"
+                },
+                {
+                  "label": "מעקב",
+                  "value": "מעקב"
+                },
+                {
+                  "label": "ביקש מועד אחר",
+                  "value": "ביקש מועד אחר"
+                },
+                {
+                  "label": "לא רלוונטי",
+                  "value": "לא רלוונטי"
+                },
+                {
+                  "label": "לא מעוניין",
+                  "value": "לא מעוניין"
+                },
+                {
+                  "label": "אין מענה",
+                  "value": "אין מענה"
+                },
+                {
+                  "label": "סוכן",
+                  "value": "סוכן"
+                },
+                {
+                  "label": "ניתנה הצעה",
+                  "value": "ניתנה הצעה"
+                },
+                {
+                  "label": "לא ניתן לשפר",
+                  "value": "לא ניתן לשפר"
+                },
+                {
+                  "label": "בתהליך הכנת מסמכים",
+                  "value": "בתהליך הכנת מסמכים"
+                }
+              ]
+            },
+            {
+              "widgetName": "Select_Source",
+              "type": "SELECT_WIDGET",
+              "widgetId": "8ba6a2512f",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 1,
+              "topRow": 11,
+              "bottomRow": 15,
+              "leftColumn": 4,
+              "rightColumn": 24,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "4c12d",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "dynamicTriggerPathList": [],
+              "dynamicPropertyPathList": [],
+              "placeholderText": "מקור הגעה",
+              "isFilterable": true,
+              "serverSideFiltering": false,
+              "defaultOptionValue": "",
+              "label": "",
+              "labelPosition": "Top",
+              "labelAlignment": "right",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "none",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "options": [
+                {
+                  "label": "הכל",
+                  "value": ""
+                },
+                {
+                  "label": "תיאום פגישות לידור",
+                  "value": "תיאום פגישות לידור"
+                },
+                {
+                  "label": "תיק קיים",
+                  "value": "תיק קיים"
+                },
+                {
+                  "label": "בדיקת מסלקה",
+                  "value": "בדיקת מסלקה"
+                },
+                {
+                  "label": "תיק קיים / אמיר",
+                  "value": "תיק קיים / אמיר"
+                }
+              ]
+            },
+            {
+              "widgetName": "Table_Asaf",
+              "type": "TABLE_WIDGET_V2",
+              "widgetId": "fe93a8c7b4",
+              "parentId": "0",
+              "isVisible": true,
+              "version": 2,
+              "topRow": 16,
+              "bottomRow": 68,
+              "leftColumn": 0,
+              "rightColumn": 64,
+              "parentRowSpace": 10,
+              "parentColumnSpace": 1,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "animateLoading": true,
+              "key": "b0dd2",
+              "isDeprecated": false,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.תאריך.computedValue"
+                },
+                {
+                  "key": "primaryColumns.שם_לקוח.computedValue"
+                },
+                {
+                  "key": "primaryColumns.תעודת_זהות.computedValue"
+                },
+                {
+                  "key": "primaryColumns.נייד.computedValue"
+                },
+                {
+                  "key": "primaryColumns.מקור_הגעה.computedValue"
+                },
+                {
+                  "key": "primaryColumns.סכום_כולל.computedValue"
+                },
+                {
+                  "key": "primaryColumns.סטטוס.computedValue"
+                },
+                {
+                  "key": "primaryColumns.הערות.computedValue"
+                },
+                {
+                  "key": "primaryColumns.פרמיה_פנסיה.computedValue"
+                },
+                {
+                  "key": "primaryColumns.צבירה_פנסיה.computedValue"
+                },
+                {
+                  "key": "primaryColumns.צבירה_גמל_השתלמות.computedValue"
+                },
+                {
+                  "key": "primaryColumns.lead_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.customer_id.computedValue"
+                }
+              ],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onPageChange"
+                },
+                {
+                  "key": "onPageSizeChange"
+                },
+                {
+                  "key": "onSubmitSuccess"
+                }
+              ],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
+              "tableData": "{{fetch_asaf_leads.data}}",
+              "primaryColumns": {
+                "תאריך": {
+                  "index": 0,
+                  "width": 100,
+                  "id": "תאריך",
+                  "originalId": "תאריך",
+                  "alias": "תאריך",
+                  "label": "תאריך",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"תאריך\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "שם_לקוח": {
+                  "index": 1,
+                  "width": 130,
+                  "id": "שם_לקוח",
+                  "originalId": "שם_לקוח",
+                  "alias": "שם_לקוח",
+                  "label": "שם לקוח",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"שם_לקוח\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "תעודת_זהות": {
+                  "index": 2,
+                  "width": 110,
+                  "id": "תעודת_זהות",
+                  "originalId": "תעודת_זהות",
+                  "alias": "תעודת_זהות",
+                  "label": "תעודת זהות",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"תעודת_זהות\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "נייד": {
+                  "index": 3,
+                  "width": 110,
+                  "id": "נייד",
+                  "originalId": "נייד",
+                  "alias": "נייד",
+                  "label": "נייד",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"נייד\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "מקור_הגעה": {
+                  "index": 4,
+                  "width": 130,
+                  "id": "מקור_הגעה",
+                  "originalId": "מקור_הגעה",
+                  "alias": "מקור_הגעה",
+                  "label": "מקור הגעה",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"מקור_הגעה\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "סכום_כולל": {
+                  "index": 5,
+                  "width": 110,
+                  "id": "סכום_כולל",
+                  "originalId": "סכום_כולל",
+                  "alias": "סכום_כולל",
+                  "label": "סכום כולל",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"סכום_כולל\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "סטטוס": {
+                  "index": 6,
+                  "width": 130,
+                  "id": "סטטוס",
+                  "originalId": "סטטוס",
+                  "alias": "סטטוס",
+                  "label": "סטטוס",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"סטטוס\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "הערות": {
+                  "index": 7,
+                  "width": 250,
+                  "id": "הערות",
+                  "originalId": "הערות",
+                  "alias": "הערות",
+                  "label": "הערות",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"הערות\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "פרמיה_פנסיה": {
+                  "index": 8,
+                  "width": 110,
+                  "id": "פרמיה_פנסיה",
+                  "originalId": "פרמיה_פנסיה",
+                  "alias": "פרמיה_פנסיה",
+                  "label": "פרמיה פנסיה",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"פרמיה_פנסיה\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "צבירה_פנסיה": {
+                  "index": 9,
+                  "width": 110,
+                  "id": "צבירה_פנסיה",
+                  "originalId": "צבירה_פנסיה",
+                  "alias": "צבירה_פנסיה",
+                  "label": "צבירה פנסיה",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"צבירה_פנסיה\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "צבירה_גמל_השתלמות": {
+                  "index": 10,
+                  "width": 140,
+                  "id": "צבירה_גמל_השתלמות",
+                  "originalId": "צבירה_גמל_השתלמות",
+                  "alias": "צבירה_גמל_השתלמות",
+                  "label": "צבירה גמל/השתלמות",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"צבירה_גמל_השתלמות\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "lead_id": {
+                  "index": 11,
+                  "width": 150,
+                  "id": "lead_id",
+                  "originalId": "lead_id",
+                  "alias": "lead_id",
+                  "label": "lead_id",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lead_id\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                },
+                "customer_id": {
+                  "index": 12,
+                  "width": 150,
+                  "id": "customer_id",
+                  "originalId": "customer_id",
+                  "alias": "customer_id",
+                  "label": "customer_id",
+                  "columnType": "text",
+                  "horizontalAlignment": "RIGHT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "0.875rem",
+                  "textColor": "",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table_Asaf.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"customer_id\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true
+                }
+              },
+              "columnOrder": [
+                "תאריך",
+                "שם_לקוח",
+                "תעודת_זהות",
+                "נייד",
+                "מקור_הגעה",
+                "סכום_כולל",
+                "סטטוס",
+                "הערות",
+                "פרמיה_פנסיה",
+                "צבירה_פנסיה",
+                "צבירה_גמל_השתלמות",
+                "lead_id",
+                "customer_id"
+              ],
+              "isVisibleSearch": true,
+              "isVisibleFilters": true,
+              "isVisiblePagination": true,
+              "isVisibleDownload": true,
+              "isSortable": true,
+              "enableClientSideSearch": false,
+              "serverSidePaginationEnabled": true,
+              "defaultPageSize": 20,
+              "totalRecordsCount": 0,
+              "defaultSelectedRowIndex": 0,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "borderWidth": "1",
+              "textSize": "0.875rem",
+              "horizontalAlignment": "RIGHT",
+              "verticalAlignment": "CENTER",
+              "delimiter": ",",
+              "label": "Data",
+              "searchKey": "",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "onPageChange": "{{fetch_asaf_leads.run()}}",
+              "onPageSizeChange": "{{fetch_asaf_leads.run()}}",
+              "onSubmitSuccess": "{{update_asaf_lead.run().then(() => { update_asaf_customer.run(); fetch_asaf_leads.run(); })}}",
+              "canFreezeColumn": true,
+              "columnWidthMap": {},
+              "columnUpdatedAt": 1772642674174,
+              "needsHeightForContent": true,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              }
+            }
+          ]
         }
       }
     ],
