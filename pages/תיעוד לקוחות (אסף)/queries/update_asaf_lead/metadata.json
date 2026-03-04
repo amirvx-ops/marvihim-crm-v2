@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_65adf96e-c94e-4d23-89e4-7e847e178501",
+  "id": "תיעוד לקוחות (אסף)_update_asaf_lead",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "UPDATE leads SET\n    main_status = {{Table_Asaf.updatedRow.סטטוס}},\n    total_amount = {{Table_Asaf.updatedRow.סכום_כולל}},\n    pension_premium = {{Table_Asaf.updatedRow.פרמיה_פנסיה}},\n    pension_accumulation = {{Table_Asaf.updatedRow.צבירה_פנסיה}},\n    gemel_hishtalmut_accumulation = {{Table_Asaf.updatedRow.צבירה_גמל_השתלמות}},\n    notes = {{Table_Asaf.updatedRow.הערות}}\nWHERE id = {{Table_Asaf.updatedRow.lead_id}}",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "update_asaf_lead",
+    "pageId": "תיעוד לקוחות (אסף)",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

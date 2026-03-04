@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_f02bb927-65c5-4e4c-aed6-be1e293fc170",
+  "id": "מעקב לידים_count_adi_stats",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "SELECT\n    COUNT(*) AS total_leads,\n    COUNT(CASE WHEN closing_amount > 0 THEN 1 END) AS closings,\n    COALESCE(SUM(closing_amount), 0) AS total_closing,\n    COALESCE(SUM(agent_appointment_amount), 0) AS total_appointment,\n    COUNT(CASE WHEN harel_agent IS NOT NULL AND harel_agent != '' THEN 1 END) AS harel_leads,\n    COUNT(CASE WHEN phoenix_agent IS NOT NULL AND phoenix_agent != '' THEN 1 END) AS phoenix_leads\nFROM adi_leads_view\nWHERE ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}\n     OR TO_CHAR(תאריך, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "count_adi_stats",
+    "pageId": "מעקב לידים",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

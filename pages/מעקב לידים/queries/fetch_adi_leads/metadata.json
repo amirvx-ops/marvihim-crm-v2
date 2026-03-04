@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_4eb386e9-9765-4c46-810b-35c6d169c2ce",
+  "id": "מעקב לידים_fetch_adi_leads",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "SELECT * FROM adi_leads_view\nWHERE ({{!Input_Search.text || Input_Search.text === ''}}\n     OR שם_לקוח ILIKE {{'%' + Input_Search.text + '%'}}\n     OR תעודת_זהות ILIKE {{'%' + Input_Search.text + '%'}})\n    AND ({{!Select_Partner.selectedOptionValue || Select_Partner.selectedOptionValue === ''}}\n     OR מקור_ליד = {{Select_Partner.selectedOptionValue}})\n    AND ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}\n     OR TO_CHAR(תאריך, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})\nORDER BY תאריך DESC\nLIMIT {{Table_Adi.pageSize}} OFFSET {{(Table_Adi.pageNo - 1) * Table_Adi.pageSize}}",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "fetch_adi_leads",
+    "pageId": "מעקב לידים",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

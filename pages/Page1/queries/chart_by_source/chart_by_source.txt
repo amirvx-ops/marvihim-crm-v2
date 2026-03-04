@@ -1,0 +1,7 @@
+SELECT p.name AS source,
+    COUNT(*) AS total,
+    COUNT(CASE WHEN l.lead_passed = TRUE THEN 1 END) AS passed,
+    COUNT(CASE WHEN l.deal_closed = 'כן' THEN 1 END) AS closed,
+    COALESCE(SUM(l.closing_amount), 0) AS revenue
+FROM leads l LEFT JOIN partners p ON l.partner_id = p.id
+GROUP BY p.name ORDER BY total DESC

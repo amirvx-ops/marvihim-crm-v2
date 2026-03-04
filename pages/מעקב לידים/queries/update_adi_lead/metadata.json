@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_9af26479-e88b-49b1-890c-22fd8ce11aca",
+  "id": "מעקב לידים_update_adi_lead",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "UPDATE leads SET\n    phoenix_agent = {{Table_Adi.updatedRow.ליד_לפניקס}},\n    harel_agent = {{Table_Adi.updatedRow.ליד_הראל}},\n    internal_lead = {{Table_Adi.updatedRow.ליד_פנימי}},\n    agent_appointment_amount = {{Table_Adi.updatedRow.מינוי_סוכן}},\n    closing_amount = {{Table_Adi.updatedRow.סכום_סגירה}},\n    closing_status = {{Table_Adi.updatedRow.סטטוס_סגירה}},\n    notes = {{Table_Adi.updatedRow.הערות}}\nWHERE id = {{Table_Adi.updatedRow.lead_id}}",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "update_adi_lead",
+    "pageId": "מעקב לידים",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

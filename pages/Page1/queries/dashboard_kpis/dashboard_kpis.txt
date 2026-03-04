@@ -1,0 +1,10 @@
+SELECT
+    (SELECT COUNT(*) FROM leads) AS total_leads,
+    (SELECT COUNT(*) FROM leads WHERE main_status = 'New') AS new_leads,
+    (SELECT COUNT(*) FROM leads WHERE closing_amount > 0) AS total_closings,
+    (SELECT COALESCE(SUM(closing_amount), 0) FROM leads WHERE closing_amount > 0) AS total_closing_amount,
+    (SELECT COALESCE(SUM(agent_appointment_amount), 0) FROM leads) AS total_appointment_amount,
+    (SELECT COUNT(*) FROM leads WHERE lead_passed = TRUE) AS total_leads_passed,
+    (SELECT COUNT(*) FROM leads WHERE deal_closed = 'כן') AS total_deals_closed,
+    (SELECT COUNT(*) FROM leads WHERE main_status = 'נויד') AS total_ported,
+    (SELECT COALESCE(SUM(total_amount), 0) FROM leads WHERE main_status = 'נויד') AS total_ported_amount

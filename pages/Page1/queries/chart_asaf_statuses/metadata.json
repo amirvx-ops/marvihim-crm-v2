@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_43da3ddb-2e68-4ccb-9de0-922e225523ef",
+  "id": "Page1_chart_asaf_statuses",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "SELECT main_status AS status, COUNT(*) AS count\nFROM leads WHERE main_status IN ('נויד','מעקב','ביקש מועד אחר','לא רלוונטי','לא מעוניין','אין מענה','סוכן','ניתנה הצעה','לא ניתן לשפר','בתהליך הכנת מסמכים')\nGROUP BY main_status ORDER BY count DESC",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "chart_asaf_statuses",
+    "pageId": "Page1",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

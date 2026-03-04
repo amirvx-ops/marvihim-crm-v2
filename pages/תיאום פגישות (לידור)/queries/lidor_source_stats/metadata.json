@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_cea85436-ce06-4cb6-ae19-1bcc7dd8c732",
+  "id": "תיאום פגישות (לידור)_lidor_source_stats",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "SELECT COALESCE(מקור, 'לא ידוע') AS source,\n    COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) AS leads_passed,\n    COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END) AS deals_closed\nFROM lidor_meetings_view GROUP BY מקור ORDER BY leads_passed DESC",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "lidor_source_stats",
+    "pageId": "תיאום פגישות (לידור)",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

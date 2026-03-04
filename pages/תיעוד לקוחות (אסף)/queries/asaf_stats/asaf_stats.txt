@@ -1,0 +1,8 @@
+SELECT
+    COUNT(*) AS total,
+    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS ported,
+    COUNT(CASE WHEN סטטוס = 'מעקב' THEN 1 END) AS followup,
+    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS proposal,
+    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה','לא ניתן לשפר') THEN 1 END) AS closed_no_deal,
+    COALESCE(SUM(CASE WHEN סטטוס = 'נויד' THEN סכום_כולל END), 0) AS ported_amount
+FROM asaf_sales_view

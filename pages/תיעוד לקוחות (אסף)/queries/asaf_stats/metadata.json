@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_e93f368e-94b2-4a31-940b-b842ed01c9ed",
+  "id": "תיעוד לקוחות (אסף)_asaf_stats",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "SELECT\n    COUNT(*) AS total,\n    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS ported,\n    COUNT(CASE WHEN סטטוס = 'מעקב' THEN 1 END) AS followup,\n    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS proposal,\n    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה','לא ניתן לשפר') THEN 1 END) AS closed_no_deal,\n    COALESCE(SUM(CASE WHEN סטטוס = 'נויד' THEN סכום_כולל END), 0) AS ported_amount\nFROM asaf_sales_view",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "asaf_stats",
+    "pageId": "תיעוד לקוחות (אסף)",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

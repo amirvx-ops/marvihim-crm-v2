@@ -1,0 +1,10 @@
+SELECT * FROM adi_leads_view
+WHERE ({{!Input_Search.text || Input_Search.text === ''}}
+     OR שם_לקוח ILIKE {{'%' + Input_Search.text + '%'}}
+     OR תעודת_זהות ILIKE {{'%' + Input_Search.text + '%'}})
+    AND ({{!Select_Partner.selectedOptionValue || Select_Partner.selectedOptionValue === ''}}
+     OR מקור_ליד = {{Select_Partner.selectedOptionValue}})
+    AND ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}
+     OR TO_CHAR(תאריך, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})
+ORDER BY תאריך DESC
+LIMIT {{Table_Adi.pageSize}} OFFSET {{(Table_Adi.pageNo - 1) * Table_Adi.pageSize}}

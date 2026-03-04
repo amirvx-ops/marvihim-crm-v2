@@ -1,0 +1,4 @@
+SELECT COALESCE(מקור, 'לא ידוע') AS source,
+    COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) AS leads_passed,
+    COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END) AS deals_closed
+FROM lidor_meetings_view GROUP BY מקור ORDER BY leads_passed DESC

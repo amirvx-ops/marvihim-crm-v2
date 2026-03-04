@@ -1,0 +1,9 @@
+UPDATE leads SET
+    phoenix_agent = {{Table_Adi.updatedRow.ליד_לפניקס}},
+    harel_agent = {{Table_Adi.updatedRow.ליד_הראל}},
+    internal_lead = {{Table_Adi.updatedRow.ליד_פנימי}},
+    agent_appointment_amount = {{Table_Adi.updatedRow.מינוי_סוכן}},
+    closing_amount = {{Table_Adi.updatedRow.סכום_סגירה}},
+    closing_status = {{Table_Adi.updatedRow.סטטוס_סגירה}},
+    notes = {{Table_Adi.updatedRow.הערות}}
+WHERE id = {{Table_Adi.updatedRow.lead_id}}

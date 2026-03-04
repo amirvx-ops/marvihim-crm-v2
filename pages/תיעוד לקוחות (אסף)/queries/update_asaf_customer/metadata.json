@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_a03faf0d-fa49-43b1-8b7e-0d37aab676b1",
+  "id": "תיעוד לקוחות (אסף)_update_asaf_customer",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "UPDATE customers SET mobile = {{Table_Asaf.updatedRow.נייד}} WHERE id = {{Table_Asaf.updatedRow.customer_id}}",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "update_asaf_customer",
+    "pageId": "תיעוד לקוחות (אסף)",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}
