@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "69a83c7ea57cda66ecff91bb_ae1bc6c7-9997-4827-993b-18d8297c942e",
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_6e41e69b-c249-4a0e-a817-e3cb732c236b",
   "unpublishedPage": {
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1250,
+          "bottomRow": 1800,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 1842,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 4896,
           "snapColumns": 64,
-          "snapRows": 130,
+          "snapRows": 185,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "מעקב לידים",
-    "slug": "adi-leads"
+    "name": "דשבורד",
+    "slug": "dashboard"
   }
 }

@@ -1,0 +1,10 @@
+SELECT
+    COUNT(*) AS total,
+    COUNT(CASE WHEN main_status = 'נויד' THEN 1 END) AS ported,
+    COUNT(CASE WHEN main_status = 'מעקב' THEN 1 END) AS follow_up,
+    COUNT(CASE WHEN main_status = 'ניתנה הצעה' THEN 1 END) AS proposal_given,
+    COUNT(CASE WHEN main_status IN ('לא מעוניין','לא רלוונטי','אין מענה','לא ניתן לשפר','סוכן') THEN 1 END) AS closed_no_deal,
+    COALESCE(SUM(CASE WHEN main_status = 'נויד' THEN total_amount END), 0) AS total_ported_amount,
+    COALESCE(SUM(pension_premium), 0) AS total_pension_premium
+FROM leads
+WHERE assigned_to = 'אסף' OR main_status IN ('נויד','מעקב','ניתנה הצעה','ביקש מועד אחר','בתהליך הכנת מסמכים')

@@ -1,0 +1,7 @@
+SELECT p.name AS source,
+    COUNT(CASE WHEN l.lead_passed = TRUE THEN 1 END) AS leads_passed,
+    COUNT(CASE WHEN l.deal_closed = 'כן' THEN 1 END) AS deals_closed
+FROM leads l LEFT JOIN partners p ON l.partner_id = p.id
+WHERE ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}
+     OR TO_CHAR(l.created_at, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})
+GROUP BY p.name ORDER BY leads_passed DESC

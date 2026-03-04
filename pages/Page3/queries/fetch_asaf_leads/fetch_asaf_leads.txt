@@ -1,0 +1,11 @@
+SELECT * FROM asaf_sales_view
+WHERE ({{!Input_Search.text || Input_Search.text === ''}}
+     OR שם_לקוח ILIKE {{'%' + Input_Search.text + '%'}}
+     OR תעודת_זהות ILIKE {{'%' + Input_Search.text + '%'}}
+     OR נייד ILIKE {{'%' + Input_Search.text + '%'}})
+    AND ({{!Select_Status.selectedOptionValue || Select_Status.selectedOptionValue === ''}}
+     OR סטטוס = {{Select_Status.selectedOptionValue}})
+    AND ({{!Select_Source.selectedOptionValue || Select_Source.selectedOptionValue === ''}}
+     OR מקור_הגעה = {{Select_Source.selectedOptionValue}})
+ORDER BY תאריך DESC
+LIMIT {{Table_Asaf.pageSize}} OFFSET {{(Table_Asaf.pageNo - 1) * Table_Asaf.pageSize}}

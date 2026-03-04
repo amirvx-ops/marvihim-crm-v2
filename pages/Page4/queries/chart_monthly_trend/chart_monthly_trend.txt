@@ -1,0 +1,6 @@
+SELECT TO_CHAR(DATE_TRUNC('month', created_at), 'MM/YYYY') AS month,
+    COUNT(*) AS new_leads,
+    COUNT(CASE WHEN closing_amount > 0 THEN 1 END) AS closings,
+    COUNT(CASE WHEN main_status = 'נויד' THEN 1 END) AS ported
+FROM leads WHERE created_at >= CURRENT_DATE - INTERVAL '12 months'
+GROUP BY DATE_TRUNC('month', created_at) ORDER BY DATE_TRUNC('month', created_at)

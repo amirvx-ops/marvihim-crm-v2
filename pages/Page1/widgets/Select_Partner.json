@@ -1,0 +1,64 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ab2v92c8gl",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "מקור ליד",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 16,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{fetch_adi_leads.run(); count_adi_stats.run()}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 17.9375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "כל המקורות",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  { \"label\": \"הכל\", \"value\": \"\" },\n  { \"label\": \"MARVIHIM\", \"value\": \"MARVIHIM\" },\n  { \"label\": \"FIBO\", \"value\": \"FIBO\" },\n  { \"label\": \"TaxPro\", \"value\": \"TaxPro\" },\n  { \"label\": \"ALLJOBS\", \"value\": \"ALLJOBS\" },\n  { \"label\": \"HIGHTAX\", \"value\": \"HIGHTAX\" },\n  { \"label\": \"TAXUP\", \"value\": \"TAXUP\" },\n  { \"label\": \"אקסלנס\", \"value\": \"אקסלנס\" },\n  { \"label\": \"החזר-טק\", \"value\": \"החזר-טק\" },\n  { \"label\": \"יש לי זכות\", \"value\": \"יש לי זכות\" },\n  { \"label\": \"סוכן שטח א\", \"value\": \"סוכן שטח א\" },\n  { \"label\": \"קבוצת פתרון\", \"value\": \"קבוצת פתרון\" },\n  { \"label\": \"קו זכות\", \"value\": \"קו זכות\" },\n  { \"label\": \"plus-finance\", \"value\": \"plus-finance\" }\n]",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "4q4i0ir4xn",
+  "widgetName": "Select_Partner"
+}

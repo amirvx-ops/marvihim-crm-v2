@@ -1,0 +1,192 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 100,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "canFreezeColumn": true,
+  "childStylesheet": {
+    "button": { "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}", "boxShadow": "none", "buttonColor": "{{appsmith.theme.colors.primaryColor}}" },
+    "editActions": { "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}", "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}", "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}", "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}" },
+    "iconButton": { "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}", "boxShadow": "none", "buttonColor": "{{appsmith.theme.colors.primaryColor}}" },
+    "menuButton": { "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}", "boxShadow": "none", "menuColor": "{{appsmith.theme.colors.primaryColor}}" }
+  },
+  "columnOrder": [
+    "תאריך", "שם", "תז", "כולל_הר_ביטוח", "מקור", "מטפל",
+    "תאריך_פגישה", "שעה", "הליד_עבר", "נסגרה_עסקה", "הערות",
+    "lead_id", "טלפון", "main_status", "updated_at"
+  ],
+  "columnWidthMap": {
+    "תאריך": 115,
+    "שם": 150,
+    "תז": 120,
+    "כולל_הר_ביטוח": 130,
+    "מקור": 120,
+    "מטפל": 100,
+    "תאריך_פגישה": 125,
+    "שעה": 80,
+    "הליד_עבר": 90,
+    "נסגרה_עסקה": 140,
+    "הערות": 200
+  },
+  "compactMode": "SHORT",
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": 0,
+  "dynamicBindingPathList": [
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "boxShadow" },
+    { "key": "tableData" },
+    { "key": "primaryColumns.תאריך.computedValue" },
+    { "key": "primaryColumns.שם.computedValue" },
+    { "key": "primaryColumns.תז.computedValue" },
+    { "key": "primaryColumns.כולל_הר_ביטוח.computedValue" },
+    { "key": "primaryColumns.מקור.computedValue" },
+    { "key": "primaryColumns.מטפל.computedValue" },
+    { "key": "primaryColumns.תאריך_פגישה.computedValue" },
+    { "key": "primaryColumns.שעה.computedValue" },
+    { "key": "primaryColumns.הליד_עבר.computedValue" },
+    { "key": "primaryColumns.נסגרה_עסקה.computedValue" },
+    { "key": "primaryColumns.הערות.computedValue" },
+    { "key": "primaryColumns.lead_id.computedValue" },
+    { "key": "primaryColumns.טלפון.computedValue" },
+    { "key": "primaryColumns.main_status.computedValue" },
+    { "key": "primaryColumns.updated_at.computedValue" }
+  ],
+  "dynamicPropertyPathList": [{ "key": "tableData" }],
+  "enableClientSideSearch": false,
+  "horizontalAlignment": "RIGHT",
+  "inlineEditingSaveOption": "CUSTOM",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": true,
+  "isVisibleSearch": false,
+  "key": "tbl_lidor_key",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.9375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "תאריך": {
+      "alias": "תאריך", "columnType": "date", "dateFormat": "DD/MM/YYYY",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"תאריך\"]))}}",
+      "id": "תאריך", "index": 0, "isCellEditable": false, "isEditable": false, "isVisible": true,
+      "label": "תאריך", "originalId": "תאריך", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 115
+    },
+    "שם": {
+      "alias": "שם", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"שם\"]))}}",
+      "id": "שם", "index": 1, "isCellEditable": false, "isEditable": false, "isVisible": true,
+      "label": "שם", "originalId": "שם", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 150
+    },
+    "תז": {
+      "alias": "תז", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"תז\"]))}}",
+      "id": "תז", "index": 2, "isCellEditable": false, "isEditable": false, "isVisible": true,
+      "label": "ת.ז.", "originalId": "תז", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 120
+    },
+    "כולל_הר_ביטוח": {
+      "alias": "כולל_הר_ביטוח", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"כולל_הר_ביטוח\"]))}}",
+      "id": "כולל_הר_ביטוח", "index": 3, "isCellEditable": true, "isEditable": true, "isVisible": true,
+      "label": "כולל הר ביטוח?", "originalId": "כולל_הר_ביטוח", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 130
+    },
+    "מקור": {
+      "alias": "מקור", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"מקור\"]))}}",
+      "id": "מקור", "index": 4, "isCellEditable": false, "isEditable": false, "isVisible": true,
+      "label": "מקור", "originalId": "מקור", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 120
+    },
+    "מטפל": {
+      "alias": "מטפל", "columnType": "select",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"מטפל\"]))}}",
+      "selectOptions": "[\n  { \"label\": \"גאמביז\", \"value\": \"גאמביז\" },\n  { \"label\": \"נופר\", \"value\": \"נופר\" },\n  { \"label\": \"רמי\", \"value\": \"רמי\" },\n  { \"label\": \"אסף\", \"value\": \"אסף\" }\n]",
+      "id": "מטפל", "index": 5, "isCellEditable": true, "isEditable": true, "isVisible": true,
+      "label": "מטפל", "originalId": "מטפל", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 100
+    },
+    "תאריך_פגישה": {
+      "alias": "תאריך_פגישה", "columnType": "date", "dateFormat": "DD/MM/YYYY",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"תאריך_פגישה\"]))}}",
+      "id": "תאריך_פגישה", "index": 6, "isCellEditable": true, "isEditable": true, "isVisible": true,
+      "label": "תאריך פגישה", "originalId": "תאריך_פגישה", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 125
+    },
+    "שעה": {
+      "alias": "שעה", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"שעה\"]))}}",
+      "id": "שעה", "index": 7, "isCellEditable": true, "isEditable": true, "isVisible": true,
+      "label": "שעה", "originalId": "שעה", "horizontalAlignment": "CENTER",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 80
+    },
+    "הליד_עבר": {
+      "alias": "הליד_עבר", "columnType": "select",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"הליד_עבר\"]))}}",
+      "selectOptions": "[\n  { \"label\": \"כן\", \"value\": true },\n  { \"label\": \"לא\", \"value\": false }\n]",
+      "id": "הליד_עבר", "index": 8, "isCellEditable": true, "isEditable": true, "isVisible": true,
+      "label": "הליד עבר?", "originalId": "הליד_עבר", "horizontalAlignment": "CENTER",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 90
+    },
+    "נסגרה_עסקה": {
+      "alias": "נסגרה_עסקה", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"נסגרה_עסקה\"]))}}",
+      "id": "נסגרה_עסקה", "index": 9, "isCellEditable": true, "isEditable": true, "isVisible": true,
+      "label": "נסגרה עסקה", "originalId": "נסגרה_עסקה", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 140
+    },
+    "הערות": {
+      "alias": "הערות", "columnType": "text", "allowCellWrapping": true,
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"הערות\"]))}}",
+      "id": "הערות", "index": 10, "isCellEditable": true, "isEditable": true, "isVisible": true,
+      "label": "הערות", "originalId": "הערות", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 200
+    },
+    "lead_id": {
+      "alias": "lead_id", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"lead_id\"]))}}",
+      "id": "lead_id", "index": 11, "isCellEditable": false, "isEditable": false, "isVisible": false,
+      "label": "lead_id", "originalId": "lead_id", "width": 150
+    },
+    "טלפון": {
+      "alias": "טלפון", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"טלפון\"]))}}",
+      "id": "טלפון", "index": 12, "isCellEditable": false, "isEditable": false, "isVisible": false,
+      "label": "טלפון", "originalId": "טלפון", "width": 150
+    },
+    "main_status": {
+      "alias": "main_status", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"main_status\"]))}}",
+      "id": "main_status", "index": 13, "isCellEditable": false, "isEditable": false, "isVisible": false,
+      "label": "main_status", "originalId": "main_status", "width": 150
+    },
+    "updated_at": {
+      "alias": "updated_at", "columnType": "text",
+      "computedValue": "{{Table_Lidor.processedTableData.map((currentRow) => (currentRow[\"updated_at\"]))}}",
+      "id": "updated_at", "index": 14, "isCellEditable": false, "isEditable": false, "isVisible": false,
+      "label": "updated_at", "originalId": "updated_at", "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 48,
+  "tableData": "{{fetch_lidor_leads.data}}",
+  "textSize": "0.875rem",
+  "topRow": 7,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "tbl_lid_001",
+  "widgetName": "Table_Lidor"
+}

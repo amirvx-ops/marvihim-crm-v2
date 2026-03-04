@@ -1,0 +1,12 @@
+{
+  "animateLoading": true, "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8, "dynamicBindingPathList": [{ "key": "fontFamily" }, { "key": "borderRadius" }, { "key": "text" }],
+  "dynamicHeight": "AUTO_HEIGHT", "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem", "fontStyle": "BOLD", "isLoading": false, "isVisible": true,
+  "leftColumn": 1, "minWidth": 450, "needsErrorInfo": false, "overflow": "NONE",
+  "parentId": "stat_02_canvas", "renderMode": "CANVAS", "responsiveBehavior": "fill",
+  "rightColumn": 62, "shouldTruncate": false,
+  "text": "{{asaf_stats.data[0]?.ported || 0}}",
+  "textAlign": "RIGHT", "textColor": "#4CAF50", "topRow": 4,
+  "type": "TEXT_WIDGET", "version": 1, "widgetId": "stat_02_val", "widgetName": "Txt_Ported_Value"
+}

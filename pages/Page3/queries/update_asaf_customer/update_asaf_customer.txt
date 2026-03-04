@@ -1,0 +1,3 @@
+UPDATE customers SET
+    mobile = {{Table_Asaf.updatedRow.נייד}}
+WHERE id = {{Table_Asaf.updatedRow.customer_id}}

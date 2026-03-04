@@ -1,0 +1,9 @@
+UPDATE leads SET
+    phoenix_agent = {{Table_Adi.updatedRow.ליד_לפניקס}},
+    internal_lead = {{Table_Adi.updatedRow.ליד_פנימי}},
+    harel_agent = {{Table_Adi.updatedRow.ליד_הראל}},
+    agent_appointment_amount = NULLIF({{Table_Adi.updatedRow.מינוי_סוכן}}, '')::numeric,
+    closing_amount = CASE WHEN {{Table_Adi.updatedRow.סכום_סגירה}} ~ '^\d+\.?\d*$' THEN {{Table_Adi.updatedRow.סכום_סגירה}}::numeric ELSE NULL END,
+    closing_status = {{Table_Adi.updatedRow.סטטוס_סגירה}},
+    notes = {{Table_Adi.updatedRow.הערות}}
+WHERE id = {{Table_Adi.updatedRow.lead_id}}

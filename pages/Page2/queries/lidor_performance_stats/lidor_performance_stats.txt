@@ -1,0 +1,12 @@
+SELECT
+    COALESCE(l.assigned_agent, 'לא מוקצה') AS agent,
+    COUNT(CASE WHEN l.lead_passed = TRUE THEN 1 END) AS leads_passed,
+    COUNT(CASE WHEN l.deal_closed = 'כן' THEN 1 END) AS deals_closed,
+    CASE WHEN COUNT(CASE WHEN l.lead_passed = TRUE THEN 1 END) > 0
+        THEN ROUND(COUNT(CASE WHEN l.deal_closed = 'כן' THEN 1 END)::numeric /
+             COUNT(CASE WHEN l.lead_passed = TRUE THEN 1 END)::numeric * 100)
+        ELSE 0 END AS close_rate
+FROM leads l
+WHERE ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}
+     OR TO_CHAR(l.created_at, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})
+GROUP BY l.assigned_agent ORDER BY leads_passed DESC

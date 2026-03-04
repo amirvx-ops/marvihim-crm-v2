@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 40,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "passed": {
+      "data": "{{chart_by_agent.data.map(r => ({x: r.agent, y: Number(r.passed)}))}}",
+      "seriesName": "לידים שעברו"
+    },
+    "closed": {
+      "data": "{{chart_by_agent.data.map(r => ({x: r.agent, y: Number(r.closed)}))}}",
+      "seriesName": "עסקאות"
+    },
+    "rate": {
+      "data": "{{chart_by_agent.data.map(r => ({x: r.agent, y: Number(r.close_rate)}))}}",
+      "seriesName": "אחוז סגירה"
+    }
+  },
+  "chartName": "ביצועים לפי סוכן",
+  "chartType": "BAR_CHART",
+  "customFusionChartConfig": {
+    "type": "column2d",
+    "dataSource": {
+      "chart": {},
+      "data": []
+    }
+  },
+  "dynamicBindingPathList": [
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "boxShadow" },
+    { "key": "chartData.passed.data" },
+    { "key": "chartData.closed.data" },
+    { "key": "chartData.rate.data" }
+  ],
+  "dynamicHeight": "FIXED",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "labelOrientation": "AUTO",
+  "leftColumn": 32,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.9375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "setAdaptiveYMin": false,
+  "topRow": 14,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "db_chart_agt",
+  "widgetName": "Chart_ByAgent",
+  "xAxisName": "סוכן",
+  "yAxisName": "כמות"
+}

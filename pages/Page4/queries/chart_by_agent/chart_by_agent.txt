@@ -1,0 +1,7 @@
+SELECT COALESCE(assigned_agent, 'לא מוקצה') AS agent,
+    COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) AS passed,
+    COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END) AS closed,
+    CASE WHEN COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) > 0
+        THEN ROUND(COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END)::numeric / COUNT(CASE WHEN lead_passed = TRUE THEN 1 END)::numeric * 100)
+        ELSE 0 END AS close_rate
+FROM leads GROUP BY assigned_agent ORDER BY passed DESC

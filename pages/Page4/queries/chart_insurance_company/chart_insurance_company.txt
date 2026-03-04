@@ -1,0 +1,12 @@
+SELECT
+    'הראל' AS company,
+    COUNT(CASE WHEN harel_agent IS NOT NULL AND harel_agent != '' THEN 1 END) AS leads,
+    COUNT(CASE WHEN harel_agent IS NOT NULL AND closing_amount > 0 THEN 1 END) AS closings,
+    COALESCE(SUM(CASE WHEN harel_agent IS NOT NULL AND closing_amount > 0 THEN closing_amount END), 0) AS amount
+FROM leads
+UNION ALL
+SELECT 'הפניקס',
+    COUNT(CASE WHEN phoenix_agent IS NOT NULL AND phoenix_agent != '' THEN 1 END),
+    COUNT(CASE WHEN phoenix_agent IS NOT NULL AND closing_amount > 0 THEN 1 END),
+    COALESCE(SUM(CASE WHEN phoenix_agent IS NOT NULL AND closing_amount > 0 THEN closing_amount END), 0)
+FROM leads

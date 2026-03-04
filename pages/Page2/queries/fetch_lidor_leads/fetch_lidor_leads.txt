@@ -1,0 +1,12 @@
+SELECT * FROM lidor_meetings_view
+WHERE ({{!Input_Search.text || Input_Search.text === ''}}
+     OR שם ILIKE {{'%' + Input_Search.text + '%'}}
+     OR תז ILIKE {{'%' + Input_Search.text + '%'}})
+    AND ({{!Select_Source.selectedOptionValue || Select_Source.selectedOptionValue === ''}}
+     OR מקור = {{Select_Source.selectedOptionValue}})
+    AND ({{!Select_Agent.selectedOptionValue || Select_Agent.selectedOptionValue === ''}}
+     OR מטפל = {{Select_Agent.selectedOptionValue}})
+    AND ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}
+     OR TO_CHAR(תאריך, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})
+ORDER BY תאריך_פגישה DESC NULLS LAST
+LIMIT {{Table_Lidor.pageSize}} OFFSET {{(Table_Lidor.pageNo - 1) * Table_Lidor.pageSize}}

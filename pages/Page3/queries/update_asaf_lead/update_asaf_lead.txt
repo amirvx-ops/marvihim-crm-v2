@@ -1,0 +1,8 @@
+UPDATE leads SET
+    main_status = {{Table_Asaf.updatedRow.סטטוס}},
+    total_amount = NULLIF({{Table_Asaf.updatedRow.סכום_כולל}}, '')::numeric,
+    notes = {{Table_Asaf.updatedRow.הערות}},
+    pension_premium = NULLIF({{Table_Asaf.updatedRow.פרמיה_פנסיה}}, '')::numeric,
+    pension_accumulation = NULLIF({{Table_Asaf.updatedRow.צבירה_פנסיה}}, '')::numeric,
+    gemel_hishtalmut_accumulation = NULLIF({{Table_Asaf.updatedRow.צבירה_גמל_השתלמות}}, '')::numeric
+WHERE id = {{Table_Asaf.updatedRow.lead_id}}

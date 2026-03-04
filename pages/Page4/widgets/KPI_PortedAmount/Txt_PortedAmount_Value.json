@@ -1,0 +1,33 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8,
+  "dynamicBindingPathList": [
+    { "key": "fontFamily" },
+    { "key": "borderRadius" },
+    { "key": "text" }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentId": "db_pa_cvs",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "{{'₪' + (dashboard_kpis.data[0]?.total_ported_amount || 0).toLocaleString()}}",
+  "textAlign": "RIGHT",
+  "textColor": "#4CAF50",
+  "topRow": 4,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "db_pa_val",
+  "widgetName": "Txt_PortedAmount_Value"
+}

@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 40,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "total": {
+      "data": "{{chart_by_source.data.map(r => ({x: r.source || 'לא ידוע', y: Number(r.total)}))}}",
+      "seriesName": "סה\"כ"
+    },
+    "passed": {
+      "data": "{{chart_by_source.data.map(r => ({x: r.source || 'לא ידוע', y: Number(r.passed)}))}}",
+      "seriesName": "עברו"
+    },
+    "closed": {
+      "data": "{{chart_by_source.data.map(r => ({x: r.source || 'לא ידוע', y: Number(r.closed)}))}}",
+      "seriesName": "נסגרו"
+    }
+  },
+  "chartName": "לידים לפי מקור",
+  "chartType": "BAR_CHART",
+  "customFusionChartConfig": {
+    "type": "column2d",
+    "dataSource": {
+      "chart": {},
+      "data": []
+    }
+  },
+  "dynamicBindingPathList": [
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "boxShadow" },
+    { "key": "chartData.total.data" },
+    { "key": "chartData.passed.data" },
+    { "key": "chartData.closed.data" }
+  ],
+  "dynamicHeight": "FIXED",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "labelOrientation": "AUTO",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.9375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "setAdaptiveYMin": false,
+  "topRow": 14,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "db_chart_src",
+  "widgetName": "Chart_BySource",
+  "xAxisName": "מקור",
+  "yAxisName": "כמות"
+}

@@ -1,0 +1,9 @@
+SELECT c.full_name AS שם, c.phone AS טלפון, p.name AS מקור,
+    l.main_status AS סטטוס, l.assigned_agent AS מטפל,
+    TO_CHAR(l.updated_at, 'DD/MM/YYYY') AS עדכון_אחרון,
+    EXTRACT(DAY FROM NOW() - l.updated_at)::integer AS ימים_ללא_עדכון
+FROM leads l LEFT JOIN customers c ON l.customer_id = c.id LEFT JOIN partners p ON l.partner_id = p.id
+WHERE l.main_status NOT IN ('נויד','לא רלוונטי','לא מעוניין','לא ניתן לשפר','סוכן')
+    AND l.main_status NOT LIKE 'סגור%'
+    AND l.updated_at < NOW() - INTERVAL '7 days'
+ORDER BY l.updated_at ASC LIMIT 20

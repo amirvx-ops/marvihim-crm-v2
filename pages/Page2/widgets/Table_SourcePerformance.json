@@ -1,0 +1,73 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 100,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "columnOrder": ["source", "leads_passed", "deals_closed"],
+  "columnWidthMap": { "source": 100, "leads_passed": 80, "deals_closed": 80 },
+  "compactMode": "SHORT",
+  "defaultPageSize": 0,
+  "dynamicBindingPathList": [
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "boxShadow" },
+    { "key": "tableData" },
+    { "key": "primaryColumns.source.computedValue" },
+    { "key": "primaryColumns.leads_passed.computedValue" },
+    { "key": "primaryColumns.deals_closed.computedValue" }
+  ],
+  "dynamicPropertyPathList": [{ "key": "tableData" }],
+  "enableClientSideSearch": false,
+  "horizontalAlignment": "RIGHT",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "tbl_src_perf",
+  "label": "ביצועים לפי מקור",
+  "leftColumn": 48,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.9375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "source": {
+      "alias": "source", "columnType": "text",
+      "computedValue": "{{Table_SourcePerformance.processedTableData.map((r) => (r[\"source\"]))}}",
+      "id": "source", "index": 0, "isCellEditable": false, "isEditable": false, "isVisible": true,
+      "label": "מקור", "originalId": "source", "horizontalAlignment": "RIGHT",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 100
+    },
+    "leads_passed": {
+      "alias": "leads_passed", "columnType": "number",
+      "computedValue": "{{Table_SourcePerformance.processedTableData.map((r) => (r[\"leads_passed\"]))}}",
+      "id": "leads_passed", "index": 1, "isCellEditable": false, "isEditable": false, "isVisible": true,
+      "label": "לידים עברו", "originalId": "leads_passed", "horizontalAlignment": "CENTER",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 80
+    },
+    "deals_closed": {
+      "alias": "deals_closed", "columnType": "number",
+      "computedValue": "{{Table_SourcePerformance.processedTableData.map((r) => (r[\"deals_closed\"]))}}",
+      "id": "deals_closed", "index": 2, "isCellEditable": false, "isEditable": false, "isVisible": true,
+      "label": "סגירות", "originalId": "deals_closed", "horizontalAlignment": "CENTER",
+      "textSize": "0.875rem", "verticalAlignment": "CENTER", "width": 80
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "tableData": "{{lidor_source_stats.data}}",
+  "textSize": "0.875rem",
+  "topRow": 52,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "widgetId": "tbl_src_perf",
+  "widgetName": "Table_SourcePerformance"
+}

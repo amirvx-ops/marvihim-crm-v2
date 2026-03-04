@@ -1,0 +1,9 @@
+SELECT COUNT(*) AS total_leads,
+    COUNT(CASE WHEN סכום_סגירה > 0 THEN 1 END) AS closings,
+    COALESCE(SUM(סכום_סגירה), 0) AS total_closing,
+    COALESCE(SUM(מינוי_סוכן), 0) AS total_appointment,
+    COUNT(CASE WHEN ליד_הראל IS NOT NULL AND ליד_הראל != '' THEN 1 END) AS harel_leads,
+    COUNT(CASE WHEN ליד_לפניקס IS NOT NULL AND ליד_לפניקס != '' THEN 1 END) AS phoenix_leads
+FROM adi_leads_view
+WHERE ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}
+     OR TO_CHAR(תאריך, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})
