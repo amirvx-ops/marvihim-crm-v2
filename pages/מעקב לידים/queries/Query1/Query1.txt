@@ -1,0 +1,1 @@
+SELECT * FROM adi_leads_view LIMIT 10
