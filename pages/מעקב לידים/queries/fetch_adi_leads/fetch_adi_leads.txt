@@ -3,5 +3,8 @@ WHERE CASE WHEN '{{Input_Search.text}}' = '' THEN TRUE
      ELSE שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%'
         OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%'
      END
+AND CASE WHEN '{{status.selectedOptionValue}}' = '' THEN TRUE
+     ELSE main_status = '{{status.selectedOptionValue}}'
+     END
 ORDER BY תאריך DESC
 LIMIT 50

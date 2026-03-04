@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM adi_leads_view\nWHERE CASE WHEN '{{Input_Search.text}}' = '' THEN TRUE\n     ELSE שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%'\n        OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%'\n     END\nORDER BY תאריך DESC\nLIMIT 50",
+      "body": "SELECT * FROM adi_leads_view\nWHERE CASE WHEN '{{Input_Search.text}}' = '' THEN TRUE\n     ELSE שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%'\n        OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%'\n     END\nAND CASE WHEN '{{status.selectedOptionValue}}' = '' THEN TRUE\n     ELSE main_status = '{{status.selectedOptionValue}}'\n     END\nORDER BY תאריך DESC\nLIMIT 50",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
