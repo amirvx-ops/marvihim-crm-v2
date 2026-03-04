@@ -18,20 +18,20 @@
   "icon": "stars",
   "pages": [
     {
+      "id": "מעקב לידים",
+      "isDefault": false
+    },
+    {
+      "id": "תיאום פגישות (לידור)",
+      "isDefault": false
+    },
+    {
+      "id": "תיעוד לקוחות (אסף)",
+      "isDefault": false
+    },
+    {
       "id": "Page1",
       "isDefault": false
-    },
-    {
-      "id": "Page2",
-      "isDefault": false
-    },
-    {
-      "id": "Page3",
-      "isDefault": false
-    },
-    {
-      "id": "Page4",
-      "isDefault": true
     }
   ],
   "unpublishedApplicationDetail": {

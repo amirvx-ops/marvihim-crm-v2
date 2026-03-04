@@ -1,23 +1,22 @@
 {
-  "gitSyncId": "69a83c7ea57cda66ecff91bb_ae1bc6c7-9997-4827-993b-18d8297c942e",
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_1ccc4999-f330-4302-b6f5-ad8a99703b98",
   "unpublishedPage": {
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 5000,
+          "bottomRow": 470,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 480,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 46,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +25,7 @@
         }
       }
     ],
-    "name": "מעקב לידים",
-    "slug": "adi-leads"
+    "name": "Page1",
+    "slug": "page1"
   }
 }

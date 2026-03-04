@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "69a83c7ea57cda66ecff91bb_f190921c-5371-4e41-9b7c-5f7a15d36eb4",
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_81a773ff-4c51-4ef4-90de-94ad2fc56a75",
   "unpublishedPage": {
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 5000,
+          "bottomRow": 470,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 480,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 46,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "תיאום פגישות",
-    "slug": "lidor-meetings"
+    "name": "תיאום פגישות (לידור)",
+    "slug": ""
   }
 }
