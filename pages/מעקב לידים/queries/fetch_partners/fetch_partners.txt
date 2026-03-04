@@ -1,0 +1,1 @@
+SELECT '' AS name UNION ALL SELECT name FROM partners ORDER BY name

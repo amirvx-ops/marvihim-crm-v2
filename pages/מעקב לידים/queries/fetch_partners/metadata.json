@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "69a83c7ea57cda66ecff91bb_4eb386e9-9765-4c46-810b-35c6d169c2ce",
-  "id": "מעקב לידים_fetch_adi_leads",
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_e09ae861-c79d-47f2-ae49-1ebefe5e0fd2",
+  "id": "מעקב לידים_fetch_partners",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM adi_leads_view LIMIT 1\n",
+      "body": "SELECT '' AS name UNION ALL SELECT name FROM partners ORDER BY name\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "fetch_adi_leads",
+    "name": "fetch_partners",
     "pageId": "מעקב לידים",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
