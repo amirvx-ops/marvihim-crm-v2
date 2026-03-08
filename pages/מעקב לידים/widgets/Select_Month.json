@@ -23,7 +23,7 @@
   "label": "",
   "labelAlignment": "right",
   "labelPosition": "Top",
-  "leftColumn": 49,
+  "leftColumn": 47,
   "options": [
     {
       "label": "הכל",
@@ -131,7 +131,7 @@
   "parentRowSpace": 10,
   "placeholderText": "בחר חודש",
   "renderMode": "CANVAS",
-  "rightColumn": 61,
+  "rightColumn": 58,
   "serverSideFiltering": false,
   "topRow": 12,
   "type": "SELECT_WIDGET",

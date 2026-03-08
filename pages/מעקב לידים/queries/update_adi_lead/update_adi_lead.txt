@@ -1,9 +1,11 @@
-UPDATE leads SET
-    phoenix_agent = {{Table_Adi.updatedRow.ליד_לפניקס}},
-    harel_agent = {{Table_Adi.updatedRow.ליד_הראל}},
-    internal_lead = {{Table_Adi.updatedRow.ליד_פנימי}},
-    agent_appointment_amount = {{Table_Adi.updatedRow.מינוי_סוכן}},
-    closing_amount = {{Table_Adi.updatedRow.סכום_סגירה}},
-    closing_status = {{Table_Adi.updatedRow.סטטוס_סגירה}},
-    notes = {{Table_Adi.updatedRow.הערות}}
-WHERE id = {{Table_Adi.updatedRow.lead_id}}
+SELECT update_lead_from_appsmith(
+    '{{Table1.updatedRow.lead_id}}',
+    '{{Table1.updatedRow.חברת_ביטוח}}',
+    '{{Table1.updatedRow.סוכן_מטפל}}',
+    '{{Table1.updatedRow.ליד_פנימי}}',
+    '{{Table1.updatedRow.מינוי_סוכן}}',
+    '{{Table1.updatedRow.סכום_סגירה}}',
+    '{{Table1.updatedRow.סטטוס_סגירה}}',
+    '{{Table1.updatedRow.סטטוס}}',
+    '{{Table1.updatedRow.הערות}}'
+)

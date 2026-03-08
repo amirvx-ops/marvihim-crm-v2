@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 8,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -12,31 +12,38 @@
     },
     {
       "key": "truncateButtonColor"
+    },
+    {
+      "key": "text"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "text"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.75rem",
-  "fontStyle": "",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "7678c",
-  "leftColumn": 53,
+  "key": "6cba4",
+  "leftColumn": 3,
   "overflow": "NONE",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 58,
-  "text": "סה״כ לידים",
+  "rightColumn": 8,
+  "text": "{{count_adi_stats.data[0]?.klal_leads || 0}}",
   "textAlign": "RIGHT",
-  "textColor": "#666",
-  "topRow": 8,
+  "textColor": "#1976d2",
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "f661cd08c7",
-  "widgetName": "Stat_TotalLbl"
+  "widgetId": "4rxrjj1q37",
+  "widgetName": "Stat_PhoenixValCopy"
 }

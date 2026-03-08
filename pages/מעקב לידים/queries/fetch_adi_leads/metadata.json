@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM adi_leads_view LIMIT 1\n",
+      "body": "SELECT * FROM adi_leads_view\nWHERE CASE WHEN '{{Input_Search.text}}' = '' THEN TRUE\n     ELSE שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%'\n        OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%'\n     END\nAND CASE WHEN '{{status.selectedOptionValue}}' = '' THEN TRUE\n     ELSE סטטוס = '{{status.selectedOptionValue}}'\n     END\nAND CASE WHEN '{{insurance_company.selectedOptionValue}}' = '' THEN TRUE\n     ELSE חברת_ביטוח = '{{insurance_company.selectedOptionValue}}'\n     END\nAND CASE WHEN '{{Select_Partner.selectedOptionValue}}' = '' THEN TRUE\n     ELSE מקור_ליד = '{{Select_Partner.selectedOptionValue}}'\n     END\nORDER BY תאריך DESC\nLIMIT 50",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,11 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "fetch_adi_leads",
     "pageId": "מעקב לידים",
     "runBehaviour": "AUTOMATIC",
