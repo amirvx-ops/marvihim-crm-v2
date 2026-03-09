@@ -1,0 +1,33 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_b2c3d4e5-6f7a-8b9c-0d1e-f2a3b4c5d6e7",
+  "id": "מעקב לידים_insurance_summary",
+  "pluginId": "postgres-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "SELECT\n    'הראל' AS חברה,\n    COUNT(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' THEN 1 END) AS לידים,\n    COUNT(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' AND l.closing_amount > 0 THEN 1 END) AS סגירות,\n    COALESCE(SUM(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' THEN l.agent_appointment_amount END), 0) AS סכום_מינוי,\n    COALESCE(SUM(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' THEN l.closing_amount END), 0) AS סכום_סגירות\nFROM leads l\nWHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')\nUNION ALL\nSELECT\n    'הפניקס' AS חברה,\n    COUNT(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' THEN 1 END) AS לידים,\n    COUNT(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' AND l.closing_amount > 0 THEN 1 END) AS סגירות,\n    COALESCE(SUM(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' THEN l.agent_appointment_amount END), 0) AS סכום_מינוי,\n    COALESCE(SUM(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' THEN l.closing_amount END), 0) AS סכום_סגירות\nFROM leads l\nWHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "name": "Supabase",
+      "pluginId": "postgres-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "insurance_summary",
+    "pageId": "מעקב לידים",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
+  }
+}

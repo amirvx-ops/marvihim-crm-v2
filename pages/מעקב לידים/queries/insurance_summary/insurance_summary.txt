@@ -1,0 +1,17 @@
+SELECT
+    'הראל' AS חברה,
+    COUNT(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' THEN 1 END) AS לידים,
+    COUNT(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' AND l.closing_amount > 0 THEN 1 END) AS סגירות,
+    COALESCE(SUM(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' THEN l.agent_appointment_amount END), 0) AS סכום_מינוי,
+    COALESCE(SUM(CASE WHEN l.harel_agent IS NOT NULL AND l.harel_agent != '' THEN l.closing_amount END), 0) AS סכום_סגירות
+FROM leads l
+WHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
+UNION ALL
+SELECT
+    'הפניקס' AS חברה,
+    COUNT(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' THEN 1 END) AS לידים,
+    COUNT(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' AND l.closing_amount > 0 THEN 1 END) AS סגירות,
+    COALESCE(SUM(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' THEN l.agent_appointment_amount END), 0) AS סכום_מינוי,
+    COALESCE(SUM(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' THEN l.closing_amount END), 0) AS סכום_סגירות
+FROM leads l
+WHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')

@@ -1,14 +1,14 @@
-SELECT 
+SELECT
     p.name AS מקור,
     COUNT(*) AS לידים,
     COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END) AS מינוי_סוכן,
     COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END) AS סגירות,
     COALESCE(SUM(l.agent_appointment_amount), 0) AS סכום_מינוי_סוכן,
     COALESCE(SUM(l.closing_amount), 0) AS סכום_סגירות,
-    CASE WHEN COUNT(*) > 0 
+    CASE WHEN COUNT(*) > 0
         THEN ROUND(COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
         ELSE 0 END AS אחוז_מינוי_סוכן,
-    CASE WHEN COUNT(*) > 0 
+    CASE WHEN COUNT(*) > 0
         THEN ROUND(COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
         ELSE 0 END AS אחוז_סגירות
 FROM leads l
