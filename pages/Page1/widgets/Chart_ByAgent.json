@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 38,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "426f5c17": {
@@ -69,7 +69,7 @@
   "rightColumn": 32,
   "setAdaptiveYMin": false,
   "showDataPointLabel": false,
-  "topRow": 12,
+  "topRow": 18,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "032f0de9fe",

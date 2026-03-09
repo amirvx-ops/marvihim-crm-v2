@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 78,
+  "bottomRow": 81,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -33,7 +33,7 @@
   "text": "לידים שדורשים טיפול (7+ ימים ללא עדכון)",
   "textAlign": "RIGHT",
   "textColor": "#F44336",
-  "topRow": 75,
+  "topRow": 78,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

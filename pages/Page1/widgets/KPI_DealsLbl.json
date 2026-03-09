@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 18,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -33,7 +33,7 @@
   "text": "עסקאות",
   "textAlign": "CENTER",
   "textColor": "#666",
-  "topRow": 9,
+  "topRow": 16,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
