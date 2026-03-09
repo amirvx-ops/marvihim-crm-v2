@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 101,
+  "bottomRow": 103,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -33,7 +33,7 @@
   "text": "פילוח לפי מקורות לידים",
   "textAlign": "RIGHT",
   "textColor": "#1976D2",
-  "topRow": 97,
+  "topRow": 99,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
