@@ -2,8 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(rm:*)",
+      "WebFetch(domain:docs.appsmith.com)",
+      "WebSearch",
+      "WebFetch(domain:www.appsmith.com)",
+      "WebFetch(domain:hadess.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:blog.greenflux.us)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(curl:*)",
       "Bash(node:*)",
-      "Bash(GIT_EDITOR=true git rebase:*)"
+      "Bash(python:*)"
     ]
   }
 }

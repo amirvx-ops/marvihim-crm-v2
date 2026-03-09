@@ -1,10 +1,20 @@
 SELECT
-    (SELECT COUNT(*) FROM leads) AS total_leads,
-    (SELECT COUNT(*) FROM leads WHERE main_status = 'New') AS new_leads,
-    (SELECT COUNT(*) FROM leads WHERE closing_amount > 0) AS total_closings,
-    (SELECT COALESCE(SUM(closing_amount), 0) FROM leads WHERE closing_amount > 0) AS total_closing_amount,
-    (SELECT COALESCE(SUM(agent_appointment_amount), 0) FROM leads) AS total_appointment_amount,
-    (SELECT COUNT(*) FROM leads WHERE lead_passed = TRUE) AS total_leads_passed,
-    (SELECT COUNT(*) FROM leads WHERE deal_closed = 'כן') AS total_deals_closed,
-    (SELECT COUNT(*) FROM leads WHERE main_status = 'נויד') AS total_ported,
-    (SELECT COALESCE(SUM(total_amount), 0) FROM leads WHERE main_status = 'נויד') AS total_ported_amount
+    COUNT(*) AS total_leads,
+    COUNT(CASE WHEN closing_amount > 0 THEN 1 END) AS total_closings,
+    COALESCE(SUM(closing_amount), 0) AS total_closing_amount,
+    COUNT(CASE WHEN agent_appointment_amount > 0 THEN 1 END) AS total_appointments,
+    COALESCE(SUM(agent_appointment_amount), 0) AS total_appointment_amount,
+    COUNT(CASE WHEN insurance_company = 'הראל' THEN 1 END) AS harel_leads,
+    COUNT(CASE WHEN insurance_company = 'הפניקס' THEN 1 END) AS phoenix_leads,
+    COUNT(CASE WHEN insurance_company = 'כלל' THEN 1 END) AS klal_leads,
+    COUNT(CASE WHEN insurance_company = 'הראל' AND closing_amount > 0 THEN 1 END) AS harel_closings,
+    COUNT(CASE WHEN insurance_company = 'הפניקס' AND closing_amount > 0 THEN 1 END) AS phoenix_closings,
+    COUNT(CASE WHEN insurance_company = 'כלל' AND closing_amount > 0 THEN 1 END) AS klal_closings,
+    COALESCE(SUM(CASE WHEN insurance_company = 'הראל' THEN closing_amount END), 0) AS harel_closing_amount,
+    COALESCE(SUM(CASE WHEN insurance_company = 'הפניקס' THEN closing_amount END), 0) AS phoenix_closing_amount,
+    COALESCE(SUM(CASE WHEN insurance_company = 'כלל' THEN closing_amount END), 0) AS klal_closing_amount
+FROM leads
+WHERE ('{{Select_Period.selectedOptionValue}}' = 'all'
+    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE))
+    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND created_at < DATE_TRUNC('month', CURRENT_DATE))
+    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND created_at >= DATE_TRUNC('year', CURRENT_DATE)))
