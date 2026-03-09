@@ -54,7 +54,7 @@
     "xn____5hcrcanso9a",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1773089884261,
+  "columnUpdatedAt": 1773096199740,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -130,6 +130,9 @@
       "key": "primaryColumns.xn__9dbfa8ad.computedValue"
     },
     {
+      "key": "primaryColumns.xn____3hcefwr5a.computedValue"
+    },
+    {
       "key": "primaryColumns.EditActions1.saveButtonColor"
     },
     {
@@ -143,9 +146,6 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
-      "key": "primaryColumns.xn____3hcefwr5a.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -164,10 +164,10 @@
       "key": "onAddNewRowSave"
     },
     {
-      "key": "primaryColumns.EditActions1.onSave"
+      "key": "onRowSelected"
     },
     {
-      "key": "onRowSelected"
+      "key": "primaryColumns.EditActions1.onSave"
     }
   ],
   "enableClientSideSearch": true,
@@ -198,7 +198,7 @@
   "parentColumnSpace": 10.25,
   "parentId": "0",
   "parentRowSpace": 10,
-  "primaryColumnId": "surens_customer_id",
+  "primaryColumnId": "lead_id",
   "primaryColumns": {
     "EditActions1": {
       "alias": "EditActions1",
@@ -230,7 +230,7 @@
       "isVisible": true,
       "label": "Save / Discard",
       "notation": "standard",
-      "onSave": "{{update_adi_lead.run().then(() => {\n  fetch_adi_leads.run();\n});}}",
+      "onSave": "{{update_adi_lead.run()}}",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
