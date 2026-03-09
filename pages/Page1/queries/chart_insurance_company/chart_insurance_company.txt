@@ -1,11 +1,13 @@
-SELECT 'הראל' AS company,
-    COUNT(CASE WHEN harel_agent IS NOT NULL AND harel_agent != '' THEN 1 END) AS leads,
-    COUNT(CASE WHEN harel_agent IS NOT NULL AND closing_amount > 0 THEN 1 END) AS closings,
-    COALESCE(SUM(CASE WHEN harel_agent IS NOT NULL AND closing_amount > 0 THEN closing_amount END), 0) AS amount
+SELECT 
+    insurance_company AS חברה,
+    COUNT(*) AS לידים,
+    COUNT(CASE WHEN closing_amount > 0 THEN 1 END) AS סגירות,
+    COALESCE(SUM(closing_amount), 0) AS סכום_סגירות
 FROM leads
-UNION ALL
-SELECT 'הפניקס',
-    COUNT(CASE WHEN phoenix_agent IS NOT NULL AND phoenix_agent != '' THEN 1 END),
-    COUNT(CASE WHEN phoenix_agent IS NOT NULL AND closing_amount > 0 THEN 1 END),
-    COALESCE(SUM(CASE WHEN phoenix_agent IS NOT NULL AND closing_amount > 0 THEN closing_amount END), 0)
-FROM leads
+WHERE insurance_company IS NOT NULL
+AND ('{{Select_Period.selectedOptionValue}}' = 'all' 
+    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE))
+    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND created_at < DATE_TRUNC('month', CURRENT_DATE))
+    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND created_at >= DATE_TRUNC('year', CURRENT_DATE)))
+GROUP BY insurance_company
+ORDER BY COUNT(*) DESC

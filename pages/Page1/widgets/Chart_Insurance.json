@@ -17,7 +17,7 @@
       "seriesName": "סגירות"
     }
   },
-  "chartName": "הראל vs פניקס",
+  "chartName": "סגירות לפי חברת ביטוח",
   "chartType": "BAR_CHART",
   "customFusionChartConfig": {
     "dataSource": {

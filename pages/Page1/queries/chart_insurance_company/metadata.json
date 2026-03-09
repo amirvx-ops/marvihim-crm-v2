@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT 'הראל' AS company,\n    COUNT(CASE WHEN harel_agent IS NOT NULL AND harel_agent != '' THEN 1 END) AS leads,\n    COUNT(CASE WHEN harel_agent IS NOT NULL AND closing_amount > 0 THEN 1 END) AS closings,\n    COALESCE(SUM(CASE WHEN harel_agent IS NOT NULL AND closing_amount > 0 THEN closing_amount END), 0) AS amount\nFROM leads\nUNION ALL\nSELECT 'הפניקס',\n    COUNT(CASE WHEN phoenix_agent IS NOT NULL AND phoenix_agent != '' THEN 1 END),\n    COUNT(CASE WHEN phoenix_agent IS NOT NULL AND closing_amount > 0 THEN 1 END),\n    COALESCE(SUM(CASE WHEN phoenix_agent IS NOT NULL AND closing_amount > 0 THEN closing_amount END), 0)\nFROM leads",
+      "body": "SELECT \n    insurance_company AS חברה,\n    COUNT(*) AS לידים,\n    COUNT(CASE WHEN closing_amount > 0 THEN 1 END) AS סגירות,\n    COALESCE(SUM(closing_amount), 0) AS סכום_סגירות\nFROM leads\nWHERE insurance_company IS NOT NULL\nAND ('{{Select_Period.selectedOptionValue}}' = 'all' \n    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND created_at < DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND created_at >= DATE_TRUNC('year', CURRENT_DATE)))\nGROUP BY insurance_company\nORDER BY COUNT(*) DESC",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
