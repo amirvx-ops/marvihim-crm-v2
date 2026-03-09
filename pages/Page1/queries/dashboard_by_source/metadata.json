@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    p.name AS מקור,\n    COUNT(*) AS לידים,\n    COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END) AS מינוי_סוכן,\n    COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END) AS סגירות,\n    COALESCE(SUM(l.closing_amount), 0) AS סכום_סגירות,\n    COALESCE(SUM(l.agent_appointment_amount), 0) AS סכום_מינוי,\n    CASE WHEN COUNT(*) > 0 THEN ROUND(COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1) ELSE 0 END AS אחוז_מינוי,\n    CASE WHEN COUNT(*) > 0 THEN ROUND(COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1) ELSE 0 END AS אחוז_סגירות\nFROM leads l LEFT JOIN partners p ON l.partner_id = p.id\nWHERE p.name IS NOT NULL\nAND ('{{Select_Period.selectedOptionValue}}' = 'all' \n    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND l.created_at >= DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND l.created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND l.created_at < DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND l.created_at >= DATE_TRUNC('year', CURRENT_DATE)))\nGROUP BY p.name ORDER BY COUNT(*) DESC",
+      "body": "SELECT\n    p.name AS מקור,\n    COUNT(*) AS לידים,\n    COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END) AS מינוי_סוכן,\n    COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END) AS סגירות,\n    COALESCE(SUM(l.closing_amount), 0) AS סכום_סגירות,\n    COALESCE(SUM(l.agent_appointment_amount), 0) AS סכום_מינוי,\n    CASE WHEN COUNT(*) > 0 THEN ROUND(COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1) ELSE 0 END AS אחוז_מינוי,\n    CASE WHEN COUNT(*) > 0 THEN ROUND(COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1) ELSE 0 END AS אחוז_סגירות\nFROM leads l LEFT JOIN partners p ON l.partner_id = p.id\nWHERE p.name IS NOT NULL\nAND ('{{Select_Period.selectedOptionValue}}' = 'all'\n    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND l.created_at >= DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND l.created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND l.created_at < DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND l.created_at >= DATE_TRUNC('year', CURRENT_DATE)))\nGROUP BY p.name ORDER BY COUNT(*) DESC",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
     ],
     "name": "dashboard_by_source",
     "pageId": "Page1",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

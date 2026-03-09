@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    insurance_company AS חברה,\n    COUNT(*) AS לידים,\n    COUNT(CASE WHEN closing_amount > 0 THEN 1 END) AS סגירות,\n    COALESCE(SUM(closing_amount), 0) AS סכום_סגירות,\n    CASE WHEN COUNT(*) > 0 THEN ROUND(COUNT(CASE WHEN closing_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1) ELSE 0 END AS אחוז_סגירות\nFROM leads\nWHERE insurance_company IS NOT NULL\nAND ('{{Select_Period.selectedOptionValue}}' = 'all' \n    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND created_at < DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND created_at >= DATE_TRUNC('year', CURRENT_DATE)))\nGROUP BY insurance_company ORDER BY COUNT(*) DESC",
+      "body": "SELECT\n    insurance_company AS חברה,\n    COUNT(*) AS לידים,\n    COUNT(CASE WHEN closing_amount > 0 THEN 1 END) AS סגירות,\n    COALESCE(SUM(closing_amount), 0) AS סכום_סגירות,\n    CASE WHEN COUNT(*) > 0 THEN ROUND(COUNT(CASE WHEN closing_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1) ELSE 0 END AS אחוז_סגירות\nFROM leads\nWHERE insurance_company IS NOT NULL\nAND ('{{Select_Period.selectedOptionValue}}' = 'all'\n    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND created_at < DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND created_at >= DATE_TRUNC('year', CURRENT_DATE)))\nGROUP BY insurance_company ORDER BY COUNT(*) DESC",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
     ],
     "name": "dashboard_insurance",
     "pageId": "Page1",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

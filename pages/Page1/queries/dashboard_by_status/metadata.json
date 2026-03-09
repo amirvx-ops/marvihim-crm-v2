@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    main_status AS סטטוס,\n    COUNT(*) AS כמות,\n    ROUND(COUNT(*)::numeric / NULLIF(SUM(COUNT(*)) OVER(), 0) * 100, 1) AS אחוז\nFROM leads\nWHERE ('{{Select_Period.selectedOptionValue}}' = 'all' \n    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND created_at < DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND created_at >= DATE_TRUNC('year', CURRENT_DATE)))\nGROUP BY main_status ORDER BY COUNT(*) DESC",
+      "body": "SELECT\n    main_status AS סטטוס,\n    COUNT(*) AS כמות,\n    ROUND(COUNT(*)::numeric / NULLIF(SUM(COUNT(*)) OVER(), 0) * 100, 1) AS אחוז\nFROM leads\nWHERE ('{{Select_Period.selectedOptionValue}}' = 'all'\n    OR ('{{Select_Period.selectedOptionValue}}' = 'current_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'last_month' AND created_at >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') AND created_at < DATE_TRUNC('month', CURRENT_DATE))\n    OR ('{{Select_Period.selectedOptionValue}}' = 'ytd' AND created_at >= DATE_TRUNC('year', CURRENT_DATE)))\nGROUP BY main_status ORDER BY COUNT(*) DESC",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
     ],
     "name": "dashboard_by_status",
     "pageId": "Page1",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
