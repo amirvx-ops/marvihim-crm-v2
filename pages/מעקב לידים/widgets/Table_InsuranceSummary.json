@@ -1,0 +1,175 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 88,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "חברה",
+    "לידים",
+    "סגירות",
+    "סכום_מינוי",
+    "סכום_סגירות"
+  ],
+  "columnWidthMap": {},
+  "defaultPageSize": 0,
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "enableClientSideSearch": false,
+  "enableServerSideFiltering": false,
+  "horizontalAlignment": "RIGHT",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSortable": false,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "ins02",
+  "label": "Data",
+  "leftColumn": 0,
+  "needsHeightForContent": true,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "חברה": {
+      "columnType": "text",
+      "computedValue": "{{Table_InsuranceSummary.processedTableData.map((currentRow) => (currentRow.חברה))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "RIGHT",
+      "id": "חברה",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isVisible": true,
+      "label": "חברה",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 120
+    },
+    "לידים": {
+      "columnType": "number",
+      "computedValue": "{{Table_InsuranceSummary.processedTableData.map((currentRow) => (currentRow.לידים))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "לידים",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isVisible": true,
+      "label": "לידים",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 100
+    },
+    "סגירות": {
+      "columnType": "number",
+      "computedValue": "{{Table_InsuranceSummary.processedTableData.map((currentRow) => (currentRow.סגירות))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "סגירות",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isVisible": true,
+      "label": "סגירות",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 100
+    },
+    "סכום_מינוי": {
+      "columnType": "number",
+      "computedValue": "{{Table_InsuranceSummary.processedTableData.map((currentRow) => (currentRow.סכום_מינוי))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "סכום_מינוי",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isVisible": true,
+      "label": "סכום מינוי",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 130
+    },
+    "סכום_סגירות": {
+      "columnType": "number",
+      "computedValue": "{{Table_InsuranceSummary.processedTableData.map((currentRow) => (currentRow.סכום_סגירות))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "סכום_סגירות",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isVisible": true,
+      "label": "סכום סגירות",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 130
+    }
+  },
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "searchKey": "",
+  "tableData": "{{insurance_summary.data}}",
+  "textSize": "0.875rem",
+  "topRow": 74,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "ins_table_01",
+  "widgetName": "Table_InsuranceSummary"
+}
