@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 74,
+  "bottomRow": 79,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -29,11 +29,11 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 61,
   "text": "סיכום לפי חברות ביטוח",
   "textAlign": "RIGHT",
   "textColor": "#1976D2",
-  "topRow": 70,
+  "topRow": 75,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

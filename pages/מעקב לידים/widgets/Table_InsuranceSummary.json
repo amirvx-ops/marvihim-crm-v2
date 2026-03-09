@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 88,
+  "bottomRow": 95,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "button": {
@@ -161,11 +161,11 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 61,
   "searchKey": "",
   "tableData": "{{insurance_summary.data}}",
   "textSize": "0.875rem",
-  "topRow": 74,
+  "topRow": 81,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
