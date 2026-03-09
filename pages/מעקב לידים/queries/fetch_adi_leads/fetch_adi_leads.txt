@@ -1,16 +1,8 @@
 SELECT * FROM adi_leads_view
-WHERE CASE WHEN '{{Input_Search.text}}' = '' THEN TRUE
-     ELSE שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%'
-        OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%'
-     END
-AND CASE WHEN '{{status.selectedOptionValue}}' = '' THEN TRUE
-     ELSE סטטוס = '{{status.selectedOptionValue}}'
-     END
-AND CASE WHEN '{{insurance_company.selectedOptionValue}}' = '' THEN TRUE
-     ELSE חברת_ביטוח = '{{insurance_company.selectedOptionValue}}'
-     END
-AND CASE WHEN '{{Select_Partner.selectedOptionValue}}' = '' THEN TRUE
-     ELSE מקור_ליד = '{{Select_Partner.selectedOptionValue}}'
-     END
+WHERE ('{{Input_Search.text}}' = '' OR שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%' OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%')
+AND ('{{status.selectedOptionValue}}' = '' OR סטטוס = '{{status.selectedOptionValue}}')
+AND ('{{insurance_company.selectedOptionValue}}' = '' OR חברת_ביטוח = '{{insurance_company.selectedOptionValue}}')
+AND ('{{Select_Partner.selectedOptionValue}}' = '' OR מקור_ליד = '{{Select_Partner.selectedOptionValue}}')
+AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
 ORDER BY תאריך DESC
 LIMIT 50
