@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    COUNT(*) AS total,\n    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS ported,\n    COUNT(CASE WHEN סטטוס = 'מעקב' THEN 1 END) AS follow_up,\n    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS proposal,\n    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה','לא ניתן לשפר','סוכן') THEN 1 END) AS closed_no_deal,\n    COALESCE(SUM(סכום_כולל), 0) AS total_amount,\n    COALESCE(SUM(פרמיה_פנסיה), 0) AS total_pension\nFROM asaf_sales_view\nWHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')",
+      "body": "SELECT\n    COUNT(*) AS total,\n    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS ported,\n    COUNT(CASE WHEN סטטוס = 'מעקב' THEN 1 END) AS follow_up,\n    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS proposal,\n    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה','לא ניתן לשפר','סוכן') THEN 1 END) AS closed_no_deal,\n    COALESCE(SUM(סכום_כולל), 0) AS total_amount,\n    COALESCE(SUM(פרמיה_פנסיה), 0) AS total_pension\nFROM asaf_sales_view\nWHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
     ],
     "name": "count_asaf_stats",
     "pageId": "תיעוד לקוחות (אסף)",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

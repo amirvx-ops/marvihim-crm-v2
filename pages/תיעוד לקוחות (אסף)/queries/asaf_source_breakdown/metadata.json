@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    מקור_הגעה AS מקור,\n    COUNT(*) AS לידים,\n    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS נוידו,\n    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS ניתנה_הצעה,\n    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה') THEN 1 END) AS לא_הצליח,\n    COALESCE(SUM(סכום_כולל), 0) AS סכום_כולל,\n    COALESCE(SUM(פרמיה_פנסיה), 0) AS פרמיה_פנסיה\nFROM asaf_sales_view\nWHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')\nGROUP BY מקור_הגעה\nORDER BY COUNT(*) DESC",
+      "body": "SELECT\n    מקור_הגעה AS מקור,\n    COUNT(*) AS לידים,\n    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS נוידו,\n    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS ניתנה_הצעה,\n    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה') THEN 1 END) AS לא_הצליח,\n    COALESCE(SUM(סכום_כולל), 0) AS סכום_כולל,\n    COALESCE(SUM(פרמיה_פנסיה), 0) AS פרמיה_פנסיה\nFROM asaf_sales_view\nWHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')\nGROUP BY מקור_הגעה\nORDER BY COUNT(*) DESC",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
     ],
     "name": "asaf_source_breakdown",
     "pageId": "תיעוד לקוחות (אסף)",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
