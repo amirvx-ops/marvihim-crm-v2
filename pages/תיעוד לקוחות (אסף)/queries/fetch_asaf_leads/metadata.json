@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM asaf_sales_view\nWHERE ({{!Input_Search.text || Input_Search.text === ''}}\n     OR שם ILIKE {{'%' + Input_Search.text + '%'}}\n     OR תעודת_זהות ILIKE {{'%' + Input_Search.text + '%'}}\n     OR נייד ILIKE {{'%' + Input_Search.text + '%'}})\n    AND ({{!Select_Status.selectedOptionValue || Select_Status.selectedOptionValue === ''}}\n     OR סטטוס = {{Select_Status.selectedOptionValue}})\n    AND ({{!Select_Source.selectedOptionValue || Select_Source.selectedOptionValue === ''}}\n     OR מקור_הגעה = {{Select_Source.selectedOptionValue}})\nORDER BY תאריך DESC\nLIMIT {{Table_Asaf.pageSize}} OFFSET {{(Table_Asaf.pageNo - 1) * Table_Asaf.pageSize}}",
+      "body": "SELECT * FROM asaf_sales_view\nWHERE ('{{Input_Search.text}}' = '' OR שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%' OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%')\nAND ('{{Select_Status.selectedOptionValue}}' = '' OR סטטוס = '{{Select_Status.selectedOptionValue}}')\nAND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')\nORDER BY תאריך DESC\nLIMIT 50",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000

@@ -1,0 +1,10 @@
+SELECT
+    COUNT(*) AS total,
+    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS ported,
+    COUNT(CASE WHEN סטטוס = 'מעקב' THEN 1 END) AS follow_up,
+    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS proposal,
+    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה','לא ניתן לשפר','סוכן') THEN 1 END) AS closed_no_deal,
+    COALESCE(SUM(סכום_כולל), 0) AS total_amount,
+    COALESCE(SUM(פרמיה_פנסיה), 0) AS total_pension
+FROM asaf_sales_view
+WHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')

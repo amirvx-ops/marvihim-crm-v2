@@ -1,0 +1,12 @@
+SELECT
+    מקור_הגעה AS מקור,
+    COUNT(*) AS לידים,
+    COUNT(CASE WHEN סטטוס = 'נויד' THEN 1 END) AS נוידו,
+    COUNT(CASE WHEN סטטוס = 'ניתנה הצעה' THEN 1 END) AS ניתנה_הצעה,
+    COUNT(CASE WHEN סטטוס IN ('לא מעוניין','לא רלוונטי','אין מענה') THEN 1 END) AS לא_הצליח,
+    COALESCE(SUM(סכום_כולל), 0) AS סכום_כולל,
+    COALESCE(SUM(פרמיה_פנסיה), 0) AS פרמיה_פנסיה
+FROM asaf_sales_view
+WHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
+GROUP BY מקור_הגעה
+ORDER BY COUNT(*) DESC

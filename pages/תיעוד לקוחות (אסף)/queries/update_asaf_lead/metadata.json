@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE leads SET\n    main_status = {{Table_Asaf.updatedRow.סטטוס}},\n    total_amount = {{Table_Asaf.updatedRow.סכום_כולל}},\n    pension_premium = {{Table_Asaf.updatedRow.פרמיה_פנסיה}},\n    pension_accumulation = {{Table_Asaf.updatedRow.צבירה_פנסיה}},\n    gemel_hishtalmut_accumulation = {{Table_Asaf.updatedRow.צבירה_גמל_השתלמות}},\n    notes = {{Table_Asaf.updatedRow.הערות}}\nWHERE id = {{Table_Asaf.updatedRow.lead_id}}",
+      "body": "SELECT update_lead_from_appsmith(\n    '{{Table_Asaf.updatedRow.lead_id}}',\n    NULL,\n    NULL,\n    NULL,\n    NULL,\n    NULL,\n    NULL,\n    '{{Table_Asaf.updatedRow.סטטוס}}',\n    '{{Table_Asaf.updatedRow.הערות}}'\n)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
