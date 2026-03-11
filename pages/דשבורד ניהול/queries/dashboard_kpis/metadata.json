@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a83c7ea57cda66ecff91bb_815f2bf0-240e-4fb0-aa99-7fb9aa7a8d9a",
-  "id": "Page1_dashboard_kpis",
+  "id": "דשבורד ניהול_dashboard_kpis",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "dashboard_kpis",
-    "pageId": "Page1",
+    "pageId": "דשבורד ניהול",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

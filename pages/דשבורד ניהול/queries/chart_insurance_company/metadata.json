@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a83c7ea57cda66ecff91bb_9916dcaa-d6d4-4c55-b259-20e38e857380",
-  "id": "Page1_chart_insurance_company",
+  "id": "דשבורד ניהול_chart_insurance_company",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "chart_insurance_company",
-    "pageId": "Page1",
+    "pageId": "דשבורד ניהול",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

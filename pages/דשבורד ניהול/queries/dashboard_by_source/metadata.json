@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a83c7ea57cda66ecff91bb_c3d4e5f6-7a8b-9c0d-1e2f-a3b4c5d6e7f8",
-  "id": "Page1_dashboard_by_source",
+  "id": "דשבורד ניהול_dashboard_by_source",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "dashboard_by_source",
-    "pageId": "Page1",
+    "pageId": "דשבורד ניהול",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a83c7ea57cda66ecff91bb_29107329-8621-442f-a229-0247a263f2c2",
-  "id": "Page1_attention_needed",
+  "id": "דשבורד ניהול_attention_needed",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "attention_needed",
-    "pageId": "Page1",
+    "pageId": "דשבורד ניהול",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

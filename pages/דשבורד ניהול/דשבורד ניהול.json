@@ -1,6 +1,7 @@
 {
   "gitSyncId": "69a83c7ea57cda66ecff91bb_1ccc4999-f330-4302-b6f5-ad8a99703b98",
   "unpublishedPage": {
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
@@ -26,7 +27,7 @@
         }
       }
     ],
-    "name": "Page1",
-    "slug": "page1"
+    "name": "דשבורד ניהול",
+    "slug": ""
   }
 }

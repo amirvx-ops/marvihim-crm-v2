@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a83c7ea57cda66ecff91bb_66838c1f-f786-43c9-a859-6a09bac0379f",
-  "id": "Page1_chart_by_agent",
+  "id": "דשבורד ניהול_chart_by_agent",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "chart_by_agent",
-    "pageId": "Page1",
+    "pageId": "דשבורד ניהול",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

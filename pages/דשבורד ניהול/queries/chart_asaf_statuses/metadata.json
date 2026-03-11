@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69a83c7ea57cda66ecff91bb_43da3ddb-2e68-4ccb-9de0-922e225523ef",
-  "id": "Page1_chart_asaf_statuses",
+  "id": "דשבורד ניהול_chart_asaf_statuses",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "chart_asaf_statuses",
-    "pageId": "Page1",
+    "pageId": "דשבורד ניהול",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
