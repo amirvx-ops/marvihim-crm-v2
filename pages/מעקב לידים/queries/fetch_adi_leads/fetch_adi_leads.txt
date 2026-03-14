@@ -5,4 +5,3 @@ AND ('{{insurance_company.selectedOptionValue}}' = '' OR חברת_ביטוח = '
 AND ('{{Select_Partner.selectedOptionValue}}' = '' OR מקור_ליד = '{{Select_Partner.selectedOptionValue}}')
 AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
 ORDER BY תאריך DESC
-LIMIT 50
