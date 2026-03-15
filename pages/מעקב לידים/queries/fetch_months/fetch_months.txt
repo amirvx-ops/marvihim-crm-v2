@@ -1,0 +1,4 @@
+SELECT DISTINCT TO_CHAR(user_updated_at, 'MM/YYYY') AS month_label
+FROM leads
+WHERE user_updated_at IS NOT NULL
+ORDER BY month_label DESC

@@ -7,7 +7,7 @@ SELECT COUNT(*) AS total_leads,
     COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS klal_leads
 FROM adi_leads_view
 WHERE CASE WHEN '{{Select_Month.selectedOptionValue}}' = '' THEN TRUE
-     ELSE TO_CHAR(תאריך_יצירת_ליד, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}'
+     ELSE TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}'
      END
 AND CASE WHEN '{{status.selectedOptionValue}}' = '' THEN TRUE
      ELSE סטטוס = '{{status.selectedOptionValue}}'
