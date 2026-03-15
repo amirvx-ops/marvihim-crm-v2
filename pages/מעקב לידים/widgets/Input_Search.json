@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 180,
+  "bottomRow": 18,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -27,7 +27,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "l0518499br",
-  "label": "Input_Search",
+  "label": "",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
@@ -50,11 +50,11 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 18,
+  "rightColumn": 10,
   "showStepArrows": false,
-  "topRow": 173,
+  "topRow": 12,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "kwg5dppjpe",
+  "widgetId": "ymjghm2eqc",
   "widgetName": "Input_Search"
 }
