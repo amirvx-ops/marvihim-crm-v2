@@ -17,3 +17,4 @@ WHERE p.name IS NOT NULL
 AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
 GROUP BY p.name
 ORDER BY COUNT(*) DESC
+LIMIT 100

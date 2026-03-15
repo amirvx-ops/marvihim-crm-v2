@@ -15,3 +15,4 @@ SELECT
     COALESCE(SUM(CASE WHEN l.phoenix_agent IS NOT NULL AND l.phoenix_agent != '' THEN l.closing_amount END), 0) AS סכום_סגירות
 FROM leads l
 WHERE ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
+LIMIT 100
