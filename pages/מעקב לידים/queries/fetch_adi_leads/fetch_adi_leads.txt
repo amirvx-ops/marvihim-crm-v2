@@ -4,4 +4,6 @@ AND ('{{status.selectedOptionValue}}' = '' OR סטטוס = '{{status.selectedOpt
 AND ('{{insurance_company.selectedOptionValue}}' = '' OR חברת_ביטוח = '{{insurance_company.selectedOptionValue}}')
 AND ('{{Select_Partner.selectedOptionValue}}' = '' OR מקור_ליד = '{{Select_Partner.selectedOptionValue}}')
 AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
+AND (סוג_ליד = 'בדיקת תיק מלאה' OR סוג_ליד IS NULL)
 ORDER BY תאריך_עדכון DESC NULLS LAST
+LIMIT 500
