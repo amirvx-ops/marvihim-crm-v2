@@ -11,9 +11,16 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
   "isFilterable": true,
@@ -24,6 +31,8 @@
   "labelAlignment": "right",
   "labelPosition": "Top",
   "leftColumn": 47,
+  "optionLabel": "month_label",
+  "optionValue": "month_label",
   "options": [
     {
       "label": "הכל",
@@ -133,6 +142,7 @@
   "renderMode": "CANVAS",
   "rightColumn": 58,
   "serverSideFiltering": false,
+  "sourceData": "{{fetch_months.data}}",
   "topRow": 12,
   "type": "SELECT_WIDGET",
   "version": 1,
