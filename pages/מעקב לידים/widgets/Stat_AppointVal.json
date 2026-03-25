@@ -37,7 +37,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 33,
-  "text": "{{count_adi_stats.data[0].סהכ_מינוי}}₪",
+  "text": "{{Number(count_adi_stats.data[0].סהכ_מינוי).toLocaleString()}}₪",
   "textAlign": "RIGHT",
   "textColor": "#FF9800",
   "topRow": 5,
