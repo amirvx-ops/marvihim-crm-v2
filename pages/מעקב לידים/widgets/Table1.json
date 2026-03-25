@@ -57,7 +57,7 @@
     "touched_by_adi",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1774479224240,
+  "columnUpdatedAt": 1774480170571,
   "columnWidthMap": {
     "customColumn1": 60,
     "xn__9dbfa8ad": 106
@@ -534,7 +534,7 @@
       "isDiscardVisible": true,
       "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "סטטוס",
       "notation": "standard",
       "originalId": "סטטוס",
@@ -635,7 +635,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "סוג_ליד",
       "notation": "standard",
       "originalId": "סוג_ליד",
