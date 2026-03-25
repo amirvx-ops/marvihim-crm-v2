@@ -37,7 +37,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 8,
-  "text": "{{count_adi_stats.data[0].כלל}}",
+  "text": "{{Number(count_adi_stats.data[0].כלל).toLocaleString()}}",
   "textAlign": "RIGHT",
   "textColor": "#1976d2",
   "topRow": 5,
