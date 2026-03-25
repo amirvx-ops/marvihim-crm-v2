@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT update_lead_from_appsmith(\n    '{{Table1.updatedRow.lead_id}}',\n    '{{Table1.updatedRow.חברת_ביטוח}}',\n    '{{Table1.updatedRow.סוכן_מטפל}}',\n    '{{Table1.updatedRow.ליד_פנימי}}',\n    '{{Table1.updatedRow.מינוי_סוכן}}',\n    '{{Table1.updatedRow.סכום_סגירה}}',\n    '{{Table1.updatedRow.סטטוס_סגירה}}',\n    '{{Table1.updatedRow.סטטוס}}',\n    '{{Table1.updatedRow.הערות}}'\n)",
+      "body": "SELECT update_lead_from_appsmith(\n    '{{Table1.updatedRow.lead_id}}',\n    '{{Table1.updatedRow.חברת_ביטוח}}',\n    '{{Table1.updatedRow.סוכן_מטפל}}',\n    '{{Table1.updatedRow.ליד_פנימי}}',\n    '{{Table1.updatedRow.מינוי_סוכן}}',\n    '{{Table1.updatedRow.סכום_סגירה}}',\n    '{{Table1.updatedRow.סטטוס_סגירה}}',\n    '{{Table1.updatedRow.סטטוס}}',\n    '{{Table1.updatedRow.הערות}}',\n    '{{Table1.updatedRow.סוג_ליד}}',\n    '{{Table1.updatedRow.תאריך_עדכון}}',\n    'עדי'\n)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

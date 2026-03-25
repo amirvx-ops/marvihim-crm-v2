@@ -37,7 +37,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 42,
-  "text": "₪{{count_adi_stats.data[0]?.total_closing || 0}}",
+  "text": "{{count_adi_stats.data[0].סהכ_סגירה}}₪",
   "textAlign": "RIGHT",
   "textColor": "#4CAF50",
   "topRow": 5,

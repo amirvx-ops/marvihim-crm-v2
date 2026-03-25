@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM adi_leads_view\nWHERE ('{{Input_Search.text}}' = '' OR שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%' OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%')\nAND ('{{status.selectedOptionValue}}' = '' OR סטטוס = '{{status.selectedOptionValue}}')\nAND ('{{insurance_company.selectedOptionValue}}' = '' OR חברת_ביטוח = '{{insurance_company.selectedOptionValue}}')\nAND ('{{Select_Partner.selectedOptionValue}}' = '' OR מקור_ליד = '{{Select_Partner.selectedOptionValue}}')\nAND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')\nAND (סוג_ליד = 'בדיקת תיק מלאה' OR סוג_ליד IS NULL)\nORDER BY תאריך_עדכון DESC NULLS LAST\nLIMIT 500",
+      "body": "SELECT * FROM adi_leads_view\nWHERE ('{{Input_Search.text}}' != '' AND (שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%' OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%'))\nOR ('{{Input_Search.text}}' = '' AND touched_by_adi = TRUE\n    AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')\n    AND ('{{status.selectedOptionValue}}' = '' OR סטטוס = '{{status.selectedOptionValue}}')\n    AND ('{{insurance_company.selectedOptionValue}}' = '' OR חברת_ביטוח = '{{insurance_company.selectedOptionValue}}')\n    AND ('{{Select_Partner.selectedOptionValue}}' = '' OR מקור_ליד = '{{Select_Partner.selectedOptionValue}}')\n)\nORDER BY תאריך_עדכון DESC NULLS LAST\nLIMIT 500",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

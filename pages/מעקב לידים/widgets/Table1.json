@@ -54,9 +54,10 @@
     "customer_id",
     "xn____5hcrcanso9a",
     "surens_lead_id",
+    "touched_by_adi",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1774389173441,
+  "columnUpdatedAt": 1774479224240,
   "columnWidthMap": {
     "customColumn1": 60,
     "xn__9dbfa8ad": 106
@@ -157,6 +158,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.computedValue"
+    },
+    {
+      "key": "primaryColumns.touched_by_adi.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -404,6 +408,40 @@
       "label": "surens_lead_id",
       "notation": "standard",
       "originalId": "surens_lead_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "touched_by_adi": {
+      "alias": "touched_by_adi",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "checkbox",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"touched_by_adi\"])) : touched_by_adi })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "touched_by_adi",
+      "index": 20,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "touched_by_adi",
+      "notation": "standard",
+      "originalId": "touched_by_adi",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
