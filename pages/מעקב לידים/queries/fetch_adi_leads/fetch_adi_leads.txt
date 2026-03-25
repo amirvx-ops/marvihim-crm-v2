@@ -1,15 +1,10 @@
 SELECT * FROM adi_leads_view
-WHERE (
-    '{{Input_Search.text}}' != ''
-    AND (שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%' OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%')
-)
-OR (
-    '{{Input_Search.text}}' = ''
-    AND touched_by_adi = TRUE
+WHERE ('{{Input_Search.text}}' != '' AND (שם_לקוח ILIKE '%' || '{{Input_Search.text}}' || '%' OR תעודת_זהות ILIKE '%' || '{{Input_Search.text}}' || '%'))
+OR ('{{Input_Search.text}}' = '' AND touched_by_adi = TRUE
+    AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
     AND ('{{status.selectedOptionValue}}' = '' OR סטטוס = '{{status.selectedOptionValue}}')
     AND ('{{insurance_company.selectedOptionValue}}' = '' OR חברת_ביטוח = '{{insurance_company.selectedOptionValue}}')
     AND ('{{Select_Partner.selectedOptionValue}}' = '' OR מקור_ליד = '{{Select_Partner.selectedOptionValue}}')
-    AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
 )
 ORDER BY תאריך_עדכון DESC NULLS LAST
 LIMIT 500

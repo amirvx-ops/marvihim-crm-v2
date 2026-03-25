@@ -1,20 +1,10 @@
-SELECT COUNT(*) AS total_leads,
-    COUNT(CASE WHEN סכום_סגירה > 0 THEN 1 END) AS closings,
-    COALESCE(SUM(סכום_סגירה), 0) AS total_closing,
-    COALESCE(SUM(מינוי_סוכן), 0) AS total_appointment,
-    COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS harel_leads,
-    COUNT(CASE WHEN חברת_ביטוח = 'הפניקס' THEN 1 END) AS phoenix_leads,
-    COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS klal_leads
+SELECT
+    COUNT(*) AS total,
+    COUNT(CASE WHEN חברת_ביטוח = 'פניקס' THEN 1 END) AS פניקס,
+    COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS הראל,
+    COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS כלל,
+    COALESCE(SUM(מינוי_סוכן), 0) AS סהכ_מינוי,
+    COALESCE(SUM(סכום_סגירה), 0) AS סהכ_סגירה
 FROM adi_leads_view
-WHERE CASE WHEN '{{Select_Month.selectedOptionValue}}' = '' THEN TRUE
-     ELSE TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}'
-     END
-AND CASE WHEN '{{status.selectedOptionValue}}' = '' THEN TRUE
-     ELSE סטטוס = '{{status.selectedOptionValue}}'
-     END
-AND CASE WHEN '{{insurance_company.selectedOptionValue}}' = '' THEN TRUE
-     ELSE חברת_ביטוח = '{{insurance_company.selectedOptionValue}}'
-     END
-AND CASE WHEN '{{Select_Partner.selectedOptionValue}}' = '' THEN TRUE
-     ELSE מקור_ליד = '{{Select_Partner.selectedOptionValue}}'
-     END
+WHERE touched_by_adi = TRUE
+AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
