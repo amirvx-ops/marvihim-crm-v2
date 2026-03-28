@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    COUNT(*) AS total,\n    COUNT(CASE WHEN חברת_ביטוח = 'פניקס' THEN 1 END) AS פניקס,\n    COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS הראל,\n    COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS כלל,\n    COALESCE(SUM(מינוי_סוכן), 0) AS סהכ_מינוי,\n    COALESCE(SUM(סכום_סגירה), 0) AS סהכ_סגירה\nFROM adi_leads_view\nWHERE touched_by_adi = TRUE\nAND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')",
+      "body": "SELECT\n    COUNT(*) AS total,\n    COUNT(CASE WHEN חברת_ביטוח = 'הפניקס' THEN 1 END) AS פניקס,\n    COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS הראל,\n    COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS כלל,\n    COALESCE(SUM(מינוי_סוכן), 0) AS סהכ_מינוי,\n    COALESCE(SUM(סכום_סגירה), 0) AS סהכ_סגירה\nFROM adi_leads_view\nWHERE touched_by_adi = TRUE\nAND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

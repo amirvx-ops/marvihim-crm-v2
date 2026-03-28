@@ -1,6 +1,6 @@
 SELECT
     COUNT(*) AS total,
-    COUNT(CASE WHEN חברת_ביטוח = 'פניקס' THEN 1 END) AS פניקס,
+    COUNT(CASE WHEN חברת_ביטוח = 'הפניקס' THEN 1 END) AS פניקס,
     COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS הראל,
     COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS כלל,
     COALESCE(SUM(מינוי_סוכן), 0) AS סהכ_מינוי,
