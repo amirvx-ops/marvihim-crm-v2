@@ -1,20 +1,21 @@
 SELECT
     p.name AS מקור,
-    COUNT(*) AS לידים,
+    COUNT(l.id) AS לידים,
     COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END) AS מינוי_סוכן,
     COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END) AS סגירות,
     COALESCE(SUM(l.agent_appointment_amount), 0) AS סכום_מינוי_סוכן,
     COALESCE(SUM(l.closing_amount), 0) AS סכום_סגירות,
-    CASE WHEN COUNT(*) > 0
-        THEN ROUND(COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
-        ELSE 0 END AS אחוז_מינוי_סוכן,
-    CASE WHEN COUNT(*) > 0
-        THEN ROUND(COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
+    CASE WHEN COUNT(l.id) > 0
+        THEN ROUND(COUNT(CASE WHEN l.agent_appointment_amount > 0 THEN 1 END)::numeric / COUNT(l.id)::numeric * 100, 1)
+        ELSE 0 END AS אחוז_מינוי,
+    CASE WHEN COUNT(l.id) > 0
+        THEN ROUND(COUNT(CASE WHEN l.closing_amount > 0 THEN 1 END)::numeric / COUNT(l.id)::numeric * 100, 1)
         ELSE 0 END AS אחוז_סגירות
-FROM leads l
-LEFT JOIN partners p ON l.partner_id = p.id
+FROM partners p
+LEFT JOIN leads l ON l.partner_id = p.id
+  AND ('{{Select_Month.selectedOptionValue}}' = '' 
+       OR TO_CHAR(l.user_updated_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
 WHERE p.name IS NOT NULL
-AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
 GROUP BY p.name
-ORDER BY COUNT(*) DESC
-LIMIT 100
+ORDER BY לידים DESC
+LIMIT 100;

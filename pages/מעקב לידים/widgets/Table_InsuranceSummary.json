@@ -33,10 +33,10 @@
     "xn__5dbgh3e",
     "xn__7dblbji",
     "xn__6dbgl4a0bn",
-    "xn____9hcbpbhpjtd",
-    "xn____4hchctip3ae6exa"
+    "xn____4hchctip3ae6exa",
+    "xn____zhchicgfu4esd"
   ],
-  "columnUpdatedAt": 1773092834125,
+  "columnUpdatedAt": 1774731831677,
   "columnWidthMap": {},
   "defaultPageSize": 0,
   "delimiter": ",",
@@ -54,26 +54,26 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.xn__5dbgh3e.computedValue"
-    },
-    {
       "key": "primaryColumns.xn__7dblbji.computedValue"
     },
     {
       "key": "primaryColumns.xn__6dbgl4a0bn.computedValue"
     },
     {
-      "key": "primaryColumns.xn____9hcbpbhpjtd.computedValue"
+      "key": "primaryColumns.xn____4hchctip3ae6exa.computedValue"
     },
     {
-      "key": "primaryColumns.xn____4hchctip3ae6exa.computedValue"
+      "key": "primaryColumns.xn__5dbgh3e.computedValue"
+    },
+    {
+      "key": "primaryColumns.xn____zhchicgfu4esd.computedValue"
     }
   ],
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": false,
   "enableServerSideFiltering": false,
-  "horizontalAlignment": "RIGHT",
+  "horizontalAlignment": "CENTER",
   "isDeprecated": false,
   "isLoading": false,
   "isSortable": false,
@@ -102,7 +102,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
+      "horizontalAlignment": "CENTER",
       "id": "xn__5dbgh3e",
       "index": 0,
       "isCellEditable": false,
@@ -129,14 +129,14 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = Table_InsuranceSummary.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"סגירות\"])) : סגירות })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table_InsuranceSummary.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Number(currentRow[\"סגירות\"]).toLocaleString('he-IL'))) : Number(currentRow[\"סגירות\"]).toLocaleString('he-IL') })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
+      "horizontalAlignment": "CENTER",
       "id": "xn__6dbgl4a0bn",
       "index": 2,
       "isCellEditable": false,
@@ -170,7 +170,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
+      "horizontalAlignment": "CENTER",
       "id": "xn__7dblbji",
       "index": 1,
       "isCellEditable": false,
@@ -197,14 +197,14 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = Table_InsuranceSummary.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"סכום_סגירות\"])) : סכום_סגירות })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table_InsuranceSummary.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Number(currentRow[\"סכום_סגירות\"]).toLocaleString('he-IL'))) : Number(currentRow[\"סכום_סגירות\"]).toLocaleString('he-IL') })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
+      "horizontalAlignment": "CENTER",
       "id": "xn____4hchctip3ae6exa",
       "index": 4,
       "isCellEditable": false,
@@ -226,21 +226,21 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "xn____9hcbpbhpjtd": {
-      "alias": "סכום_מינוי",
+    "xn____zhchicgfu4esd": {
+      "alias": "אחוז_סגירה",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = Table_InsuranceSummary.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"סכום_מינוי\"])) : סכום_מינוי })()}}",
+      "computedValue": "{{(() => { const tableData = Table_InsuranceSummary.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"אחוז_סגירה\"]+\"%\")) : currentRow[\"אחוז_סגירה\"]+\"%\" })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
-      "id": "xn____9hcbpbhpjtd",
-      "index": 3,
+      "horizontalAlignment": "CENTER",
+      "id": "xn____zhchicgfu4esd",
+      "index": 4,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -249,9 +249,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "סכום_מינוי",
+      "label": "אחוז_סגירה",
       "notation": "standard",
-      "originalId": "סכום_מינוי",
+      "originalId": "אחוז_סגירה",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
