@@ -1,0 +1,8 @@
+SELECT
+  COUNT(*) AS סה_כ_לידים,
+  COUNT(CASE WHEN תאריך_פגישה IS NOT NULL THEN 1 END) AS פגישות_מתואמות,
+  COUNT(CASE WHEN ליד_עבר = TRUE THEN 1 END) AS לידים_שעברו,
+  COUNT(CASE WHEN נסגרה_עסקה IS NOT NULL AND נסגרה_עסקה != '' THEN 1 END) AS עסקאות_שנסגרו
+FROM lidor_leads_view
+WHERE ('{{Select_Month_Lidor.selectedOptionValue}}' = ''
+       OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')

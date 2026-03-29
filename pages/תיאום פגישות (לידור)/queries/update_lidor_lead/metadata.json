@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE leads SET\n  meeting_scheduled_date = '{{update_lidor_lead.params.meeting_date}}',\n  meeting_time = '{{update_lidor_lead.params.meeting_time}}',\n  assigned_agent = '{{update_lidor_lead.params.agent}}',\n  lead_passed = '{{update_lidor_lead.params.lead_passed}}',\n  deal_closed = '{{update_lidor_lead.params.deal_closed}}',\n  notes = '{{update_lidor_lead.params.notes}}',\n  touched_by_lidor = TRUE,\n  user_updated_at = CURRENT_DATE,\n  updated_at = NOW()\nWHERE id = '{{update_lidor_lead.params.lead_id}}'",
+      "body": "UPDATE leads SET\n    has_har_bituach = {{Table_Lidor.updatedRow.כולל_הר_ביטוח}},\n    assigned_agent = {{Table_Lidor.updatedRow.מטפל}},\n    meeting_scheduled_date = {{Table_Lidor.updatedRow.תאריך_פגישה}},\n    meeting_time = {{Table_Lidor.updatedRow.שעה}},\n    lead_passed = {{Table_Lidor.updatedRow.הליד_עבר === 'כן'}},\n    deal_closed = {{Table_Lidor.updatedRow.נסגרה_עסקה}},\n    notes = {{Table_Lidor.updatedRow.הערות}}\nWHERE id = {{Table_Lidor.updatedRow.lead_id}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

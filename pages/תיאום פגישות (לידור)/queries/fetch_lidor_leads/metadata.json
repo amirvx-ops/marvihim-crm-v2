@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM lidor_leads_view\nWHERE ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n       OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')\n  AND ('{{Input_Search_Lidor.text}}' = ''\n       OR שם_לקוח ILIKE '%' || '{{Input_Search_Lidor.text}}' || '%'\n       OR תעודת_זהות ILIKE '%' || '{{Input_Search_Lidor.text}}' || '%')\nORDER BY תאריך_יצירה DESC\nLIMIT 200",
+      "body": "SELECT * FROM lidor_meetings_view\nWHERE ({{!Input_Search.text || Input_Search.text === ''}}\n     OR שם ILIKE {{'%' + Input_Search.text + '%'}}\n     OR תעודת_זהות ILIKE {{'%' + Input_Search.text + '%'}})\n    AND ({{!Select_Source.selectedOptionValue || Select_Source.selectedOptionValue === ''}}\n     OR מקור = {{Select_Source.selectedOptionValue}})\n    AND ({{!Select_Agent.selectedOptionValue || Select_Agent.selectedOptionValue === ''}}\n     OR מטפל = {{Select_Agent.selectedOptionValue}})\n    AND ({{!Select_Month.selectedOptionValue || Select_Month.selectedOptionValue === ''}}\n     OR TO_CHAR(תאריך, 'MM/YYYY') = {{Select_Month.selectedOptionValue}})\nORDER BY תאריך DESC\nLIMIT {{Table_Lidor.pageSize}} OFFSET {{(Table_Lidor.pageNo - 1) * Table_Lidor.pageSize}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
