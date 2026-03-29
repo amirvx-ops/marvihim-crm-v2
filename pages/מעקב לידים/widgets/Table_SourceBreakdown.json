@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 155,
+  "bottomRow": 156,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "button": {
@@ -40,7 +40,15 @@
     "xn____zhcpbderb6bv"
   ],
   "columnUpdatedAt": 1774729363843,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "xn__6dbgl4a0bn": 78,
+    "xn__7dblbji": 84,
+    "xn____4hchctip3ae6exa": 95,
+    "xn____9hcbnbopodn": 99,
+    "xn_____9ldbbvblhnmshhk": 110,
+    "xn____zhchkcdfu4esdxa": 117,
+    "xn____zhcpbderb6bv": 109.609375
+  },
   "compactMode": "SHORT",
   "defaultPageSize": 0,
   "delimiter": ",",
@@ -97,7 +105,7 @@
   "isVisibleSearch": false,
   "key": "src02",
   "label": "Data",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "needsHeightForContent": true,
   "parentColumnSpace": 1,
   "parentId": "0",
@@ -377,11 +385,11 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 61,
+  "rightColumn": 40,
   "searchKey": "",
   "tableData": "{{source_breakdown.data}}",
   "textSize": "0.875rem",
-  "topRow": 124,
+  "topRow": 125,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
