@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 173,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "e5f6g7h8": {
+      "color": "",
+      "data": "{{chart_monthly_trend.data}}",
+      "seriesName": "לידים"
+    }
+  },
+  "chartName": "מגמת לידים חודשית",
+  "chartType": "LINE_CHART",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": ""
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.e5f6g7h8.data"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartData.e5f6g7h8.data"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "d2b3c",
+  "labelOrientation": "auto",
+  "leftColumn": 32,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "setAdaptiveYMin": false,
+  "showDataPointLabel": false,
+  "topRow": 153,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "ch4rt_mnt02",
+  "widgetName": "Chart_MonthlyTrend",
+  "xAxisName": "חודש",
+  "yAxisName": "כמות"
+}

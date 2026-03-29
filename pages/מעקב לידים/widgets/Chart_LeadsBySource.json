@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 173,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "a1b2c3d4": {
+      "color": "",
+      "data": "{{chart_leads_by_source.data}}",
+      "seriesName": "לידים"
+    }
+  },
+  "chartName": "פילוח לידים לפי מקור",
+  "chartType": "PIE_CHART",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": ""
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.a1b2c3d4.data"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartData.a1b2c3d4.data"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "c1a2b",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 32,
+  "setAdaptiveYMin": false,
+  "showDataPointLabel": false,
+  "topRow": 153,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "ch4rt_src01",
+  "widgetName": "Chart_LeadsBySource",
+  "xAxisName": "",
+  "yAxisName": ""
+}
