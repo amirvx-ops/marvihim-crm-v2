@@ -1,0 +1,6 @@
+SELECT TO_CHAR(DATE_TRUNC('month', created_at), 'MM/YYYY') AS x,
+    COUNT(*)::int AS y
+FROM leads
+WHERE created_at >= CURRENT_DATE - INTERVAL '12 months'
+GROUP BY DATE_TRUNC('month', created_at)
+ORDER BY DATE_TRUNC('month', created_at)

@@ -1,0 +1,6 @@
+SELECT COALESCE(p.name, 'לא ידוע') AS x,
+    COUNT(*)::int AS y
+FROM leads l
+LEFT JOIN partners p ON l.partner_id = p.id
+GROUP BY p.name
+ORDER BY y DESC

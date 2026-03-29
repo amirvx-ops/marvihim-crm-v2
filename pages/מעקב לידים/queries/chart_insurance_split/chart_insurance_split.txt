@@ -1,0 +1,10 @@
+SELECT 
+  insurance_company AS x,
+  COUNT(*) AS y
+FROM leads
+WHERE insurance_company IS NOT NULL AND insurance_company != ''
+  AND touched_by_adi = TRUE
+  AND ('{{Select_Month.selectedOptionValue}}' = ''
+       OR TO_CHAR(user_updated_at, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
+GROUP BY insurance_company
+ORDER BY y DESC
