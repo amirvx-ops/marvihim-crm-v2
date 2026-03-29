@@ -43,9 +43,10 @@
   "columnWidthMap": {
     "xn__6dbgl4a0bn": 78,
     "xn__7dblbji": 84,
+    "xn__9dbr1af": 112,
     "xn____4hchctip3ae6exa": 95,
     "xn____9hcbnbopodn": 99,
-    "xn_____9ldbbvblhnmshhk": 110,
+    "xn_____9ldbbvblhnmshhk": 113,
     "xn____zhchkcdfu4esdxa": 117,
     "xn____zhcpbderb6bv": 109.609375
   },
@@ -385,7 +386,7 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 40,
+  "rightColumn": 64,
   "searchKey": "",
   "tableData": "{{source_breakdown.data}}",
   "textSize": "0.875rem",

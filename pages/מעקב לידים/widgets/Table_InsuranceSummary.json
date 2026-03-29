@@ -262,7 +262,7 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 34,
+  "rightColumn": 60,
   "searchKey": "",
   "tableData": "{{insurance_summary.data}}",
   "textSize": "0.875rem",
