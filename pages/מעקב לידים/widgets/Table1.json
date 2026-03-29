@@ -57,7 +57,7 @@
     "touched_by_adi",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1774728691823,
+  "columnUpdatedAt": 1774771440610,
   "columnWidthMap": {
     "customColumn1": 60,
     "xn__9dbfa8ad": 106
@@ -635,7 +635,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "סוג_ליד",
       "notation": "standard",
       "originalId": "סוג_ליד",
@@ -855,7 +855,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "סוכן_מטפל",
       "notation": "standard",
       "originalId": "סוכן_מטפל",
