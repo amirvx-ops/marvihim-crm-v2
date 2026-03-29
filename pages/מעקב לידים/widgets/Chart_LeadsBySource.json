@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 173,
+  "bottomRow": 230,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "a1b2c3d4": {
@@ -56,9 +56,9 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 32,
-  "setAdaptiveYMin": false,
+  "setAdaptiveYMin": true,
   "showDataPointLabel": false,
-  "topRow": 153,
+  "topRow": 199,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "ch4rt_src01",

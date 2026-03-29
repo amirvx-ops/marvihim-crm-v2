@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 193,
+  "bottomRow": 195,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "m3n4o5p6": {
@@ -50,7 +50,7 @@
   "isVisible": true,
   "key": "f4d5e",
   "labelOrientation": "auto",
-  "leftColumn": 32,
+  "leftColumn": 33,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -58,7 +58,7 @@
   "rightColumn": 64,
   "setAdaptiveYMin": false,
   "showDataPointLabel": false,
-  "topRow": 173,
+  "topRow": 157,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "ch4rt_ins04",

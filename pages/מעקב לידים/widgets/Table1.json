@@ -978,7 +978,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{fetch_adi_leads.data}}",
   "textSize": "0.875rem",
-  "topRow": 18,
+  "topRow": 19,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
