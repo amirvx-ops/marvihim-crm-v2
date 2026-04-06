@@ -1,8 +1,11 @@
 SELECT
     COUNT(*) AS total,
-    COUNT(CASE WHEN חברת_ביטוח = 'הפניקס' THEN 1 END) AS פניקס,
+    COUNT(CASE WHEN חברת_ביטוח ILIKE '%פניקס%' THEN 1 END) AS פניקס,
     COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS הראל,
     COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS כלל,
+    COUNT(CASE WHEN חברת_ביטוח ILIKE '%פניקס%' AND סכום_סגירה IS NOT NULL THEN 1 END) AS פניקס_סגירות,
+    COUNT(CASE WHEN חברת_ביטוח = 'הראל' AND סכום_סגירה IS NOT NULL THEN 1 END) AS הראל_סגירות,
+    COUNT(CASE WHEN חברת_ביטוח = 'כלל' AND סכום_סגירה IS NOT NULL THEN 1 END) AS כלל_סגירות,
     COALESCE(SUM(מינוי_סוכן), 0) AS סהכ_מינוי,
     COALESCE(SUM(סכום_סגירה), 0) AS סהכ_סגירה
 FROM adi_leads_view
