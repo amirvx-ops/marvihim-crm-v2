@@ -1,9 +1,10 @@
-UPDATE leads SET
-    has_har_bituach = {{Table_Lidor.updatedRow.כולל_הר_ביטוח}},
-    assigned_agent = {{Table_Lidor.updatedRow.מטפל}},
-    meeting_scheduled_date = {{Table_Lidor.updatedRow.תאריך_פגישה}},
-    meeting_time = {{Table_Lidor.updatedRow.שעה}},
-    lead_passed = {{Table_Lidor.updatedRow.הליד_עבר === 'כן'}},
-    deal_closed = {{Table_Lidor.updatedRow.נסגרה_עסקה}},
-    notes = {{Table_Lidor.updatedRow.הערות}}
-WHERE id = {{Table_Lidor.updatedRow.lead_id}}
+SELECT update_lead_from_lidor(
+  '{{Table_LidorLeads.updatedRow.lead_id}}',
+  '{{Table_LidorLeads.updatedRow.תאריך_פגישה}}',
+  '{{Table_LidorLeads.updatedRow.שעת_פגישה}}',
+  '{{Table_LidorLeads.updatedRow.סוכן_מטפל}}',
+  '{{Table_LidorLeads.updatedRow.ליד_עבר}}',
+  '{{Table_LidorLeads.updatedRow.נסגרה_עסקה}}',
+  '{{Table_LidorLeads.updatedRow.סטטוס}}',
+  '{{Table_LidorLeads.updatedRow.הערות}}'
+);
