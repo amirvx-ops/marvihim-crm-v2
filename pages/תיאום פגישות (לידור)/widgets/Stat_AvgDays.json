@@ -25,7 +25,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 10,
-  "text": "{{fetch_lidor_stats.data[0].avg_days_to_meeting || \"-\"}}",
+  "text": "{{fetch_lidor_new_leads.data[0].new_leads_this_month}}",
   "textAlign": "CENTER",
   "textColor": "#1976D2",
   "topRow": 5,
