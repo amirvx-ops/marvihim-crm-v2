@@ -1,0 +1,4 @@
+SELECT COUNT(*) AS new_leads_this_month
+FROM leads
+WHERE type IN ('קיבלו כסף', 'מסלקה (אוטומציה)', 'שכר מעל 10 (ללא יפוי כח)')
+  AND DATE_TRUNC('month', created_at) = DATE_TRUNC('month', NOW());
