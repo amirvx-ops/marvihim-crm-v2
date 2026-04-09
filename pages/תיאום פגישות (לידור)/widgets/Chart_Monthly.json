@@ -3,10 +3,11 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 216,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "bottomRow": 217,
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "chartData": {
     "deals": {
+      "color": "#22c55e",
       "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.deals}))}}",
       "seriesName": "סגרו"
     },
@@ -15,6 +16,7 @@
       "seriesName": "לידים"
     },
     "passed": {
+      "color": "#eab308",
       "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.passed}))}}",
       "seriesName": "עברו"
     }
@@ -34,9 +36,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
     },
     {
       "key": "chartData.leads.data"
@@ -66,13 +65,13 @@
   "isVisible": true,
   "key": "ch004",
   "labelOrientation": "auto",
-  "leftColumn": 37,
+  "leftColumn": 33,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 64,
-  "topRow": 188,
+  "topRow": 189,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "e1f2a3b404",

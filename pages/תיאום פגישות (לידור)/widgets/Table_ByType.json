@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 129,
+  "bottomRow": 132,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -40,12 +40,12 @@
   ],
   "columnUpdatedAt": 1772642674172,
   "columnWidthMap": {
-    "אחוז_העברה": 97,
+    "אחוז_העברה": 112,
     "אחוז_סגירה": 116.90625,
-    "לידים": 70,
-    "סגרו": 66,
+    "לידים": 115,
+    "סגרו": 87,
     "סוג_ליד": 134,
-    "עברו": 87
+    "עברו": 115
   },
   "defaultPageSize": 10,
   "defaultSelectedRowIndex": 0,
@@ -100,7 +100,7 @@
   "isVisible": true,
   "isVisibleDownload": false,
   "isVisibleFilters": false,
-  "isVisiblePagination": false,
+  "isVisiblePagination": true,
   "isVisibleSearch": false,
   "key": "tt001",
   "label": "Data",
@@ -292,9 +292,9 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 37,
+  "rightColumn": 33,
   "searchKey": "",
-  "serverSidePaginationEnabled": false,
+  "serverSidePaginationEnabled": true,
   "tableData": "{{fetch_lidor_by_type.data}}",
   "textSize": "0.875rem",
   "topRow": 104,

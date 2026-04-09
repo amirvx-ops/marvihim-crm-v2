@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 129,
+  "bottomRow": 132,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "default": {
@@ -46,12 +46,12 @@
   "isVisible": true,
   "key": "ch002",
   "labelOrientation": "auto",
-  "leftColumn": 37,
+  "leftColumn": 33,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "showDataPointLabel": true,
   "topRow": 104,
   "type": "CHART_WIDGET",

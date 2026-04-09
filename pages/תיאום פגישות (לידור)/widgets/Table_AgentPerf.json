@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 186,
+  "bottomRow": 189,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -230,12 +230,12 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 37,
+  "rightColumn": 33,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{fetch_lidor_by_agent.data}}",
   "textSize": "0.875rem",
-  "topRow": 166,
+  "topRow": 167,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
