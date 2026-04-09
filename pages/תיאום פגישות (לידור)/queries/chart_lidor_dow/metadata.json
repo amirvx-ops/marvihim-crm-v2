@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "",
+      "body": "SELECT\n  CASE EXTRACT(DOW FROM meeting_date)\n    WHEN 0 THEN '7-ראשון'\n    WHEN 1 THEN '1-שני'\n    WHEN 2 THEN '2-שלישי'\n    WHEN 3 THEN '3-רביעי'\n    WHEN 4 THEN '4-חמישי'\n    WHEN 5 THEN '5-שישי'\n  END AS x,\n  COUNT(*) AS y\nFROM lidor_leads_view\nWHERE touched_by_lidor = TRUE\n  AND meeting_date IS NOT NULL\n  AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n       OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')\nGROUP BY x\nORDER BY x;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,6 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
     "name": "chart_lidor_dow",
     "pageId": "תיאום פגישות (לידור)",
     "runBehaviour": "AUTOMATIC",

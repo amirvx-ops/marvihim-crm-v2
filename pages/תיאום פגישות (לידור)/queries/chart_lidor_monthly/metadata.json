@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "",
+      "body": "SELECT\n  TO_CHAR(update_date, 'MM/YYYY') AS x,\n  COUNT(*) AS total,\n  COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) AS passed,\n  COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END) AS deals,\n  CASE WHEN COUNT(*) > 0\n    THEN ROUND(COUNT(CASE WHEN lead_passed = TRUE THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)\n    ELSE 0 END AS pass_rate\nFROM lidor_leads_view\nWHERE touched_by_lidor = TRUE AND update_date IS NOT NULL\nGROUP BY x\nORDER BY MIN(update_date);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,6 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
     "name": "chart_lidor_monthly",
     "pageId": "תיאום פגישות (לידור)",
     "runBehaviour": "AUTOMATIC",
