@@ -56,7 +56,7 @@
     "closing_amount",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1775735091477,
+  "columnUpdatedAt": 1775772516162,
   "columnWidthMap": {
     "customColumn3": 60
   },
@@ -308,7 +308,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "closing_amount",
       "notation": "standard",
       "originalId": "closing_amount",
@@ -342,7 +342,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "created_at",
       "notation": "standard",
       "originalId": "created_at",
@@ -470,7 +470,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "handler",
       "notation": "standard",
       "originalId": "handler",
