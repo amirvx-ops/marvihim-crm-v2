@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) AS new_leads_this_month\nFROM leads\nWHERE type IN ('קיבלו כסף', 'מסלקה (אוטומציה)', 'שכר מעל 10 (ללא יפוי כח)')\n  AND DATE_TRUNC('month', created_at) = DATE_TRUNC('month', NOW());",
+      "body": "SELECT COUNT(DISTINCT c.identity_number) AS new_leads_this_month\nFROM leads l\nJOIN customers c ON l.customer_id = c.id\nWHERE l.type IN ('קיבלו כסף', 'מסלקה (אוטומציה)', 'שכר מעל 10 (ללא יפוי כח)')\n  AND DATE_TRUNC('month', l.created_at) = DATE_TRUNC('month', NOW());",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,11 +22,7 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "fetch_lidor_new_leads",
     "pageId": "תיאום פגישות (לידור)",
     "runBehaviour": "AUTOMATIC",
