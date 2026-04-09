@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "",
+      "body": "SELECT COUNT(*) AS new_leads_this_month\nFROM leads\nWHERE type IN ('קיבלו כסף', 'מסלקה (אוטומציה)', 'שכר מעל 10 (ללא יפוי כח)')\n  AND DATE_TRUNC('month', created_at) = DATE_TRUNC('month', NOW());",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,6 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
     "name": "fetch_lidor_new_leads",
     "pageId": "תיאום פגישות (לידור)",
     "runBehaviour": "AUTOMATIC",
