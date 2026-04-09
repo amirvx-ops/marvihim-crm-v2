@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT update_lead_from_lidor(\n  '{{Table_LidorLeads.updatedRow.lead_id}}',\n  '{{Table_LidorLeads.updatedRow.תאריך_פגישה}}',\n  '{{Table_LidorLeads.updatedRow.שעת_פגישה}}',\n  '{{Table_LidorLeads.updatedRow.סוכן_מטפל}}',\n  '{{Table_LidorLeads.updatedRow.ליד_עבר}}',\n  '{{Table_LidorLeads.updatedRow.בעל_ואישה}}',\n  '{{Table_LidorLeads.updatedRow.נסגרה_עסקה}}',\n  '{{Table_LidorLeads.updatedRow.סטטוס}}',\n  '{{Table_LidorLeads.updatedRow.הערות}}'\n);",
+      "body": "DO $$\nBEGIN\n  IF '{{Table_LidorLeads.updatedRow.lead_id}}' != ''\n  AND '{{Table_LidorLeads.updatedRow.lead_id}}' != 'null' THEN\n    PERFORM update_lead_from_lidor(\n      '{{Table_LidorLeads.updatedRow.lead_id}}',\n      '{{Table_LidorLeads.updatedRow.תאריך_פגישה}}',\n      '{{Table_LidorLeads.updatedRow.שעת_פגישה}}',\n      '{{Table_LidorLeads.updatedRow.סוכן_מטפל}}',\n      '{{Table_LidorLeads.updatedRow.ליד_עבר}}',\n      '{{Table_LidorLeads.updatedRow.בעל_ואישה}}',\n      '{{Table_LidorLeads.updatedRow.נסגרה_עסקה}}',\n      '{{Table_LidorLeads.updatedRow.סטטוס}}',\n      '{{Table_LidorLeads.updatedRow.הערות}}'\n    );\n  END IF;\nEND $$;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

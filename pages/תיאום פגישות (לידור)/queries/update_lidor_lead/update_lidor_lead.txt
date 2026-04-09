@@ -1,11 +1,17 @@
-SELECT update_lead_from_lidor(
-  '{{Table_LidorLeads.updatedRow.lead_id}}',
-  '{{Table_LidorLeads.updatedRow.תאריך_פגישה}}',
-  '{{Table_LidorLeads.updatedRow.שעת_פגישה}}',
-  '{{Table_LidorLeads.updatedRow.סוכן_מטפל}}',
-  '{{Table_LidorLeads.updatedRow.ליד_עבר}}',
-  '{{Table_LidorLeads.updatedRow.בעל_ואישה}}',
-  '{{Table_LidorLeads.updatedRow.נסגרה_עסקה}}',
-  '{{Table_LidorLeads.updatedRow.סטטוס}}',
-  '{{Table_LidorLeads.updatedRow.הערות}}'
-);
+DO $$
+BEGIN
+  IF '{{Table_LidorLeads.updatedRow.lead_id}}' != ''
+  AND '{{Table_LidorLeads.updatedRow.lead_id}}' != 'null' THEN
+    PERFORM update_lead_from_lidor(
+      '{{Table_LidorLeads.updatedRow.lead_id}}',
+      '{{Table_LidorLeads.updatedRow.תאריך_פגישה}}',
+      '{{Table_LidorLeads.updatedRow.שעת_פגישה}}',
+      '{{Table_LidorLeads.updatedRow.סוכן_מטפל}}',
+      '{{Table_LidorLeads.updatedRow.ליד_עבר}}',
+      '{{Table_LidorLeads.updatedRow.בעל_ואישה}}',
+      '{{Table_LidorLeads.updatedRow.נסגרה_עסקה}}',
+      '{{Table_LidorLeads.updatedRow.סטטוס}}',
+      '{{Table_LidorLeads.updatedRow.הערות}}'
+    );
+  END IF;
+END $$;
