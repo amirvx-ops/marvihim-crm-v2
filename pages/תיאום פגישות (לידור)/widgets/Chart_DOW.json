@@ -3,18 +3,42 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 175,
+  "bottomRow": 200,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "default": {
+      "data": "{{chart_lidor_dow.data}}",
+      "seriesName": "פגישות"
+    }
+  },
   "chartName": "פגישות לפי יום בשבוע",
   "chartType": "BAR_CHART",
-  "customFusionChartConfig": { "type": "bar2d", "dataSource": { "chart": {}, "data": [] } },
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": "bar2d"
+  },
   "dynamicBindingPathList": [
-    { "key": "accentColor" },
-    { "key": "borderRadius" },
-    { "key": "boxShadow" },
-    { "key": "chartData.default.data" }
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.default.data"
+    }
   ],
-  "dynamicPropertyPathList": [{ "key": "chartData.default.data" }],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartData.default.data"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isDeprecated": false,
@@ -27,14 +51,8 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 22,
-  "chartData": {
-    "default": {
-      "seriesName": "פגישות",
-      "data": "{{chart_lidor_dow.data}}"
-    }
-  },
-  "topRow": 147,
+  "rightColumn": 20,
+  "topRow": 172,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "e1f2a3b406",

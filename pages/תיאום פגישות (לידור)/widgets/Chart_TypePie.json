@@ -3,18 +3,42 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 145,
+  "bottomRow": 171,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "default": {
+      "data": "{{fetch_lidor_by_type.data.map(r => ({x: r[\"סוג_ליד\"], y: r[\"לידים\"]}))}}",
+      "seriesName": "לידים"
+    }
+  },
   "chartName": "לידים לפי סוג",
   "chartType": "PIE_CHART",
-  "customFusionChartConfig": { "type": "pie2d", "dataSource": { "chart": {}, "data": [] } },
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": "pie2d"
+  },
   "dynamicBindingPathList": [
-    { "key": "accentColor" },
-    { "key": "borderRadius" },
-    { "key": "boxShadow" },
-    { "key": "chartData.default.data" }
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.default.data"
+    }
   ],
-  "dynamicPropertyPathList": [{ "key": "chartData.default.data" }],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartData.default.data"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isDeprecated": false,
@@ -22,19 +46,13 @@
   "isVisible": true,
   "key": "ch002",
   "labelOrientation": "auto",
-  "leftColumn": 22,
+  "leftColumn": 21,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 43,
-  "chartData": {
-    "default": {
-      "seriesName": "לידים",
-      "data": "{{fetch_lidor_by_type.data.map(r => ({x: r[\"סוג_ליד\"], y: r[\"לידים\"]}))}}"
-    }
-  },
-  "topRow": 122,
+  "rightColumn": 42,
+  "topRow": 148,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "e1f2a3b402",

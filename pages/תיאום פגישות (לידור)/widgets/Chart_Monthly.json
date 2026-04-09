@@ -3,23 +3,61 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 175,
+  "bottomRow": 200,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "deals": {
+      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.deals}))}}",
+      "seriesName": "סגרו"
+    },
+    "leads": {
+      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.total}))}}",
+      "seriesName": "לידים"
+    },
+    "passed": {
+      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.passed}))}}",
+      "seriesName": "עברו"
+    }
+  },
   "chartName": "מגמה חודשית",
   "chartType": "COLUMN_CHART",
-  "customFusionChartConfig": { "type": "mscolumn2d", "dataSource": { "chart": {}, "data": [] } },
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": "mscolumn2d"
+  },
   "dynamicBindingPathList": [
-    { "key": "accentColor" },
-    { "key": "borderRadius" },
-    { "key": "boxShadow" },
-    { "key": "chartData.leads.data" },
-    { "key": "chartData.passed.data" },
-    { "key": "chartData.deals.data" }
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.leads.data"
+    },
+    {
+      "key": "chartData.passed.data"
+    },
+    {
+      "key": "chartData.deals.data"
+    }
   ],
   "dynamicPropertyPathList": [
-    { "key": "chartData.leads.data" },
-    { "key": "chartData.passed.data" },
-    { "key": "chartData.deals.data" }
+    {
+      "key": "chartData.leads.data"
+    },
+    {
+      "key": "chartData.passed.data"
+    },
+    {
+      "key": "chartData.deals.data"
+    }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
@@ -34,21 +72,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 64,
-  "chartData": {
-    "leads": {
-      "seriesName": "לידים",
-      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.total}))}}"
-    },
-    "passed": {
-      "seriesName": "עברו",
-      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.passed}))}}"
-    },
-    "deals": {
-      "seriesName": "סגרו",
-      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.deals}))}}"
-    }
-  },
-  "topRow": 147,
+  "topRow": 172,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "e1f2a3b404",

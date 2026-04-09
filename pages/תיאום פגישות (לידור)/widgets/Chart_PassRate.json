@@ -3,18 +3,42 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 175,
+  "bottomRow": 200,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "default": {
+      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.pass_rate}))}}",
+      "seriesName": "אחוז העברה %"
+    }
+  },
   "chartName": "מגמת אחוז העברה חודשי",
   "chartType": "LINE_CHART",
-  "customFusionChartConfig": { "type": "line", "dataSource": { "chart": {}, "data": [] } },
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {},
+      "data": []
+    },
+    "type": "line"
+  },
   "dynamicBindingPathList": [
-    { "key": "accentColor" },
-    { "key": "borderRadius" },
-    { "key": "boxShadow" },
-    { "key": "chartData.default.data" }
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "chartData.default.data"
+    }
   ],
-  "dynamicPropertyPathList": [{ "key": "chartData.default.data" }],
+  "dynamicPropertyPathList": [
+    {
+      "key": "chartData.default.data"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isDeprecated": false,
@@ -22,19 +46,13 @@
   "isVisible": true,
   "key": "ch005",
   "labelOrientation": "auto",
-  "leftColumn": 22,
+  "leftColumn": 21,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 43,
-  "chartData": {
-    "default": {
-      "seriesName": "אחוז העברה %",
-      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.pass_rate}))}}"
-    }
-  },
-  "topRow": 147,
+  "rightColumn": 42,
+  "topRow": 172,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "e1f2a3b405",
