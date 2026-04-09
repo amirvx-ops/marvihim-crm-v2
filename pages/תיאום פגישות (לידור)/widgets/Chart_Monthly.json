@@ -1,0 +1,58 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 175,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartName": "מגמה חודשית",
+  "chartType": "COLUMN_CHART",
+  "customFusionChartConfig": { "type": "mscolumn2d", "dataSource": { "chart": {}, "data": [] } },
+  "dynamicBindingPathList": [
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "boxShadow" },
+    { "key": "chartData.leads.data" },
+    { "key": "chartData.passed.data" },
+    { "key": "chartData.deals.data" }
+  ],
+  "dynamicPropertyPathList": [
+    { "key": "chartData.leads.data" },
+    { "key": "chartData.passed.data" },
+    { "key": "chartData.deals.data" }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ch004",
+  "labelOrientation": "auto",
+  "leftColumn": 43,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "chartData": {
+    "leads": {
+      "seriesName": "לידים",
+      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.total}))}}"
+    },
+    "passed": {
+      "seriesName": "עברו",
+      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.passed}))}}"
+    },
+    "deals": {
+      "seriesName": "סגרו",
+      "data": "{{chart_lidor_monthly.data.map(r => ({x: r.x, y: r.deals}))}}"
+    }
+  },
+  "topRow": 147,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "e1f2a3b404",
+  "widgetName": "Chart_Monthly",
+  "xAxisName": "חודש",
+  "yAxisName": "כמות"
+}

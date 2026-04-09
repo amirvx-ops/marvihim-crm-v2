@@ -1,0 +1,44 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 145,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartName": "לידים לפי מקור",
+  "chartType": "PIE_CHART",
+  "customFusionChartConfig": { "type": "pie2d", "dataSource": { "chart": {}, "data": [] } },
+  "dynamicBindingPathList": [
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "boxShadow" },
+    { "key": "chartData.default.data" }
+  ],
+  "dynamicPropertyPathList": [{ "key": "chartData.default.data" }],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ch003",
+  "labelOrientation": "auto",
+  "leftColumn": 43,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "chartData": {
+    "default": {
+      "seriesName": "לידים",
+      "data": "{{fetch_lidor_by_source.data.map(r => ({x: r[\"מקור\"], y: r[\"לידים\"]}))}}"
+    }
+  },
+  "topRow": 122,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "e1f2a3b403",
+  "widgetName": "Chart_SourcePie",
+  "xAxisName": "",
+  "yAxisName": ""
+}

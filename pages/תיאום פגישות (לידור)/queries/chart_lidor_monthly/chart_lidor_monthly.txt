@@ -1,0 +1,12 @@
+SELECT
+  TO_CHAR(update_date, 'MM/YYYY') AS x,
+  COUNT(*) AS total,
+  COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) AS passed,
+  COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END) AS deals,
+  CASE WHEN COUNT(*) > 0
+    THEN ROUND(COUNT(CASE WHEN lead_passed = TRUE THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
+    ELSE 0 END AS pass_rate
+FROM lidor_leads_view
+WHERE touched_by_lidor = TRUE AND update_date IS NOT NULL
+GROUP BY x
+ORDER BY MIN(update_date);

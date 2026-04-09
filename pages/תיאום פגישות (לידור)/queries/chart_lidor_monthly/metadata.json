@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69a83c7ea57cda66ecff91bb_fetch_lidor_stats_01",
-  "id": "תיאום פגישות (לידור)_fetch_lidor_stats",
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_chart_lidor_monthly_01",
+  "id": "תיאום פגישות (לידור)_chart_lidor_monthly",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": true,
-    "name": "fetch_lidor_stats",
+    "name": "chart_lidor_monthly",
     "pageId": "תיאום פגישות (לידור)",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true

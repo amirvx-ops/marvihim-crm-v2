@@ -2,7 +2,15 @@ SELECT
   COUNT(*) AS total,
   COUNT(CASE WHEN meeting_date IS NOT NULL THEN 1 END) AS meetings,
   COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) AS passed,
-  COUNT(CASE WHEN deal_closed IS NOT NULL AND deal_closed != '' THEN 1 END) AS deals
+  COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END) AS deals,
+  CASE WHEN COUNT(*) > 0
+    THEN ROUND(COUNT(CASE WHEN lead_passed = TRUE THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
+    ELSE 0 END AS pass_rate,
+  CASE WHEN COUNT(*) > 0
+    THEN ROUND(COUNT(CASE WHEN deal_closed = 'כן' THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
+    ELSE 0 END AS close_rate,
+  ROUND(AVG(CASE WHEN meeting_date IS NOT NULL
+    THEN EXTRACT(DAY FROM meeting_date - created_at) END), 1) AS avg_days_to_meeting
 FROM lidor_leads_view
 WHERE touched_by_lidor = TRUE
 AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''
