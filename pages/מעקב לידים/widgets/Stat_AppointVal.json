@@ -39,7 +39,7 @@
   "rightColumn": 33,
   "text": "{{Number(count_adi_stats.data[0].סהכ_מינוי).toLocaleString()}}₪",
   "textAlign": "RIGHT",
-  "textColor": "#FF9800",
+  "textColor": "#f9a8d4",
   "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
