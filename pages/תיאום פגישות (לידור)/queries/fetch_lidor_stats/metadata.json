@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  COUNT(*) AS סה_כ_לידים,\n  COUNT(CASE WHEN תאריך_פגישה IS NOT NULL THEN 1 END) AS פגישות_מתואמות,\n  COUNT(CASE WHEN ליד_עבר = TRUE THEN 1 END) AS לידים_שעברו,\n  COUNT(CASE WHEN נסגרה_עסקה IS NOT NULL AND נסגרה_עסקה != '' THEN 1 END) AS עסקאות_שנסגרו\nFROM lidor_leads_view\nWHERE ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n       OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')",
+      "body": "SELECT\n  COUNT(*) AS total,\n  COUNT(CASE WHEN meeting_date IS NOT NULL THEN 1 END) AS meetings,\n  COUNT(CASE WHEN lead_passed = TRUE THEN 1 END) AS passed,\n  COUNT(CASE WHEN deal_closed IS NOT NULL AND deal_closed != '' THEN 1 END) AS deals\nFROM lidor_leads_view\nWHERE touched_by_lidor = TRUE\nAND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n     OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

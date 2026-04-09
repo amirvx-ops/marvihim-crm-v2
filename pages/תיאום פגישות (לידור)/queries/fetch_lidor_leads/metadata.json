@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM lidor_leads_view\nWHERE (\n    '{{Input_Search_Lidor.text}}' != ''\n    AND (שם_לקוח ILIKE '%' || '{{Input_Search_Lidor.text}}' || '%'\n         OR תעודת_זהות ILIKE '%' || '{{Input_Search_Lidor.text}}' || '%')\n)\nOR (\n    '{{Input_Search_Lidor.text}}' = ''\n    AND touched_by_lidor = TRUE\n    AND ('{{Select_Month_Lidor.selectedOptionValue}}' = '' \n         OR TO_CHAR(תאריך_יצירה, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')\n)\nORDER BY תאריך_יצירה DESC\nLIMIT 200;",
+      "body": "SELECT * FROM lidor_leads_view\nWHERE (\n    '{{Input_Search_Lidor.text}}' != ''\n    AND (customer_name ILIKE '%' || '{{Input_Search_Lidor.text}}' || '%'\n         OR id_number ILIKE '%' || '{{Input_Search_Lidor.text}}' || '%')\n)\nOR (\n    '{{Input_Search_Lidor.text}}' = ''\n    AND touched_by_lidor = TRUE\n    AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n         OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')\n)\nORDER BY update_date DESC NULLS LAST\nLIMIT 200;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

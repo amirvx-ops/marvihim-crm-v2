@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  מקור,\n  COUNT(*) AS לידים_שעברו,\n  COUNT(CASE WHEN נסגרה_עסקה IS NOT NULL AND נסגרה_עסקה != '' THEN 1 END) AS עסקאות,\n  CASE WHEN COUNT(*) > 0\n    THEN ROUND(COUNT(CASE WHEN נסגרה_עסקה IS NOT NULL AND נסגרה_עסקה != '' THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)\n    ELSE 0 END AS אחוז_סגירה\nFROM lidor_leads_view\nWHERE ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n       OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')\nGROUP BY מקור\nORDER BY לידים_שעברו DESC",
+      "body": "SELECT\n  source AS מקור,\n  COUNT(*) AS לידים_שעברו,\n  COUNT(CASE WHEN deal_closed IS NOT NULL AND deal_closed != '' THEN 1 END) AS עסקאות,\n  CASE WHEN COUNT(*) > 0\n    THEN ROUND(COUNT(CASE WHEN deal_closed IS NOT NULL AND deal_closed != '' THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)\n    ELSE 0 END AS אחוז_סגירה\nFROM lidor_leads_view\nWHERE ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n       OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')\nGROUP BY source\nORDER BY לידים_שעברו DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
