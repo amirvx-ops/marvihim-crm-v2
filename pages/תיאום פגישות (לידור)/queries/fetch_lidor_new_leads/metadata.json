@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(DISTINCT c.identity_number) AS new_leads_this_month\nFROM leads l\nJOIN customers c ON l.customer_id = c.id\nWHERE l.type IN ('קיבלו כסף', 'מסלקה (אוטומציה)', 'שכר מעל 10 (ללא יפוי כח)')\n  AND DATE_TRUNC('month', l.created_at) = DATE_TRUNC('month', NOW())\n  AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''\n       OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')\n  AND ('{{Select_Source.selectedOptionValue}}' = ''\n       OR EXISTS (\n         SELECT 1 FROM partners p \n         WHERE p.id = l.partner_id \n         AND p.name = '{{Select_Source.selectedOptionValue}}'\n       ));",
+      "body": "SELECT COUNT(DISTINCT c.identity_number) AS new_leads_this_month\nFROM leads l\nJOIN customers c ON l.customer_id = c.id\nLEFT JOIN partners p ON l.partner_id = p.id\nWHERE l.type IN ('קיבלו כסף', 'מסלקה (אוטומציה)', 'שכר מעל 10 (ללא יפוי כח)')\n  AND TO_CHAR(l.created_at, 'MM/YYYY') = COALESCE(\n    NULLIF('{{Select_Month_Lidor.selectedOptionValue}}', ''),\n    TO_CHAR(NOW(), 'MM/YYYY')\n  )\n  AND ('{{Select_Source.selectedOptionValue}}' = ''\n       OR p.name = '{{Select_Source.selectedOptionValue}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

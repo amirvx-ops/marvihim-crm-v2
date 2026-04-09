@@ -1,13 +1,11 @@
 SELECT COUNT(DISTINCT c.identity_number) AS new_leads_this_month
 FROM leads l
 JOIN customers c ON l.customer_id = c.id
+LEFT JOIN partners p ON l.partner_id = p.id
 WHERE l.type IN ('קיבלו כסף', 'מסלקה (אוטומציה)', 'שכר מעל 10 (ללא יפוי כח)')
-  AND DATE_TRUNC('month', l.created_at) = DATE_TRUNC('month', NOW())
-  AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''
-       OR TO_CHAR(l.created_at, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')
+  AND TO_CHAR(l.created_at, 'MM/YYYY') = COALESCE(
+    NULLIF('{{Select_Month_Lidor.selectedOptionValue}}', ''),
+    TO_CHAR(NOW(), 'MM/YYYY')
+  )
   AND ('{{Select_Source.selectedOptionValue}}' = ''
-       OR EXISTS (
-         SELECT 1 FROM partners p 
-         WHERE p.id = l.partner_id 
-         AND p.name = '{{Select_Source.selectedOptionValue}}'
-       ));
+       OR p.name = '{{Select_Source.selectedOptionValue}}');
