@@ -13,5 +13,7 @@ FROM lidor_leads_view
 WHERE touched_by_lidor = TRUE
 AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''
      OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')
+AND ('{{Select_Agent.selectedOptionValue}}' = ''
+     OR agent = '{{Select_Agent.selectedOptionValue}}')
 GROUP BY source
 ORDER BY לידים DESC;

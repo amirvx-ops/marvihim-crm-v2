@@ -10,5 +10,7 @@ WHERE touched_by_lidor = TRUE
 AND agent IS NOT NULL
 AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''
      OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')
+AND ('{{Select_Source.selectedOptionValue}}' = ''
+     OR source = '{{Select_Source.selectedOptionValue}}')
 GROUP BY agent
 ORDER BY לידים DESC;

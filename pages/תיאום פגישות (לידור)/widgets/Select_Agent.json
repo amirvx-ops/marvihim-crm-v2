@@ -6,14 +6,13 @@
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
-    {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    }
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "options" }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    { "key": "options" }
+  ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
   "isFilterable": true,
@@ -24,28 +23,7 @@
   "labelAlignment": "right",
   "labelPosition": "Top",
   "leftColumn": 18,
-  "options": [
-    {
-      "label": "הכל",
-      "value": ""
-    },
-    {
-      "label": "גאמביז",
-      "value": "גאמביז"
-    },
-    {
-      "label": "נופר",
-      "value": "נופר"
-    },
-    {
-      "label": "רמי",
-      "value": "רמי"
-    },
-    {
-      "label": "אסף",
-      "value": "אסף"
-    }
-  ],
+  "options": "{{[{label: \"הכל\", value: \"\"}, ...fetch_lidor_by_agent.data.map(r => ({label: r[\"מטפל\"], value: r[\"מטפל\"]}))]}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,

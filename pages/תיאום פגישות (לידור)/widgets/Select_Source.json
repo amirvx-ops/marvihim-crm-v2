@@ -6,14 +6,13 @@
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
-    {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    }
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "options" }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    { "key": "options" }
+  ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
   "isFilterable": true,
@@ -24,60 +23,7 @@
   "labelAlignment": "right",
   "labelPosition": "Top",
   "leftColumn": 31,
-  "options": [
-    {
-      "label": "הכל",
-      "value": ""
-    },
-    {
-      "label": "MARVIHIM",
-      "value": "MARVIHIM"
-    },
-    {
-      "label": "FIBO",
-      "value": "FIBO"
-    },
-    {
-      "label": "TaxPro",
-      "value": "TaxPro"
-    },
-    {
-      "label": "ALLJOBS",
-      "value": "ALLJOBS"
-    },
-    {
-      "label": "HIGHTAX",
-      "value": "HIGHTAX"
-    },
-    {
-      "label": "TAXUP",
-      "value": "TAXUP"
-    },
-    {
-      "label": "אקסלנס",
-      "value": "אקסלנס"
-    },
-    {
-      "label": "החזר-טק",
-      "value": "החזר-טק"
-    },
-    {
-      "label": "יש לי זכות",
-      "value": "יש לי זכות"
-    },
-    {
-      "label": "קבוצת פתרון",
-      "value": "קבוצת פתרון"
-    },
-    {
-      "label": "קו זכות",
-      "value": "קו זכות"
-    },
-    {
-      "label": "plus-finance",
-      "value": "plus-finance"
-    }
-  ],
+  "options": "{{[{label: \"הכל\", value: \"\"}, ...fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))]}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
