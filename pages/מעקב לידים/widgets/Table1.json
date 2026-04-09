@@ -164,13 +164,13 @@
       "key": "primaryColumns.touched_by_adi.computedValue"
     },
     {
-      "key": "primaryColumns.xn____1hcbqgefh6kua.cellBackground"
-    },
-    {
       "key": "primaryColumns.xn____4hcgbwip3ae6e.cellBackground"
     },
     {
       "key": "primaryColumns.xn____9hcbnbopodn.cellBackground"
+    },
+    {
+      "key": "primaryColumns.xn____1hcbqgefh6kua.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -600,7 +600,7 @@
       "alias": "חברת_ביטוח",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{currentRow[\"חברת_ביטוח\"]?.trim() === 'הראל' ? '#FFF176' : currentRow[\"חברת_ביטוח\"]?.trim() === 'הפניקס' ? '#81C784' : currentRow[\"חברת_ביטוח\"]?.trim() === 'כלל' ? '#FFB74D' : 'transparent'}}",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"חברת_ביטוח\"] === 'הראל' ? '#FFF176' : currentRow[\"חברת_ביטוח\"] === 'הפניקס' ? '#81C784' : currentRow[\"חברת_ביטוח\"] === 'כלל' ? '#FFB74D' : 'transparent')) : currentRow[\"חברת_ביטוח\"] === 'הראל' ? '#FFF176' : currentRow[\"חברת_ביטוח\"] === 'הפניקס' ? '#81C784' : currentRow[\"חברת_ביטוח\"] === 'כלל' ? '#FFB74D' : 'transparent' })()}}",
       "columnType": "select",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"חברת_ביטוח\"])) : חברת_ביטוח })()}}",
       "currencyCode": "USD",
@@ -701,7 +701,7 @@
       "alias": "סכום_סגירה",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{currentRow[\"חברת_ביטוח\"]?.trim() === 'הראל' ? '#FFF176' : currentRow[\"חברת_ביטוח\"]?.trim() === 'הפניקס' ? '#81C784' : currentRow[\"חברת_ביטוח\"]?.trim() === 'כלל' ? '#FFB74D' : 'transparent'}}",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"סכום_סגירה\"] ? (currentRow[\"חברת_ביטוח\"] === 'הראל' ? '#FFF176' : currentRow[\"חברת_ביטוח\"] === 'הפניקס' ? '#81C784' : currentRow[\"חברת_ביטוח\"] === 'כלל' ? '#FFB74D' : 'transparent') : 'transparent')) : currentRow[\"סכום_סגירה\"] ? (currentRow[\"חברת_ביטוח\"] === 'הראל' ? '#FFF176' : currentRow[\"חברת_ביטוח\"] === 'הפניקס' ? '#81C784' : currentRow[\"חברת_ביטוח\"] === 'כלל' ? '#FFB74D' : 'transparent') : 'transparent' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"סכום_סגירה\"])) : סכום_סגירה })()}}",
       "currencyCode": "USD",
@@ -826,7 +826,7 @@
       "alias": "מינוי_סוכן",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{currentRow[\"מינוי_סוכן\"] > 0 ? '#FCE4EC' : 'transparent'}}",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (Number(currentRow[\"מינוי_סוכן\"]) > 0 ? '#FCE4EC' : 'transparent')) : Number(currentRow[\"מינוי_סוכן\"]) > 0 ? '#FCE4EC' : 'transparent' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"מינוי_סוכן\"])) : מינוי_סוכן })()}}",
       "currencyCode": "USD",
@@ -848,6 +848,7 @@
       "notation": "standard",
       "originalId": "מינוי_סוכן",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
