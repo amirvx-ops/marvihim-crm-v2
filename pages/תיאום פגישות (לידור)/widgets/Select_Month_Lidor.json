@@ -8,10 +8,10 @@
   "dynamicBindingPathList": [
     { "key": "accentColor" },
     { "key": "borderRadius" },
-    { "key": "options" }
+    { "key": "sourceData" }
   ],
   "dynamicPropertyPathList": [
-    { "key": "options" }
+    { "key": "sourceData" }
   ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
@@ -22,8 +22,8 @@
   "label": "",
   "labelAlignment": "right",
   "labelPosition": "Top",
+  "labelKey": "month_label",
   "leftColumn": 47,
-  "options": "{{[{label: \"הכל\", value: \"\"}, ...fetch_months_lidor.data.map(m => ({label: m.month_label, value: m.month_label}))]}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -31,8 +31,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 59,
   "serverSideFiltering": false,
+  "sourceData": "{{fetch_months_lidor.data}}",
   "topRow": 10,
   "type": "SELECT_WIDGET",
+  "valueKey": "month_label",
   "version": 1,
   "widgetId": "5fe8e4a83f",
   "widgetName": "Select_Month_Lidor"

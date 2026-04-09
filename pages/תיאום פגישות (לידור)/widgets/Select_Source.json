@@ -8,10 +8,10 @@
   "dynamicBindingPathList": [
     { "key": "accentColor" },
     { "key": "borderRadius" },
-    { "key": "options" }
+    { "key": "sourceData" }
   ],
   "dynamicPropertyPathList": [
-    { "key": "options" }
+    { "key": "sourceData" }
   ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
@@ -21,9 +21,9 @@
   "key": "f1caa",
   "label": "",
   "labelAlignment": "right",
+  "labelKey": "label",
   "labelPosition": "Top",
   "leftColumn": 31,
-  "options": "{{[{label: \"הכל\", value: \"\"}, ...fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))]}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -31,8 +31,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 45,
   "serverSideFiltering": false,
+  "sourceData": "{{[{label: \"הכל\", value: \"\"}, ...fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))]}}",
   "topRow": 10,
   "type": "SELECT_WIDGET",
+  "valueKey": "value",
   "version": 1,
   "widgetId": "bb7992c92b",
   "widgetName": "Select_Source"
