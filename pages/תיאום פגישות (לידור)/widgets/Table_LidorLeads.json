@@ -685,10 +685,13 @@
       "isVisible": true,
       "label": "תאריך פגישה",
       "originalId": "meeting_date",
+      "outputFormat": "DD/MM/YY",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
-      "validation": {},
+      "validation": {
+        "isColumnEditableCellRequired": true
+      },
       "verticalAlignment": "CENTER",
       "width": 120
     },
