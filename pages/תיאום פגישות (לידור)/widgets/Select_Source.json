@@ -41,7 +41,7 @@
   "renderMode": "CANVAS",
   "rightColumn": 45,
   "serverSideFiltering": false,
-  "sourceData": "{{[{label: \"הכל\", value: \"\"}, ...fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))]}}",
+  "sourceData": "{{fetch_lidor_by_source.data.map(r => ({label: r[\"מקור\"], value: r[\"מקור\"]}))}}",
   "topRow": 10,
   "type": "SELECT_WIDGET",
   "valueKey": "value",
