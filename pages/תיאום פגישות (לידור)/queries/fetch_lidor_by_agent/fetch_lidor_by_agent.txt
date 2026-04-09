@@ -1,13 +1,13 @@
 SELECT
-  סוכן_מטפל AS מטפל,
+  agent AS מטפל,
   COUNT(*) AS לידים_שעברו,
-  COUNT(CASE WHEN נסגרה_עסקה IS NOT NULL AND נסגרה_עסקה != '' THEN 1 END) AS עסקאות,
+  COUNT(CASE WHEN deal_closed IS NOT NULL AND deal_closed != '' THEN 1 END) AS עסקאות,
   CASE WHEN COUNT(*) > 0
-    THEN ROUND(COUNT(CASE WHEN נסגרה_עסקה IS NOT NULL AND נסגרה_עסקה != '' THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
+    THEN ROUND(COUNT(CASE WHEN deal_closed IS NOT NULL AND deal_closed != '' THEN 1 END)::numeric / COUNT(*)::numeric * 100, 1)
     ELSE 0 END AS אחוז_סגירה
 FROM lidor_leads_view
-WHERE סוכן_מטפל IS NOT NULL
+WHERE agent IS NOT NULL
   AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''
-       OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')
-GROUP BY סוכן_מטפל
-ORDER BY לידים_שעברו DESC
+       OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')
+GROUP BY agent
+ORDER BY לידים_שעברו DESC;

@@ -4,14 +4,14 @@ BEGIN
   AND '{{Table_LidorLeads.updatedRow.lead_id}}' != 'null' THEN
     PERFORM update_lead_from_lidor(
       '{{Table_LidorLeads.updatedRow.lead_id}}',
-      '{{Table_LidorLeads.updatedRow.תאריך_פגישה}}',
-      '{{Table_LidorLeads.updatedRow.שעת_פגישה}}',
-      '{{Table_LidorLeads.updatedRow.סוכן_מטפל}}',
-      '{{Table_LidorLeads.updatedRow.ליד_עבר}}',
-      '{{Table_LidorLeads.updatedRow.בעל_ואישה}}',
-      '{{Table_LidorLeads.updatedRow.נסגרה_עסקה}}',
-      '{{Table_LidorLeads.updatedRow.סטטוס}}',
-      '{{Table_LidorLeads.updatedRow.הערות}}'
+      '{{Table_LidorLeads.updatedRow.meeting_date}}',
+      '{{Table_LidorLeads.updatedRow.meeting_time}}',
+      '{{Table_LidorLeads.updatedRow.agent}}',
+      '{{Table_LidorLeads.updatedRow.lead_passed}}',
+      '{{Table_LidorLeads.updatedRow.is_couple}}',
+      '{{Table_LidorLeads.updatedRow.deal_closed}}',
+      '{{Table_LidorLeads.updatedRow.status}}',
+      '{{Table_LidorLeads.updatedRow.notes}}'
     );
   END IF;
 END $$;
