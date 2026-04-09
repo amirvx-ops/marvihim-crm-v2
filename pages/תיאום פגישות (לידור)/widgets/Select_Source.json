@@ -6,12 +6,20 @@
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
-    { "key": "accentColor" },
-    { "key": "borderRadius" },
-    { "key": "sourceData" }
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
   ],
   "dynamicPropertyPathList": [
-    { "key": "sourceData" }
+    {
+      "key": "sourceData"
+    }
   ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
@@ -24,6 +32,8 @@
   "labelKey": "label",
   "labelPosition": "Top",
   "leftColumn": 31,
+  "optionLabel": "label",
+  "optionValue": "value",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,

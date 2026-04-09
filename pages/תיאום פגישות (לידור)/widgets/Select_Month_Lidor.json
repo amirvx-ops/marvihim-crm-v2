@@ -4,14 +4,25 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 14,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( moment().format('MM/YYYY')))(Select_Month_Lidor.options, Select_Month_Lidor.serverSideFiltering) }}",
   "dynamicBindingPathList": [
-    { "key": "accentColor" },
-    { "key": "borderRadius" },
-    { "key": "sourceData" }
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
   ],
   "dynamicPropertyPathList": [
-    { "key": "sourceData" }
+    {
+      "key": "sourceData"
+    }
   ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
@@ -21,9 +32,11 @@
   "key": "f3957",
   "label": "",
   "labelAlignment": "right",
-  "labelPosition": "Top",
   "labelKey": "month_label",
+  "labelPosition": "Top",
   "leftColumn": 47,
+  "optionLabel": "month_label",
+  "optionValue": "month_label",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
