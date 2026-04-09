@@ -1,12 +1,18 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 107,
+  "bottomRow": 104,
   "disableLink": false,
   "dynamicBindingPathList": [
-    { "key": "fontFamily" },
-    { "key": "borderRadius" },
-    { "key": "truncateButtonColor" }
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "truncateButtonColor"
+    }
   ],
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
@@ -17,17 +23,17 @@
   "isLoading": false,
   "isVisible": true,
   "key": "tb002",
-  "leftColumn": 22,
+  "leftColumn": 42,
   "overflow": "NONE",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 43,
+  "rightColumn": 63,
   "text": "ביצועים לפי סוג ליד",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
-  "topRow": 104,
+  "topRow": 101,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 14,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -23,7 +23,7 @@
   "label": "",
   "labelAlignment": "right",
   "labelPosition": "Top",
-  "leftColumn": 8,
+  "leftColumn": 18,
   "options": [
     {
       "label": "הכל",
@@ -51,9 +51,9 @@
   "parentRowSpace": 10,
   "placeholderText": "מטפל",
   "renderMode": "CANVAS",
-  "rightColumn": 22,
+  "rightColumn": 28,
   "serverSideFiltering": false,
-  "topRow": 11,
+  "topRow": 10,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "f388f73370",

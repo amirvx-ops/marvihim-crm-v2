@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 235,
+  "bottomRow": 186,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -37,7 +37,9 @@
     "xn__6dbg8a3a"
   ],
   "columnUpdatedAt": 1775735090537,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "מטפל": 84
+  },
   "defaultPageSize": 5,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
@@ -89,7 +91,7 @@
   "isVisibleSearch": false,
   "key": "a2d23",
   "label": "Data",
-  "leftColumn": 25,
+  "leftColumn": 0,
   "needsHeightForContent": true,
   "onPageChange": "",
   "onPageSizeChange": "",
@@ -228,12 +230,12 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 62,
+  "rightColumn": 37,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{fetch_lidor_by_agent.data}}",
   "textSize": "0.875rem",
-  "topRow": 214,
+  "topRow": 166,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 14,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -23,7 +23,7 @@
   "label": "",
   "labelAlignment": "right",
   "labelPosition": "Top",
-  "leftColumn": 36,
+  "leftColumn": 47,
   "options": [
     {
       "label": "הכל",
@@ -131,9 +131,9 @@
   "parentRowSpace": 10,
   "placeholderText": "חודש",
   "renderMode": "CANVAS",
-  "rightColumn": 48,
+  "rightColumn": 59,
   "serverSideFiltering": false,
-  "topRow": 11,
+  "topRow": 10,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "5fe8e4a83f",
