@@ -6,14 +6,13 @@
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
-    {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    }
+    { "key": "accentColor" },
+    { "key": "borderRadius" },
+    { "key": "options" }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    { "key": "options" }
+  ],
   "dynamicTriggerPathList": [],
   "isDeprecated": false,
   "isFilterable": true,
@@ -24,108 +23,7 @@
   "labelAlignment": "right",
   "labelPosition": "Top",
   "leftColumn": 47,
-  "options": [
-    {
-      "label": "הכל",
-      "value": ""
-    },
-    {
-      "label": "03/2026",
-      "value": "03/2026"
-    },
-    {
-      "label": "02/2026",
-      "value": "02/2026"
-    },
-    {
-      "label": "01/2026",
-      "value": "01/2026"
-    },
-    {
-      "label": "12/2025",
-      "value": "12/2025"
-    },
-    {
-      "label": "11/2025",
-      "value": "11/2025"
-    },
-    {
-      "label": "10/2025",
-      "value": "10/2025"
-    },
-    {
-      "label": "09/2025",
-      "value": "09/2025"
-    },
-    {
-      "label": "08/2025",
-      "value": "08/2025"
-    },
-    {
-      "label": "07/2025",
-      "value": "07/2025"
-    },
-    {
-      "label": "06/2025",
-      "value": "06/2025"
-    },
-    {
-      "label": "05/2025",
-      "value": "05/2025"
-    },
-    {
-      "label": "04/2025",
-      "value": "04/2025"
-    },
-    {
-      "label": "03/2025",
-      "value": "03/2025"
-    },
-    {
-      "label": "02/2025",
-      "value": "02/2025"
-    },
-    {
-      "label": "01/2025",
-      "value": "01/2025"
-    },
-    {
-      "label": "12/2024",
-      "value": "12/2024"
-    },
-    {
-      "label": "11/2024",
-      "value": "11/2024"
-    },
-    {
-      "label": "10/2024",
-      "value": "10/2024"
-    },
-    {
-      "label": "09/2024",
-      "value": "09/2024"
-    },
-    {
-      "label": "08/2024",
-      "value": "08/2024"
-    },
-    {
-      "label": "07/2024",
-      "value": "07/2024"
-    },
-    {
-      "label": "06/2024",
-      "value": "06/2024"
-    },
-    {
-      "label": "05/2024",
-      "value": "05/2024"
-    },
-    {
-      "label": "04/2024",
-      "value": "04/2024"
-    }
-  ],
+  "options": "{{[{label: \"הכל\", value: \"\"}, ...fetch_months_lidor.data.map(m => ({label: m.month_label, value: m.month_label}))]}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,

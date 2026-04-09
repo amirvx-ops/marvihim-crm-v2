@@ -1,0 +1,4 @@
+SELECT DISTINCT TO_CHAR(update_date, 'MM/YYYY') AS month_label
+FROM lidor_leads_view
+WHERE touched_by_lidor = TRUE AND update_date IS NOT NULL
+ORDER BY month_label DESC
