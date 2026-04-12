@@ -59,7 +59,8 @@
   ],
   "columnUpdatedAt": 1775988926112,
   "columnWidthMap": {
-    "customColumn3": 60
+    "customColumn3": 60,
+    "update_date": 148
   },
   "defaultPageSize": 20,
   "defaultSelectedRowIndex": 0,
@@ -258,6 +259,7 @@
       "sticky": "right",
       "thousandSeparator": true,
       "validation": {},
+      "verticalAlignment": "CENTER",
       "width": 150
     },
     "agent": {
