@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 99,
+  "bottomRow": 100,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -38,8 +38,8 @@
     "id_number",
     "source",
     "lead_type",
+    "lidor_status",
     "notes",
-    "status",
     "meeting_date",
     "meeting_time",
     "agent",
@@ -54,9 +54,10 @@
     "created_at",
     "handler",
     "closing_amount",
+    "main_status",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1775986076783,
+  "columnUpdatedAt": 1775988926112,
   "columnWidthMap": {
     "customColumn3": 60
   },
@@ -125,9 +126,6 @@
       "key": "primaryColumns.deal_closed.computedValue"
     },
     {
-      "key": "primaryColumns.status.computedValue"
-    },
-    {
       "key": "primaryColumns.notes.computedValue"
     },
     {
@@ -165,6 +163,12 @@
     },
     {
       "key": "primaryColumns.closing_amount.computedValue"
+    },
+    {
+      "key": "primaryColumns.lidor_status.computedValue"
+    },
+    {
+      "key": "primaryColumns.main_status.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -662,6 +666,77 @@
       "verticalAlignment": "CENTER",
       "width": 90
     },
+    "lidor_status": {
+      "alias": "lidor_status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "select",
+      "computedValue": "{{(() => { const tableData = Table_LidorLeads.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"lidor_status\"])) : lidor_status })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "lidor_status",
+      "index": 14,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "סטטוס תיאום",
+      "notation": "standard",
+      "originalId": "lidor_status",
+      "selectOptions": "[\n{\"label\": \"נקבעה פגישה\", \"value\": \"נקבעה פגישה\"},\n  {\"label\": \"אין מענה\", \"value\": \"אין מענה\"},\n  {\"label\": \"לא מעוניין\", \"value\": \"לא מעוניין\"},\n  {\"label\": \"לא רלוונטי\", \"value\": \"לא רלוונטי\"},\n\t{\"label\": \"לא הגיעה מסלקה\", \"value\": \"לא הגיעה מסלקה\"},\n\t{\"label\": \"הוזמנה מסלקה\", \"value\": \"הוזמנה מסלקה\"}\n]",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {
+        "isColumnEditableCellRequired": true
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "main_status": {
+      "alias": "main_status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table_LidorLeads.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"main_status\"])) : main_status })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "RIGHT",
+      "id": "main_status",
+      "index": 15,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "main_status",
+      "notation": "standard",
+      "originalId": "main_status",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "meeting_date": {
       "alias": "meeting_date",
       "allowCellWrapping": false,
@@ -815,36 +890,6 @@
       "verticalAlignment": "CENTER",
       "width": 110
     },
-    "status": {
-      "alias": "status",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table_LidorLeads.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
-      "id": "status",
-      "index": 14,
-      "isCellEditable": true,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": true,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "סטטוס",
-      "originalId": "status",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 100
-    },
     "surens_lead_id": {
       "alias": "surens_lead_id",
       "allowCellWrapping": false,
@@ -944,7 +989,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{fetch_lidor_leads.data}}",
   "textSize": "0.875rem",
-  "topRow": 14,
+  "topRow": 15,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DO $$\nBEGIN\n  IF '{{Table_LidorLeads.updatedRow.lead_id}}' != ''\n  AND '{{Table_LidorLeads.updatedRow.lead_id}}' != 'null' THEN\n    PERFORM update_lead_from_lidor(\n      '{{Table_LidorLeads.updatedRow.lead_id}}',\n      '{{Table_LidorLeads.updatedRow.meeting_date}}',\n      '{{Table_LidorLeads.updatedRow.meeting_time}}',\n      '{{Table_LidorLeads.updatedRow.agent}}',\n      '{{Table_LidorLeads.updatedRow.lead_passed}}',\n      '{{Table_LidorLeads.updatedRow.is_couple}}',\n      '{{Table_LidorLeads.updatedRow.deal_closed}}',\n      '{{Table_LidorLeads.updatedRow.status}}',\n      '{{Table_LidorLeads.updatedRow.notes}}'\n    );\n  END IF;\nEND $$;",
+      "body": "DO $$\nBEGIN\n  IF '{{Table_LidorLeads.updatedRow.lead_id}}' != ''\n  AND '{{Table_LidorLeads.updatedRow.lead_id}}' != 'null' THEN\n    PERFORM update_lead_from_lidor(\n      '{{Table_LidorLeads.updatedRow.lead_id}}',\n      '{{Table_LidorLeads.updatedRow.meeting_date}}',\n      '{{Table_LidorLeads.updatedRow.meeting_time}}',\n      '{{Table_LidorLeads.updatedRow.agent}}',\n      '{{Table_LidorLeads.updatedRow.lead_passed}}',\n      '{{Table_LidorLeads.updatedRow.is_couple}}',\n      '{{Table_LidorLeads.updatedRow.deal_closed}}',\n      '{{Table_LidorLeads.updatedRow.lidor_status}}',\n      '{{Table_LidorLeads.updatedRow.notes}}'\n    );\n  END IF;\nEND $$;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

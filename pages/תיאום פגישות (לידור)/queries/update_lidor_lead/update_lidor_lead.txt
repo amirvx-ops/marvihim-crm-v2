@@ -10,7 +10,7 @@ BEGIN
       '{{Table_LidorLeads.updatedRow.lead_passed}}',
       '{{Table_LidorLeads.updatedRow.is_couple}}',
       '{{Table_LidorLeads.updatedRow.deal_closed}}',
-      '{{Table_LidorLeads.updatedRow.status}}',
+      '{{Table_LidorLeads.updatedRow.lidor_status}}',
       '{{Table_LidorLeads.updatedRow.notes}}'
     );
   END IF;
