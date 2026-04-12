@@ -1,18 +1,17 @@
 SELECT
   CASE EXTRACT(DOW FROM meeting_date)
-    WHEN 0 THEN '7-ראשון'
-    WHEN 1 THEN '1-שני'
-    WHEN 2 THEN '2-שלישי'
-    WHEN 3 THEN '3-רביעי'
-    WHEN 4 THEN '4-חמישי'
-    WHEN 5 THEN '5-שישי'
+    WHEN 0 THEN '1-ראשון'
+    WHEN 1 THEN '2-שני'
+    WHEN 2 THEN '3-שלישי'
+    WHEN 3 THEN '4-רביעי'
+    WHEN 4 THEN '5-חמישי'
+    WHEN 5 THEN '6-שישי'
   END AS x,
   COUNT(*) AS y
 FROM lidor_leads_view
-WHERE touched_by_lidor = TRUE
+WHERE touched_by_lidor = TRUE 
   AND meeting_date IS NOT NULL
-  AND ('{{Select_Month_Lidor.selectedOptionValue}}' = ''
-       OR TO_CHAR(update_date, 'MM/YYYY') = '{{Select_Month_Lidor.selectedOptionValue}}')
+  AND EXTRACT(DOW FROM meeting_date) != 6
   AND ('{{Select_Source.selectedOptionValue}}' = ''
        OR source = '{{Select_Source.selectedOptionValue}}')
   AND ('{{Select_Agent.selectedOptionValue}}' = ''
