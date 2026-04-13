@@ -1,0 +1,8 @@
+SELECT
+  COUNT(*) FILTER (WHERE lidor_status = 'הוזמנה מסלקה') AS מסלקה,
+  COUNT(*) FILTER (WHERE lidor_status = 'נקבעה פגישה') AS פגישות,
+  COUNT(*) FILTER (WHERE deal_closed = 'כן') AS סגירות,
+  COALESCE(SUM(closing_amount) FILTER (WHERE deal_closed = 'כן'), 0) AS סכום_סגירות
+FROM lidor_leads_view
+WHERE touched_by_lidor = TRUE
+AND DATE_TRUNC('month', update_date) = DATE_TRUNC('month', CURRENT_DATE);
