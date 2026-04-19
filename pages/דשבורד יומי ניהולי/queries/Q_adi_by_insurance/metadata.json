@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  COALESCE(insurance_company, 'לא שויכה') AS \"חברת_ביטוח\",\n  COUNT(*) AS \"סגירות\",\n  COALESCE(SUM(closing_amount), 0) AS \"סכום_סגירה\",\n  COALESCE(SUM(agent_appointment_amount), 0) AS \"סכום_מינוי\"\nFROM leads\nWHERE user_updated_at = '{{DatePicker_Date.selectedDate}}'::date\n  AND touched_by_adi = TRUE\n  AND insurance_company IS NOT NULL\n  AND insurance_company <> ''\nGROUP BY insurance_company\nORDER BY \"סגירות\" DESC;",
+      "body": "SELECT\n  COALESCE(insurance_company, 'לא שויכה') AS \"חברת_ביטוח\",\n  COUNT(*) AS \"סגירות\",\n  COALESCE(SUM(closing_amount), 0) AS \"סכום_סגירה\",\n  COALESCE(SUM(agent_appointment_amount), 0) AS \"סכום_מינוי\"\nFROM leads\nWHERE user_updated_at = '{{DatePicker_Date.selectedDate}}'::date\n  AND touched_by_adi = TRUE\n  AND insurance_company IS NOT NULL\n  AND insurance_company <> ''\nGROUP BY insurance_company\nORDER BY \"סגירות\" DESC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
