@@ -4,7 +4,7 @@ SELECT
   COALESCE(SUM(closing_amount), 0) AS "סכום_סגירה",
   COALESCE(SUM(agent_appointment_amount), 0) AS "סכום_מינוי"
 FROM leads
-WHERE user_updated_at = '{{DatePicker_Date.selectedDate}}'::date
+WHERE user_updated_at = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
   AND touched_by_adi = TRUE
   AND insurance_company IS NOT NULL
   AND insurance_company <> ''

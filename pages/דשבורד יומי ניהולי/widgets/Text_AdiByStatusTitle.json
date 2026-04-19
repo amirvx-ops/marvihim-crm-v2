@@ -13,6 +13,7 @@
       "key": "text"
     }
   ],
+  "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
   "fontStyle": "BOLD",
@@ -25,7 +26,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 32,
-  "text": "פעילות עדי לפי סטטוס ({{DatePicker_Date.selectedDate}})",
+  "text": "{{\"פעילות עדי לפי סטטוס (\" + moment(DatePicker_Date.selectedDate).format(\"DD/MM/YYYY\") + \")\"}}",
   "textAlign": "RIGHT",
   "textColor": "#333333",
   "topRow": 8,

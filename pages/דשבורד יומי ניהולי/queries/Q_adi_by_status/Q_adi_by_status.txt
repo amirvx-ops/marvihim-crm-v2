@@ -2,7 +2,7 @@ WITH deduped AS (
   SELECT DISTINCT ON (c.identity_number) l.main_status
   FROM leads l
   JOIN customers c ON c.id = l.customer_id
-  WHERE l.main_status_date_of_update = '{{DatePicker_Date.selectedDate}}'::date
+  WHERE l.main_status_date_of_update = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
     AND l.type = 'בדיקת תיק מלאה'
     AND l.touched_by_adi = TRUE
     AND l.main_status IN (
