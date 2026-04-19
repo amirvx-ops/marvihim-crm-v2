@@ -1,0 +1,33 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 44,
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "dmd07",
+  "leftColumn": 0,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 32,
+  "text": "פעילות יומית של לידור",
+  "textAlign": "RIGHT",
+  "textColor": "#333333",
+  "topRow": 42,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "dmd_txt_lidor_daily_01",
+  "widgetName": "Text_LidorDailyTitle"
+}

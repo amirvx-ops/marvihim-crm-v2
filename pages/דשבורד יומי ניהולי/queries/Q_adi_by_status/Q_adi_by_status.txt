@@ -1,0 +1,24 @@
+WITH deduped AS (
+  SELECT DISTINCT ON (c.identity_number) l.main_status
+  FROM leads l
+  JOIN customers c ON c.id = l.customer_id
+  WHERE l.main_status_date_of_update = '{{DatePicker_Date.selectedDate}}'::date
+    AND l.type = 'בדיקת תיק מלאה'
+    AND l.touched_by_adi = TRUE
+    AND l.main_status IN (
+      'חדש','בן זוג','למעקב','חתם על יפויי כוח',
+      'הוזמנה מסלקה','עבר לבדיקת מסלקה','עבר להצעות',
+      'לא מעוניין','לא מעוניין - יש סוכן קרוב','לא מעוניין - אין ביטוחים',
+      'לא רלוונטי - גיל','עבר בדיקת צ''ק-אפ','קיבלו כסף',
+      'אין מענה - נסיון 1','אין מענה - נסיון 2','אין מענה - נסיון 3',
+      'נקבעה פגישה','לא הגיעה מסלקה','אין מענה','לא רלוונטי','הוזמן'
+    )
+  ORDER BY c.identity_number, l.updated_at DESC
+)
+SELECT
+  main_status AS "סטטוס",
+  COUNT(*) AS "כמות",
+  ROUND(100.0 * COUNT(*) / NULLIF(SUM(COUNT(*)) OVER (), 0), 1) AS "אחוז"
+FROM deduped
+GROUP BY main_status
+ORDER BY "כמות" DESC;

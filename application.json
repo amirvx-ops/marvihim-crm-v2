@@ -35,6 +35,10 @@
     {
       "id": "דשבורד ניהול",
       "isDefault": false
+    },
+    {
+      "id": "דשבורד יומי ניהולי",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

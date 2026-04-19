@@ -1,0 +1,36 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "dmd03",
+  "leftColumn": 0,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 32,
+  "text": "פעילות עדי לפי סטטוס ({{DatePicker_Date.selectedDate}})",
+  "textAlign": "RIGHT",
+  "textColor": "#333333",
+  "topRow": 8,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "dmd_txt_adi_status_01",
+  "widgetName": "Text_AdiByStatusTitle"
+}
