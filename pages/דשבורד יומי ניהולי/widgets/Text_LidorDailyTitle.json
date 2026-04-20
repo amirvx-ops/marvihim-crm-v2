@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 44,
+  "bottomRow": 46,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -25,7 +25,7 @@
   "text": "פעילות יומית של לידור",
   "textAlign": "RIGHT",
   "textColor": "#333333",
-  "topRow": 42,
+  "topRow": 44,
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "dmd_txt_lidor_daily_01",

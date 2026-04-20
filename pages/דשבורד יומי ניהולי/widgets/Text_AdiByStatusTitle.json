@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 14,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -29,7 +29,7 @@
   "text": "{{\"פעילות עדי לפי סטטוס (\" + moment(DatePicker_Date.selectedDate).format(\"DD/MM/YYYY\") + \")\"}}",
   "textAlign": "RIGHT",
   "textColor": "#333333",
-  "topRow": 8,
+  "topRow": 10,
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "dmd_txt_adi_status_01",

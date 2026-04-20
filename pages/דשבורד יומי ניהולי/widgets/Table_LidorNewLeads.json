@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 69,
+  "bottomRow": 71,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -34,7 +34,9 @@
     "סוג_ליד",
     "כמות"
   ],
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "סוג_ליד": 449
+  },
   "defaultPageSize": 20,
   "defaultSelectedRowIndex": -1,
   "delimiter": ",",
@@ -63,6 +65,7 @@
       "key": "tableData"
     }
   ],
+  "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "horizontalAlignment": "RIGHT",
   "isDeprecated": false,
@@ -148,7 +151,7 @@
   "serverSidePaginationEnabled": false,
   "tableData": "{{Q_lidor_new_leads_by_type.data}}",
   "textSize": "0.875rem",
-  "topRow": 44,
+  "topRow": 46,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

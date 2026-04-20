@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 40,
+  "bottomRow": 44,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -35,7 +35,9 @@
     "כמות",
     "אחוז"
   ],
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "כמות": 378
+  },
   "defaultPageSize": 20,
   "defaultSelectedRowIndex": -1,
   "delimiter": ",",
@@ -67,6 +69,7 @@
       "key": "tableData"
     }
   ],
+  "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "horizontalAlignment": "RIGHT",
   "isDeprecated": false,
@@ -85,19 +88,19 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "סטטוס": {
-      "alias": "סטטוס",
+    "אחוז": {
+      "alias": "אחוז",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table_AdiByStatus.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"סטטוס\"]))}}",
+      "columnType": "number",
+      "computedValue": "{{Table_AdiByStatus.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"אחוז\"]))}}",
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "RIGHT",
-      "id": "סטטוס",
-      "index": 0,
+      "id": "אחוז",
+      "index": 2,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -106,14 +109,14 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "סטטוס",
-      "originalId": "סטטוס",
+      "label": "אחוז %",
+      "originalId": "אחוז",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 200
+      "width": 100
     },
     "כמות": {
       "alias": "כמות",
@@ -145,19 +148,19 @@
       "verticalAlignment": "CENTER",
       "width": 100
     },
-    "אחוז": {
-      "alias": "אחוז",
+    "סטטוס": {
+      "alias": "סטטוס",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{Table_AdiByStatus.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"אחוז\"]))}}",
+      "columnType": "text",
+      "computedValue": "{{Table_AdiByStatus.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"סטטוס\"]))}}",
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "RIGHT",
-      "id": "אחוז",
-      "index": 2,
+      "id": "סטטוס",
+      "index": 0,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -166,14 +169,14 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "אחוז %",
-      "originalId": "אחוז",
+      "label": "סטטוס",
+      "originalId": "סטטוס",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 100
+      "width": 200
     }
   },
   "renderMode": "CANVAS",
@@ -182,7 +185,7 @@
   "serverSidePaginationEnabled": false,
   "tableData": "{{Q_adi_by_status.data}}",
   "textSize": "0.875rem",
-  "topRow": 10,
+  "topRow": 14,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
