@@ -8,5 +8,6 @@ WHERE user_updated_at = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-
   AND touched_by_adi = TRUE
   AND insurance_company IS NOT NULL
   AND insurance_company <> ''
+  AND closing_amount > 0
 GROUP BY insurance_company
 ORDER BY "סגירות" DESC;
