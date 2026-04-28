@@ -2,8 +2,11 @@ WITH deduped AS (
   SELECT DISTINCT ON (c.identity_number) l.main_status
   FROM leads l
   JOIN customers c ON c.id = l.customer_id
-  WHERE l.user_updated_at = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
-	AND l.type = 'בדיקת תיק מלאה'
+  WHERE (
+    l.user_updated_at = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+    OR l.main_status_date_of_update = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+  )
+    AND l.type = 'בדיקת תיק מלאה'
     AND l.main_status IN (
       'חדש','בן זוג','למעקב','חתם על יפויי כוח',
       'הוזמנה מסלקה','עבר לבדיקת מסלקה','עבר להצעות',
