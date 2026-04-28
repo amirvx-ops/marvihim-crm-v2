@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 113,
+  "bottomRow": 116,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "button": {
@@ -84,7 +84,7 @@
   "isVisibleSearch": false,
   "key": "ins02",
   "label": "Data",
-  "leftColumn": 1,
+  "leftColumn": 11,
   "needsHeightForContent": true,
   "parentColumnSpace": 1,
   "parentId": "0",
@@ -262,11 +262,11 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 60,
+  "rightColumn": 54,
   "searchKey": "",
   "tableData": "{{insurance_summary.data}}",
   "textSize": "0.875rem",
-  "topRow": 95,
+  "topRow": 98,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

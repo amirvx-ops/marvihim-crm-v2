@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69a83c7ea57cda66ecff91bb_574e2ae8-8e04-458d-8ed0-14a712577ab8",
+  "id": "מעקב לידים_Utils",
+  "unpublishedCollection": {
+    "name": "Utils",
+    "pageId": "מעקב לידים",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "isAdmin",
+        "value": "appsmith.user.email === \"amir@marvihim.co.il\""
+      }
+    ]
+  }
+}
