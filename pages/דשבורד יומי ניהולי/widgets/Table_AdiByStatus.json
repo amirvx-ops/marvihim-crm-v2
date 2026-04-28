@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 44,
+  "bottomRow": 47,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -36,7 +36,7 @@
     "אחוז"
   ],
   "columnWidthMap": {
-    "כמות": 215
+    "כמות": 167
   },
   "defaultPageSize": 20,
   "defaultSelectedRowIndex": -1,
@@ -82,7 +82,7 @@
   "isVisibleSearch": false,
   "key": "dmd04",
   "label": "Data",
-  "leftColumn": 0,
+  "leftColumn": 6,
   "needsHeightForContent": true,
   "parentColumnSpace": 1,
   "parentId": "0",
@@ -180,12 +180,12 @@
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 32,
+  "rightColumn": 23,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{Q_adi_by_status.data}}",
   "textSize": "0.875rem",
-  "topRow": 14,
+  "topRow": 16,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

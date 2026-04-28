@@ -1,33 +1,37 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52,
+  "bottomRow": 15,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
+  "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "dmd09",
-  "leftColumn": 44,
+  "key": "dmd03",
+  "leftColumn": 25,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 58,
-  "text": "לידים חדשים לפי סוג (של לידור)",
+  "rightColumn": 39,
+  "text": "{{\"מקורות יומי (\" + moment(DatePicker_Date.selectedDate).format(\"DD/MM/YYYY\") + \")\"}}",
   "textAlign": "RIGHT",
   "textColor": "#333333",
-  "topRow": 50,
+  "topRow": 11,
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "dmd_txt_lidor_new_01",
-  "widgetName": "Text_LidorNewLeadsTitle"
+  "widgetId": "naiutlxhp8",
+  "widgetName": "Text_AdiByStatusTitleCopy"
 }

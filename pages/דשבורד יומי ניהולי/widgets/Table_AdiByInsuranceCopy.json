@@ -31,12 +31,12 @@
     }
   },
   "columnOrder": [
-    "חברת_ביטוח",
-    "סגירות",
-    "סכום_סגירה",
-    "סכום_מינוי"
+    "xn__9dbr1af",
+    "xn__9dblj3c"
   ],
+  "columnUpdatedAt": 1777366202090,
   "columnWidthMap": {
+    "xn__9dbr1af": 163,
     "סגירות": 281,
     "סכום_סגירה": 289
   },
@@ -57,16 +57,10 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.חברת_ביטוח.computedValue"
+      "key": "primaryColumns.xn__9dbr1af.computedValue"
     },
     {
-      "key": "primaryColumns.סגירות.computedValue"
-    },
-    {
-      "key": "primaryColumns.סכום_סגירה.computedValue"
-    },
-    {
-      "key": "primaryColumns.סכום_מינוי.computedValue"
+      "key": "primaryColumns.xn__9dblj3c.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -87,54 +81,24 @@
   "isVisibleSearch": false,
   "key": "dmd06",
   "label": "Data",
-  "leftColumn": 40,
+  "leftColumn": 23,
   "needsHeightForContent": true,
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "חברת_ביטוח": {
-      "alias": "חברת_ביטוח",
+    "xn__9dblj3c": {
+      "alias": "כמות",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table_AdiByInsurance.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"חברת_ביטוח\"]))}}",
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
-      "id": "חברת_ביטוח",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "חברת ביטוח",
-      "originalId": "חברת_ביטוח",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "סגירות": {
-      "alias": "סגירות",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{Table_AdiByInsurance.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"סגירות\"]))}}",
+      "computedValue": "{{(() => { const tableData = Table_AdiByInsuranceCopy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"כמות\"])) : כמות })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "fontStyle": "",
       "horizontalAlignment": "RIGHT",
-      "id": "סגירות",
+      "id": "xn__9dblj3c",
       "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -144,28 +108,29 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "סגירות",
-      "originalId": "סגירות",
+      "label": "כמות",
+      "notation": "standard",
+      "originalId": "כמות",
       "sticky": "",
-      "textColor": "",
       "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 100
+      "width": 150
     },
-    "סכום_מינוי": {
-      "alias": "סכום_מינוי",
+    "xn__9dbr1af": {
+      "alias": "מקור",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{Table_AdiByInsurance.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"סכום_מינוי\"]))}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table_AdiByInsuranceCopy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"מקור\"])) : מקור })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "fontStyle": "",
       "horizontalAlignment": "RIGHT",
-      "id": "סכום_מינוי",
-      "index": 3,
+      "id": "xn__9dbr1af",
+      "index": 0,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -174,57 +139,28 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "סכום מינוי",
-      "originalId": "סכום_מינוי",
+      "label": "מקור",
+      "notation": "standard",
+      "originalId": "מקור",
       "sticky": "",
-      "textColor": "",
       "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 130
-    },
-    "סכום_סגירה": {
-      "alias": "סכום_סגירה",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{Table_AdiByInsurance.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"סכום_סגירה\"]))}}",
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "RIGHT",
-      "id": "סכום_סגירה",
-      "index": 2,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "סכום סגירה",
-      "originalId": "סכום_סגירה",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 130
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
-  "rightColumn": 60,
+  "rightColumn": 40,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
-  "tableData": "{{Q_adi_by_insurance.data}}",
+  "tableData": "{{q_adi_by_source_daily.data}}",
   "textSize": "0.875rem",
   "topRow": 16,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "dmd_tbl_adi_ins_01",
-  "widgetName": "Table_AdiByInsurance"
+  "widgetId": "ufdaua46pb",
+  "widgetName": "Table_AdiByInsuranceCopy"
 }
