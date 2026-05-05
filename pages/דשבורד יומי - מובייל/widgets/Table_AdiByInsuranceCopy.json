@@ -1,0 +1,166 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 48,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "canFreezeColumn": false,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "xn__9dbr1af",
+    "xn__9dblj3c"
+  ],
+  "columnUpdatedAt": 1777366202090,
+  "columnWidthMap": {
+    "xn__9dbr1af": 163,
+    "סגירות": 281,
+    "סכום_סגירה": 289
+  },
+  "defaultPageSize": 20,
+  "defaultSelectedRowIndex": -1,
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.xn__9dbr1af.computedValue"
+    },
+    {
+      "key": "primaryColumns.xn__9dblj3c.computedValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableClientSideSearch": true,
+  "horizontalAlignment": "RIGHT",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "dmd06",
+  "label": "Data",
+  "leftColumn": 23,
+  "needsHeightForContent": true,
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "xn__9dblj3c": {
+      "alias": "כמות",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table_AdiByInsuranceCopy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"כמות\"])) : כמות })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "RIGHT",
+      "id": "xn__9dblj3c",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "כמות",
+      "notation": "standard",
+      "originalId": "כמות",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "xn__9dbr1af": {
+      "alias": "מקור",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table_AdiByInsuranceCopy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"מקור\"])) : מקור })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "RIGHT",
+      "id": "xn__9dbr1af",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "מקור",
+      "notation": "standard",
+      "originalId": "מקור",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "rightColumn": 40,
+  "searchKey": "",
+  "serverSidePaginationEnabled": false,
+  "tableData": "{{q_adi_by_source_daily.data}}",
+  "textSize": "0.875rem",
+  "topRow": 17,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "9jl65f0fhi",
+  "widgetName": "Table_AdiByInsuranceCopy"
+}

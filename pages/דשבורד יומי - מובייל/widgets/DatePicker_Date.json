@@ -1,0 +1,51 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 11,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "DD/MM/YYYY",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{moment().format('YYYY-MM-DD')}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDateSelected"
+    }
+  ],
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dmd02",
+  "label": "",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelWidth": 4,
+  "leftColumn": 30,
+  "minWidth": 450,
+  "onDateSelected": "{{Q_adi_by_status.run(); Q_adi_by_insurance.run(); Q_lidor_daily_stats.run(); Q_lidor_new_leads_by_type.run()}}",
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 36,
+  "shortcuts": false,
+  "timePrecision": "None",
+  "topRow": 7,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "69cggzvytv",
+  "widgetName": "DatePicker_Date"
+}

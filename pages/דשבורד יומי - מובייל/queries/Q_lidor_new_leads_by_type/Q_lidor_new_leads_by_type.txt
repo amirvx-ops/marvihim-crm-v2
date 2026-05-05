@@ -1,0 +1,25 @@
+WITH lidor_types AS (
+  SELECT unnest(ARRAY[
+    'קיבלו כסף',
+    'מסלקה (אוטומציה)',
+    'שכר מעל 10 (ללא יפוי כח)',
+    'סגור (לא זכאי)',
+    'ליד גמאביז',
+    'שנתית'
+  ]) AS t
+),
+new_today AS (
+  SELECT DISTINCT ON (c.identity_number) l.type
+  FROM leads l
+  JOIN customers c ON c.id = l.customer_id
+  WHERE l.created_at::date = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+    AND l.type IN (SELECT t FROM lidor_types)
+  ORDER BY c.identity_number, l.created_at DESC
+)
+SELECT
+  lt.t AS "סוג_ליד",
+  COALESCE(COUNT(nt.type), 0) AS "כמות"
+FROM lidor_types lt
+LEFT JOIN new_today nt ON nt.type = lt.t
+GROUP BY lt.t
+ORDER BY "כמות" DESC;

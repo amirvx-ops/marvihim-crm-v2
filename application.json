@@ -1,7 +1,7 @@
 {
   "appIsExample": false,
   "appLayout": {
-    "type": "FLUID"
+    "type": "TABLET"
   },
   "applicationDetail": {
     "appPositioning": {
@@ -39,10 +39,14 @@
     {
       "id": "דשבורד יומי ניהולי",
       "isDefault": false
+    },
+    {
+      "id": "דשבורד יומי - מובייל",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "TABLET"
   },
   "unpublishedApplicationDetail": {
     "appPositioning": {
