@@ -1,5 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -96,13 +97,14 @@
   "enableClientSideSearch": false,
   "enableServerSideFiltering": false,
   "horizontalAlignment": "CENTER",
+  "infiniteScrollEnabled": true,
   "isDeprecated": false,
   "isLoading": false,
-  "isSortable": true,
+  "isSortable": false,
   "isVisible": true,
   "isVisibleDownload": true,
   "isVisibleFilters": false,
-  "isVisiblePagination": false,
+  "isVisiblePagination": true,
   "isVisibleSearch": false,
   "key": "src02",
   "label": "Data",
@@ -383,11 +385,44 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
+    },
+    "אחוז_מינוי": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "אחוז_סגירות": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "לידים": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "מינוי_סוכן": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "מקור": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "סגירות": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "סכום_מינוי_סוכן": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "סכום_סגירות": {
+      "isCellEditable": false,
+      "isEditable": false
     }
   },
   "renderMode": "CANVAS",
   "rightColumn": 54,
   "searchKey": "",
+  "serverSidePaginationEnabled": true,
   "tableData": "{{source_breakdown.data}}",
   "textSize": "0.875rem",
   "topRow": 122,
