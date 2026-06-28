@@ -58,7 +58,7 @@
     "touched_by_yuli",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1782408061183,
+  "columnUpdatedAt": 1782640041619,
   "columnWidthMap": {
     "customColumn1": 60,
     "surens_customer_id": 212,
@@ -317,7 +317,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "customer_id",
       "notation": "standard",
       "originalId": "customer_id",
@@ -351,7 +351,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "lead_id",
       "notation": "standard",
       "originalId": "lead_id",
