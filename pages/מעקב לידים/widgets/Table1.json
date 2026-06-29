@@ -58,7 +58,7 @@
     "touched_by_yuli",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1782716831607,
+  "columnUpdatedAt": 1782717229743,
   "columnWidthMap": {
     "customColumn1": 60,
     "surens_customer_id": 212,
@@ -167,6 +167,12 @@
     },
     {
       "key": "primaryColumns.touched_by_yuli.computedValue"
+    },
+    {
+      "key": "primaryColumns.xn____1hcbqgefh6kua.cellBackground"
+    },
+    {
+      "key": "primaryColumns.xn____9hcbnbopodn.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -178,6 +184,12 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.xn____1hcbqgefh6kua.cellBackground"
+    },
+    {
+      "key": "primaryColumns.xn____9hcbnbopodn.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [
@@ -639,7 +651,7 @@
       "alias": "חברת_ביטוח",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.חברת_ביטוח === 'כלל' ? '#1976d2' : \n  currentRow.חברת_ביטוח === 'הפניקס' ? '#ffb74d' : \n  currentRow.חברת_ביטוח === 'הראל' ? '#fde047' : '')) : currentRow.חברת_ביטוח === 'כלל' ? '#1976d2' : \n  currentRow.חברת_ביטוח === 'הפניקס' ? '#ffb74d' : \n  currentRow.חברת_ביטוח === 'הראל' ? '#fde047' : '' })()}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"חברת_ביטוח\"])) : חברת_ביטוח })()}}",
       "currencyCode": "USD",
@@ -827,7 +839,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "ליד_פנימי",
       "notation": "standard",
       "originalId": "ליד_פנימי",
@@ -877,7 +889,7 @@
       "alias": "מינוי_סוכן",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.מינוי_סוכן ? '#f9a8d4' : '')) : currentRow.מינוי_סוכן ? '#f9a8d4' : '' })()}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"מינוי_סוכן\"])) : מינוי_סוכן })()}}",
       "currencyCode": "USD",
