@@ -1,0 +1,1 @@
+SELECT reassign_lead('{{Table1.triggeredRow.lead_id}}', '{{Table1.updatedRow.שיוך}}')
