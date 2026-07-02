@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 18,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( moment().format('MM/YYYY')))(Select_Month.options, Select_Month.serverSideFiltering) }}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,9 +14,6 @@
     },
     {
       "key": "sourceData"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicPropertyPathList": [
