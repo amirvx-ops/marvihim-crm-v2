@@ -1,17 +1,1 @@
-SELECT COUNT(*) AS total,
-COUNT(CASE WHEN חברת_ביטוח ILIKE '%פניקס%' THEN 1 END) AS פניקס,
-COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS הראל,
-COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS כלל,
-COUNT(CASE WHEN חברת_ביטוח ILIKE '%פניקס%' AND סכום_סגירה IS NOT NULL THEN 1 END) AS פניקס_סגירות,
-COUNT(CASE WHEN חברת_ביטוח = 'הראל' AND סכום_סגירה IS NOT NULL THEN 1 END) AS הראל_סגירות,
-COUNT(CASE WHEN חברת_ביטוח = 'כלל' AND סכום_סגירה IS NOT NULL THEN 1 END) AS כלל_סגירות,
-COALESCE(SUM(מינוי_סוכן), 0) AS סהכ_מינוי,
-COALESCE(SUM(סכום_סגירה), 0) AS סהכ_סגירה
-FROM adi_leads_view
-WHERE (
-  ('{{Select_Agent.selectedOptionValue}}' = 'עדי' AND "שיוך" = 'עדי') OR
-  ('{{Select_Agent.selectedOptionValue}}' = 'יולי' AND "שיוך" = 'יולי') OR
-  ('{{Select_Agent.selectedOptionValue}}' = 'כולם' AND "שיוך" IS NOT NULL) OR
-  ('{{Select_Agent.selectedOptionValue}}' = '' AND "שיוך" = 'עדי')
-)
-AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
+SELECT COUNT(*) AS total, COUNT(CASE WHEN חברת_ביטוח ILIKE '%פניקס%' THEN 1 END) AS פניקס, COUNT(CASE WHEN חברת_ביטוח = 'הראל' THEN 1 END) AS הראל, COUNT(CASE WHEN חברת_ביטוח = 'כלל' THEN 1 END) AS כלל, COUNT(CASE WHEN חברת_ביטוח ILIKE '%פניקס%' AND סכום_סגירה IS NOT NULL THEN 1 END) AS פניקס_סגירות, COUNT(CASE WHEN חברת_ביטוח = 'הראל' AND סכום_סגירה IS NOT NULL THEN 1 END) AS הראל_סגירות, COUNT(CASE WHEN חברת_ביטוח = 'כלל' AND סכום_סגירה IS NOT NULL THEN 1 END) AS כלל_סגירות, COALESCE(SUM(מינוי_סוכן), 0) AS סהכ_מינוי, COALESCE(SUM(סכום_סגירה), 0) AS סהכ_סגירה FROM adi_leads_view WHERE ( ('{{Select_Agent.selectedOptionValue}}' = 'עדי' AND touched_by_adi = TRUE) OR ('{{Select_Agent.selectedOptionValue}}' = 'יולי' AND touched_by_yuli = TRUE) OR ('{{Select_Agent.selectedOptionValue}}' = 'כולם' AND (touched_by_adi = TRUE OR touched_by_yuli = TRUE)) OR ('{{Select_Agent.selectedOptionValue}}' = 'ללא שיוך' AND touched_by_adi = FALSE AND touched_by_yuli = FALSE) OR ('{{Select_Agent.selectedOptionValue}}' = '' AND touched_by_adi = TRUE) ) AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')

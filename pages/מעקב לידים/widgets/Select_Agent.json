@@ -50,7 +50,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 6,
   "serverSideFiltering": false,
-  "sourceData": "[{\"label\": \"עדי\", \"value\": \"עדי\"}, {\"label\": \"יולי\", \"value\": \"יולי\"}, {\"label\": \"כולם\", \"value\": \"כולם\"}]\n",
+  "sourceData": "[{\"label\": \"עדי\", \"value\": \"עדי\"}, {\"label\": \"יולי\", \"value\": \"יולי\"}, {\"label\": \"כולם\", \"value\": \"כולם\"}, {\"label\": \"ללא שיוך\", \"value\": \"ללא שיוך\"}]\n\n",
   "topRow": 8,
   "type": "SELECT_WIDGET",
   "version": 1,
