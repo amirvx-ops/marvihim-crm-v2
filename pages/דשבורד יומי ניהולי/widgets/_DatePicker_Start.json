@@ -33,19 +33,19 @@
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelWidth": 4,
-  "leftColumn": 30,
+  "leftColumn": 39,
   "minWidth": 450,
   "onDateSelected": "{{Q_adi_by_status.run(); Q_adi_by_insurance.run(); Q_lidor_daily_stats.run(); Q_lidor_new_leads_by_type.run()}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 36,
+  "rightColumn": 45,
   "shortcuts": false,
   "timePrecision": "None",
   "topRow": 6,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
   "widgetId": "dmd_datepicker_01",
-  "widgetName": "DatePicker_Date"
+  "widgetName": "_DatePicker_Start"
 }

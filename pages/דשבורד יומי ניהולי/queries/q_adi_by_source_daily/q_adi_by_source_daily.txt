@@ -5,8 +5,8 @@ FROM leads l
 LEFT JOIN partners p ON l.partner_id = p.id
 WHERE l.type = 'בדיקת תיק מלאה'
   AND (
-    l.main_status_date_of_update = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
-    OR l.user_updated_at = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+    l.main_status_date_of_update = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
+    OR l.user_updated_at = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
   )
 GROUP BY p.name
 ORDER BY "כמות" DESC;

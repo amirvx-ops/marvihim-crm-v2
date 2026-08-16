@@ -1,19 +1,19 @@
 SELECT
   (SELECT COUNT(*) FROM lidor_leads_view
-   WHERE masleka_date = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+   WHERE masleka_date = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
      AND touched_by_lidor = TRUE) AS "מסלקות_הוזמנו",
 
   (SELECT COUNT(*) FROM lidor_leads_view
    WHERE lidor_status = 'נקבעה פגישה'
-     AND update_date = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+     AND update_date = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
      AND touched_by_lidor = TRUE) AS "פגישות_נקבעו",
 
   (SELECT COUNT(*) FROM lidor_leads_view
-   WHERE close_date = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+   WHERE close_date = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
      AND touched_by_lidor = TRUE) AS "סגירות",
 
   (SELECT COALESCE(SUM(closing_amount), 0) FROM lidor_leads_view
-   WHERE close_date = '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+   WHERE close_date = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
      AND touched_by_lidor = TRUE) AS "סכום_סגירות",
 
   (SELECT
@@ -24,6 +24,6 @@ SELECT
    FROM lidor_leads_view
    WHERE touched_by_lidor = TRUE
      AND DATE_TRUNC('month', meeting_date)
-         = DATE_TRUNC('month', '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::timestamp)
-     AND meeting_date::date <= '{{moment(DatePicker_Date.selectedDate).format("YYYY-MM-DD")}}'::date
+         = DATE_TRUNC('month', '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::timestamp)
+     AND meeting_date::date <= '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
   ) AS "אחוז_פגישות_מתקיימות_החודש";

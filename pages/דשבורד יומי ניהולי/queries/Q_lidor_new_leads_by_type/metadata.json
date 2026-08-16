@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "WITH lidor_types AS (\n  SELECT unnest(ARRAY[\n    'קיבלו כסף',\n    'מסלקה (אוטומציה)',\n    'שכר מעל 10 (ללא יפוי כח)',\n    'סגור (לא זכאי)',\n    'ליד גמאביז',\n    'שנתית'\n  ]) AS t\n),\nnew_today AS (\n  SELECT DISTINCT ON (c.identity_number) l.type\n  FROM leads l\n  JOIN customers c ON c.id = l.customer_id\n  WHERE l.created_at::date = '{{moment(DatePicker_Date.selectedDate).format(\"YYYY-MM-DD\")}}'::date\n    AND l.type IN (SELECT t FROM lidor_types)\n  ORDER BY c.identity_number, l.created_at DESC\n)\nSELECT\n  lt.t AS \"סוג_ליד\",\n  COALESCE(COUNT(nt.type), 0) AS \"כמות\"\nFROM lidor_types lt\nLEFT JOIN new_today nt ON nt.type = lt.t\nGROUP BY lt.t\nORDER BY \"כמות\" DESC;",
+      "body": "WITH lidor_types AS (\n  SELECT unnest(ARRAY[\n    'קיבלו כסף',\n    'מסלקה (אוטומציה)',\n    'שכר מעל 10 (ללא יפוי כח)',\n    'סגור (לא זכאי)',\n    'ליד גמאביז',\n    'שנתית'\n  ]) AS t\n),\nnew_today AS (\n  SELECT DISTINCT ON (c.identity_number) l.type\n  FROM leads l\n  JOIN customers c ON c.id = l.customer_id\n  WHERE l.created_at::date = '{{moment(_DatePicker_Start.selectedDate).format(\"YYYY-MM-DD\")}}'::date\n    AND l.type IN (SELECT t FROM lidor_types)\n  ORDER BY c.identity_number, l.created_at DESC\n)\nSELECT\n  lt.t AS \"סוג_ליד\",\n  COALESCE(COUNT(nt.type), 0) AS \"כמות\"\nFROM lidor_types lt\nLEFT JOIN new_today nt ON nt.type = lt.t\nGROUP BY lt.t\nORDER BY \"כמות\" DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
