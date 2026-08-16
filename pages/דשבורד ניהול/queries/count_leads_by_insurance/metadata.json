@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \"חברת_ביטוח\", COUNT(*) AS \"כמות_לידים\" FROM adi_leads_view WHERE \"סוכן_מטפל\" IS NOT DISTINCT FROM COALESCE(NULLIF({{AgentFilter.selectedOptionValue}}, ''), \"סוכן_מטפל\") AND EXTRACT(MONTH FROM \"תאריך_עדכון\")::text IS NOT DISTINCT FROM COALESCE(NULLIF({{MonthFilter.selectedOptionValue}}, ''), EXTRACT(MONTH FROM \"תאריך_עדכון\")::text) AND EXTRACT(YEAR FROM \"תאריך_עדכון\")::text IS NOT DISTINCT FROM COALESCE(NULLIF({{YearFilter.selectedOptionValue}}, ''), EXTRACT(YEAR FROM \"תאריך_עדכון\")::text) GROUP BY \"חברת_ביטוח\" ORDER BY \"כמות_לידים\" DESC\n",
+      "body": "SELECT COALESCE(\"חברת_ביטוח\", 'לא ידוע') AS \"חברת_ביטוח\", COUNT(*) AS \"כמות_לידים\" FROM adi_leads_view WHERE \"סטטוס\" = 'חדש' AND \"סוכן_מטפל\" IS NOT DISTINCT FROM COALESCE(NULLIF({{AgentFilter.selectedOptionValue}}, ''), \"סוכן_מטפל\") AND EXTRACT(MONTH FROM \"תאריך_עדכון\")::text IS NOT DISTINCT FROM COALESCE(NULLIF({{MonthFilter.selectedOptionValue}}, ''), EXTRACT(MONTH FROM \"תאריך_עדכון\")::text) AND EXTRACT(YEAR FROM \"תאריך_עדכון\")::text IS NOT DISTINCT FROM COALESCE(NULLIF({{YearFilter.selectedOptionValue}}, ''), EXTRACT(YEAR FROM \"תאריך_עדכון\")::text) GROUP BY COALESCE(\"חברת_ביטוח\", 'לא ידוע') ORDER BY \"כמות_לידים\" DESC\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -29,7 +29,7 @@
     ],
     "name": "count_leads_by_insurance",
     "pageId": "דשבורד ניהול",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": true
   }
 }
