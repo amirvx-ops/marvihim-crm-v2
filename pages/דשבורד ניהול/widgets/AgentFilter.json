@@ -14,6 +14,9 @@
     },
     {
       "key": "sourceData"
+    },
+    {
+      "key": "labelTextColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -32,6 +35,7 @@
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelText": "",
+  "labelTextColor": "{{appsmith.theme.colors.backgroundColor}}",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 59,
