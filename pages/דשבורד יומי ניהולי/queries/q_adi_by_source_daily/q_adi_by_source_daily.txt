@@ -1,12 +1,1 @@
-SELECT 
-  COALESCE(p.name, 'לא ידוע') AS "מקור",
-  COUNT(*) AS "כמות"
-FROM leads l
-LEFT JOIN partners p ON l.partner_id = p.id
-WHERE l.type = 'בדיקת תיק מלאה'
-  AND (
-    l.main_status_date_of_update = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
-    OR l.user_updated_at = '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date
-  )
-GROUP BY p.name
-ORDER BY "כמות" DESC;
+SELECT COALESCE(p.name, 'לא ידוע') AS "מקור", COUNT(*) AS "כמות" FROM leads l LEFT JOIN partners p ON l.partner_id = p.id WHERE l.type = 'בדיקת תיק מלאה' AND ( l.main_status_date_of_update BETWEEN '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date AND '{{moment(DatePicker_End.selectedDate).format("YYYY-MM-DD")}}'::date OR l.user_updated_at BETWEEN '{{moment(_DatePicker_Start.selectedDate).format("YYYY-MM-DD")}}'::date AND '{{moment(DatePicker_End.selectedDate).format("YYYY-MM-DD")}}'::date ) GROUP BY p.name ORDER BY "כמות" DESC
