@@ -26,7 +26,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 21,
-  "text": "{{\"פעילות עדי לפי סטטוס (\" + moment(_DatePicker_Start.selectedDate).format(\"DD/MM/YYYY\") + \")\"}}",
+  "text": "{{\"פעילות עדי לפי סטטוס | מ-\" + moment(_DatePicker_Start.selectedDate).format(\"DD/MM/YYYY\") + \" עד \" + moment(DatePicker_End.selectedDate).format(\"DD/MM/YYYY\")}}",
   "textAlign": "RIGHT",
   "textColor": "#333333",
   "topRow": 11,
