@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COALESCE(insurance_company, 'לא שויכה') AS \"חברת_ביטוח\", COUNT(*) AS \"סגירות\", COALESCE(SUM(closing_amount), 0) AS \"סכום_סגירה\", COALESCE(SUM(agent_appointment_amount), 0) AS \"סכום_מינוי\" FROM leads WHERE user_updated_at BETWEEN '{{moment(_DatePicker_Start.selectedDate).format(\"YYYY-MM-DD\")}}'::date AND '{{moment(DatePicker_End.selectedDate).format(\"YYYY-MM-DD\")}}'::date AND touched_by_adi = TRUE AND insurance_company IS NOT NULL AND insurance_company <> '' AND closing_amount > 0 GROUP BY insurance_company ORDER BY \"סגירות\" DESC\n",
+      "body": "SELECT COALESCE(insurance_company, 'לא שויכה') AS \"חברת_ביטוח\", COUNT(*) AS \"סגירות\", COALESCE(SUM(closing_amount), 0) AS \"סכום_סגירה\", COALESCE(SUM(agent_appointment_amount), 0) AS \"סכום_מינוי\" FROM leads WHERE user_updated_at BETWEEN '{{moment(_DatePicker_Start.selectedDate).format(\"YYYY-MM-DD\")}}'::date AND '{{moment(DatePicker_End.selectedDate).format(\"YYYY-MM-DD\")}}'::date AND insurance_company IS NOT NULL AND insurance_company <> '' AND closing_amount > 0 AND ( ({{AgentSelect.selectedOptionValue}}::int = 1 AND touched_by_adi = TRUE) OR ({{AgentSelect.selectedOptionValue}}::int = 2 AND touched_by_yuli = TRUE) OR ({{AgentSelect.selectedOptionValue}}::int = 3 AND (touched_by_adi = TRUE OR touched_by_yuli = TRUE)) ) GROUP BY insurance_company ORDER BY \"סגירות\" DESC\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
