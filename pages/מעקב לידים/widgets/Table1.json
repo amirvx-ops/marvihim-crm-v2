@@ -175,13 +175,13 @@
       "key": "primaryColumns.touched_by_yuli.computedValue"
     },
     {
-      "key": "primaryColumns.xn____1hcbqgefh6kua.cellBackground"
-    },
-    {
       "key": "primaryColumns.xn____9hcbnbopodn.cellBackground"
     },
     {
       "key": "primaryColumns.xn__9dbhe1d.computedValue"
+    },
+    {
+      "key": "primaryColumns.xn____1hcbqgefh6kua.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -695,7 +695,7 @@
       "alias": "חברת_ביטוח",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.חברת_ביטוח === 'כלל' ? '#1976d2' : \n  currentRow.חברת_ביטוח === 'הפניקס' ? '#ffb74d' : \n  currentRow.חברת_ביטוח === 'הראל' ? '#fde047' : '')) : currentRow.חברת_ביטוח === 'כלל' ? '#1976d2' : \n  currentRow.חברת_ביטוח === 'הפניקס' ? '#ffb74d' : \n  currentRow.חברת_ביטוח === 'הראל' ? '#fde047' : '' })()}}",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.חברת_ביטוח === 'כלל' ? '#1976d2' : currentRow.חברת_ביטוח === 'הפניקס' ? '#ffb74d' : currentRow.חברת_ביטוח === 'הראל' ? '#fde047' : currentRow.חברת_ביטוח === 'מגדל' ? '#00bcd4' : '')) : currentRow.חברת_ביטוח === 'כלל' ? '#1976d2' : currentRow.חברת_ביטוח === 'הפניקס' ? '#ffb74d' : currentRow.חברת_ביטוח === 'הראל' ? '#fde047' : currentRow.חברת_ביטוח === 'מגדל' ? '#00bcd4' : '' })()}}",
       "columnType": "select",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"חברת_ביטוח\"])) : חברת_ביטוח })()}}",
       "currencyCode": "USD",

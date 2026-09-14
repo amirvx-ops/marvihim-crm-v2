@@ -55,9 +55,12 @@
     "handler",
     "closing_amount",
     "main_status",
+    "meeting_held",
+    "close_date",
+    "masleka_date",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1775988926112,
+  "columnUpdatedAt": 1789374451645,
   "columnWidthMap": {
     "customColumn3": 60,
     "update_date": 148
@@ -170,6 +173,15 @@
     },
     {
       "key": "primaryColumns.main_status.computedValue"
+    },
+    {
+      "key": "primaryColumns.meeting_held.computedValue"
+    },
+    {
+      "key": "primaryColumns.close_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.masleka_date.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -292,6 +304,40 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 100
+    },
+    "close_date": {
+      "alias": "close_date",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table_LidorLeads.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"close_date\"])) : close_date })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "close_date",
+      "index": 19,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "close_date",
+      "notation": "standard",
+      "originalId": "close_date",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     },
     "closing_amount": {
       "alias": "closing_amount",
@@ -740,6 +786,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "masleka_date": {
+      "alias": "masleka_date",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "date",
+      "computedValue": "{{(() => { const tableData = Table_LidorLeads.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"masleka_date\"])) : masleka_date })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "masleka_date",
+      "index": 20,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "masleka_date",
+      "notation": "standard",
+      "originalId": "masleka_date",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "meeting_date": {
       "alias": "meeting_date",
       "allowCellWrapping": false,
@@ -772,6 +852,40 @@
       },
       "verticalAlignment": "CENTER",
       "width": 120
+    },
+    "meeting_held": {
+      "alias": "meeting_held",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table_LidorLeads.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"meeting_held\"])) : meeting_held })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "meeting_held",
+      "index": 14,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "meeting_held",
+      "notation": "standard",
+      "originalId": "meeting_held",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     },
     "meeting_time": {
       "alias": "meeting_time",

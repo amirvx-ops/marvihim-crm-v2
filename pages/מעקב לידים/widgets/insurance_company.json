@@ -55,7 +55,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 35,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\"label\": \"הכל\", \"value\": \"\"},\n  {\"label\": \"הראל\", \"value\": \"הראל\"},\n  {\"label\": \"הפניקס\", \"value\": \"הפניקס\"},\n  {\"label\": \"כלל\", \"value\": \"כלל\"}\n]",
+  "sourceData": "[{\"label\":\"הכל\",\"value\":\"\"},{\"label\":\"הראל\",\"value\":\"הראל\"},{\"label\":\"הפניקס\",\"value\":\"הפניקס\"},{\"label\":\"כלל\",\"value\":\"כלל\"},{\"label\":\"מגדל\",\"value\":\"מגדל\"}]\n",
   "topRow": 14,
   "type": "SELECT_WIDGET",
   "version": 1,
