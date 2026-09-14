@@ -717,7 +717,7 @@
       "label": "חברת ביטוח",
       "notation": "standard",
       "originalId": "חברת_ביטוח",
-      "selectOptions": "[\n  {\"label\": \"הראל\", \"value\": \"הראל\"},\n  {\"label\": \"הפניקס\", \"value\": \"הפניקס\"},\n  {\"label\": \"כלל\", \"value\": \"כלל\"}\n]",
+      "selectOptions": "[\n  {\"label\": \"הראל\", \"value\": \"הראל\"},\n  {\"label\": \"הפניקס\", \"value\": \"הפניקס\"},\n  {\"label\": \"כלל\", \"value\": \"כלל\"},\n  {\"label\": \"מגדל\", \"value\": \"מגדל\"}\n]\n",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
