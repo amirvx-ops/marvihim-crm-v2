@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 101,
+  "bottomRow": 12,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -12,9 +12,16 @@
     },
     {
       "key": "truncateButtonColor"
+    },
+    {
+      "key": "text"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "text"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
@@ -22,21 +29,21 @@
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "ins01",
-  "leftColumn": 12,
+  "key": "6cba4",
+  "leftColumn": 9,
   "overflow": "NONE",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 38,
-  "text": "סיכום לפי חברות ביטוח",
+  "rightColumn": 13,
+  "text": "{{Number(count_adi_stats.data[0].מגדל).toLocaleString()}}",
   "textAlign": "RIGHT",
-  "textColor": "#1976D2",
-  "topRow": 97,
+  "textColor": "#00bcd4",
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "ins_title_01",
-  "widgetName": "Text_InsuranceSummaryTitle"
+  "widgetId": "elhws72is3",
+  "widgetName": "Stat_PhoenixValCopyCopy"
 }
