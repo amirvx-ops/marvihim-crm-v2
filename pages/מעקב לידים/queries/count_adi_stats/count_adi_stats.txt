@@ -19,4 +19,5 @@ OR ('{{Select_Agent.selectedOptionValue}}' = 'ללא שיוך' AND "שיוך" IS
 OR ('{{Select_Agent.selectedOptionValue}}' = '' AND "שיוך" = 'עדי')
 )
 AND ('{{Select_Month.selectedOptionValue}}' = '' OR TO_CHAR(תאריך_עדכון, 'MM/YYYY') = '{{Select_Month.selectedOptionValue}}')
+AND ('{{Select_Partner.selectedOptionValue}}' = '' OR מקור_ליד = '{{Select_Partner.selectedOptionValue}}')
 
