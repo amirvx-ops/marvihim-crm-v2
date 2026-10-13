@@ -14,6 +14,7 @@ FROM adi_leads_view
 WHERE (
 ('{{Select_Agent.selectedOptionValue}}' = 'עדי' AND "שיוך" = 'עדי')
 OR ('{{Select_Agent.selectedOptionValue}}' = 'יולי' AND "שיוך" = 'יולי')
+	OR ('{{Select_Agent.selectedOptionValue}}' = 'הדר' AND "שיוך" = 'הדר')
 OR ('{{Select_Agent.selectedOptionValue}}' = 'כולם' AND "שיוך" IS NOT NULL)
 OR ('{{Select_Agent.selectedOptionValue}}' = 'ללא שיוך' AND "שיוך" IS NULL)
 OR ('{{Select_Agent.selectedOptionValue}}' = '' AND "שיוך" = 'עדי')
