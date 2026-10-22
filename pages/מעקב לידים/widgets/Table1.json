@@ -682,7 +682,7 @@
       "label": "שיוך",
       "notation": "standard",
       "originalId": "שיוך",
-      "selectOptions": "[{\"label\": \"עדי\", \"value\": \"עדי\"}, {\"label\": \"יולי\", \"value\": \"יולי\"}, {\"label\": \"הדר\", \"value\": \"הדר\"}]\n",
+      "selectOptions": "[{\"label\":\"עדי\",\"value\":\"עדי\"},{\"label\":\"יולי\",\"value\":\"יולי\"},{\"label\":\"הדר\",\"value\":\"הדר\"},{\"label\":\"שחר\",\"value\":\"שחר\"}]\n",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
